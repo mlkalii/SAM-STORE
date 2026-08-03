@@ -1,0 +1,488 @@
+/**
+ * Source material for the two new technology departments.
+ * Same shape as `catalog-source.mjs`: brands, gradients, shared copy, concepts.
+ */
+
+export const TECH_SOURCE = {
+  "computers-accessories": {
+    brands: ["Nordvane", "Cirroq", "Volux", "Halden", "Meridiem", "Axio", "Novare", "Deskform"],
+    gradients: [
+      "from-slate-700 via-indigo-800 to-violet-700",
+      "from-indigo-800 via-blue-800 to-slate-700",
+      "from-violet-800 via-indigo-700 to-sky-700",
+      "from-zinc-800 via-slate-700 to-indigo-700",
+    ],
+    commonFeatures: [
+      "Serviceable by design — storage, memory and battery are all user-replaceable",
+      "Drivers, firmware and schematics published for a minimum of six years",
+    ],
+    commonSpecs: [
+      ["Warranty", "3 years, parts and labour"],
+      ["Support", "Named engineer, no scripted first line"],
+    ],
+    concepts: [
+      {
+        name: "Cirrus 14 Laptop",
+        sub: "Laptops",
+        price: 119900,
+        variants: "tech",
+        blurb: "A 14-inch machine with a real keyboard and every part replaceable.",
+        features: [
+          "Storage, memory, battery and even the ports are user-replaceable",
+          "1.5 mm key travel — the reason people keep these for five years",
+          "Two Thunderbolt ports on opposite sides so charging works either way",
+        ],
+        specs: [
+          ["Display", '14" 2880 × 1800, 120 Hz, 500 nits'],
+          ["Memory", "32 GB DDR5, two SODIMM slots"],
+          ["Battery", "61 Wh, 12 hours mixed use"],
+        ],
+      },
+      {
+        name: "Atlas Desktop Tower",
+        sub: "Desktops",
+        price: 189900,
+        variants: "bold",
+        blurb: "Standard ATX internals, so upgrading never means replacing the machine.",
+        features: [
+          "Entirely standard parts — no proprietary board or power connector",
+          "Tool-free side panel and drive cages",
+          "Three years of firmware updates and a published BIOS changelog",
+        ],
+        specs: [
+          ["Form factor", "Mid-tower ATX"],
+          ["Cooling", "280 mm AIO, four case fans"],
+          ["Power", "850 W 80+ Gold, fully modular"],
+        ],
+      },
+      {
+        name: "Vantage Ultrawide Monitor",
+        sub: "Peripherals",
+        price: 79900,
+        variants: "none",
+        blurb: "A 34-inch curved panel that replaces two screens without the bezel gap.",
+        features: [
+          "Factory calibrated with a printed Delta-E report in the box",
+          "KVM switch built in — one keyboard and mouse across two machines",
+          "90 W USB-C charging plus a three-port hub",
+        ],
+        specs: [
+          ["Panel", '34" IPS, 3440 × 1440, 1900R'],
+          ["Refresh", "144 Hz, adaptive sync"],
+          ["Colour", "98% DCI-P3, Delta-E under 2"],
+        ],
+      },
+      {
+        name: "Junction Thunderbolt Dock",
+        sub: "Docks",
+        price: 34900,
+        variants: "tech",
+        blurb: "One cable for two displays, gigabit ethernet and 96 watts of charge.",
+        features: [
+          "Drives two 4K/60 displays from a single Thunderbolt 4 cable",
+          "96 W upstream charging — enough for a 16-inch laptop",
+          "Externally powered, so the laptop never carries the hub load",
+        ],
+        specs: [
+          ["Ports", "2 × TB4, 4 × USB-A, 2.5 GbE, SD, 3.5 mm"],
+          ["Displays", "2 × 4K/60 or 1 × 8K/30"],
+          ["Power", "180 W supply, 96 W upstream"],
+        ],
+      },
+      {
+        name: "Quill Mechanical Keyboard 65",
+        sub: "Peripherals",
+        price: 18900,
+        variants: "warm",
+        blurb: "An aluminium 65% board with a proper gasket mount and QMK firmware.",
+        features: [
+          "CNC aluminium case with a gasket-mounted plate",
+          "Open QMK/VIA firmware — remap without vendor software",
+          "Hot-swap sockets for three- and five-pin switches",
+        ],
+        specs: [
+          ["Layout", "65%, 68 keys"],
+          ["Switches", "Pre-lubed tactile, 55 g"],
+          ["Connection", "USB-C, detachable"],
+        ],
+      },
+      {
+        name: "Trace Vertical Mouse",
+        sub: "Peripherals",
+        price: 8900,
+        variants: "tech",
+        blurb: "A 57° grip angle that takes the twist out of a long day at a desk.",
+        features: [
+          "57° angle keeps the forearm neutral instead of pronated",
+          "Thumb rest carries the weight rather than the wrist",
+          "Silent switches rated for 20 million clicks",
+        ],
+        specs: [
+          ["Sensor", "4,000 DPI optical"],
+          ["Battery", "90 days, USB-C"],
+          ["Connection", "2.4 GHz and Bluetooth"],
+        ],
+      },
+      {
+        name: "Vault NVMe Enclosure",
+        sub: "Storage",
+        price: 9900,
+        variants: "tech",
+        blurb: "Turns a spare NVMe drive into a 40 Gbps external at full speed.",
+        features: [
+          "Thunderbolt 4 at a genuine 40 Gbps, not a rebadged 10 Gbps case",
+          "Machined aluminium body doubles as the heatsink",
+          "Tool-free drive install with a captive thermal pad",
+        ],
+        specs: [
+          ["Interface", "Thunderbolt 4 / USB4"],
+          ["Speeds", "3,000 MB/s read"],
+          ["Drives", "M.2 2280 NVMe, up to 8 TB"],
+        ],
+      },
+      {
+        name: "Signal Webcam Pro",
+        sub: "Peripherals",
+        price: 16900,
+        variants: "tech",
+        blurb: "A real 1-inch sensor, so a badly lit room still looks deliberate.",
+        features: [
+          "1-inch sensor gathers enough light to skip the ring light",
+          "Physical privacy shutter, not a software toggle",
+          "Works as a plain UVC device — no driver, no account",
+        ],
+        specs: [
+          ["Sensor", '1" CMOS, 4K/30 or 1080p/60'],
+          ["Field of view", "78°, adjustable to 65°"],
+          ["Mount", "Clip plus 1/4\" tripod thread"],
+        ],
+      },
+      {
+        name: "Kestrel Studio Microphone",
+        sub: "Peripherals",
+        price: 21900,
+        variants: "bold",
+        blurb: "A cardioid condenser with an internal shock mount and USB-C or XLR out.",
+        features: [
+          "Internal shock mount kills desk thumps without an external cradle",
+          "USB-C now, XLR later — the same microphone grows with the setup",
+          "Zero-latency headphone monitoring with a real gain knob",
+        ],
+        specs: [
+          ["Capsule", "25 mm cardioid condenser"],
+          ["Response", "20 Hz – 20 kHz"],
+          ["Sampling", "24-bit / 96 kHz"],
+        ],
+      },
+      {
+        name: "Line-Interactive UPS 1500",
+        sub: "Components",
+        price: 27900,
+        variants: "none",
+        blurb: "Line-interactive backup with replaceable cells and a readable display.",
+        features: [
+          "User-replaceable battery pack — a UPS should outlive one set of cells",
+          "Pure sine wave output, safe for active PFC power supplies",
+          "USB monitoring that works with stock OS power management",
+        ],
+        specs: [
+          ["Capacity", "1500 VA / 900 W"],
+          ["Runtime", "22 minutes at 300 W"],
+          ["Outlets", "8, six battery-backed"],
+        ],
+      },
+      {
+        name: "Machined Laptop Stand",
+        sub: "Docks",
+        price: 8900,
+        variants: "tech",
+        blurb: "Machined aluminium that lifts a screen to eye level and stays there.",
+        features: [
+          "Single machined billet — nothing to flex or rattle",
+          "Open back keeps the laptop's own vents clear",
+          "Silicone pads on every contact point",
+        ],
+        specs: [
+          ["Height", "Raises 15 cm"],
+          ["Capacity", "8 kg"],
+          ["Fits", "11–17 inch machines"],
+        ],
+      },
+      {
+        name: "Graphics Card 12GB",
+        sub: "Components",
+        price: 79900,
+        variants: "none",
+        blurb: "A two-slot card that stays under 70 °C without sounding like a hairdryer.",
+        features: [
+          "Two-slot design fits a normal case without a support bracket",
+          "Fans stop entirely below 55 °C",
+          "Standard 8-pin power — no adapter tree",
+        ],
+        specs: [
+          ["Memory", "12 GB GDDR6X"],
+          ["Power", "220 W TDP, single 8-pin"],
+          ["Outputs", "3 × DisplayPort 2.1, 1 × HDMI 2.1"],
+        ],
+      },
+      {
+        name: "Cable Management Kit",
+        sub: "Docks",
+        price: 4900,
+        variants: "soft",
+        blurb: "Trays, sleeves and clips that make a desk look like nobody wired it.",
+        features: [
+          "Under-desk tray fits a dock and a power strip out of sight",
+          "Magnetic clips reposition without leaving adhesive residue",
+          "Braided sleeving cuts cleanly with scissors, no fraying",
+        ],
+        specs: [
+          ["Includes", "Tray, 2 m sleeving, 12 clips, 30 ties"],
+          ["Mounting", "Clamp or adhesive, both supplied"],
+          ["Capacity", "5 kg tray load"],
+        ],
+      },
+    ],
+  },
+
+  "mobile-phones": {
+    brands: ["Novare", "Cirroq", "Aeterna", "Volux", "Lumenwave", "Kestrel Audio", "Halden", "Nordvane"],
+    gradients: [
+      "from-cyan-700 via-sky-700 to-blue-800",
+      "from-sky-800 via-cyan-700 to-teal-700",
+      "from-blue-800 via-indigo-700 to-cyan-600",
+      "from-teal-800 via-sky-800 to-blue-700",
+    ],
+    commonFeatures: [
+      "Sold unlocked, with the out-of-warranty battery replacement price published",
+      "Security updates guaranteed in writing for at least five years",
+    ],
+    commonSpecs: [
+      ["Warranty", "2 years, plus 5 years of security updates"],
+      ["Network", "Unlocked, dual SIM (nano + eSIM)"],
+    ],
+    concepts: [
+      {
+        name: "Meridian 5G Handset",
+        sub: "Handsets",
+        price: 84900,
+        variants: "tech",
+        blurb: "A flagship sensor and a battery you can replace without a heat gun.",
+        features: [
+          "Battery replaceable with a standard screwdriver in under ten minutes",
+          "1-inch main sensor with optical stabilisation",
+          "Seven years of OS updates, in writing",
+        ],
+        specs: [
+          ["Display", '6.3" LTPO OLED, 1–120 Hz, 2,400 nits'],
+          ["Camera", '1" 50 MP main, 48 MP ultrawide, 5× tele'],
+          ["Battery", "5,000 mAh, 80 W wired"],
+        ],
+      },
+      {
+        name: "Meridian Compact",
+        sub: "Handsets",
+        price: 64900,
+        variants: "tech",
+        blurb: "A properly small phone that did not cut the camera to get there.",
+        features: [
+          "6.1-inch body that still reaches one-handed",
+          "Same main sensor as the full-size model",
+          "IP68 with a replaceable battery — rarely done together",
+        ],
+        specs: [
+          ["Display", '6.1" OLED, 120 Hz'],
+          ["Camera", "50 MP main, 12 MP ultrawide"],
+          ["Battery", "4,200 mAh, 65 W wired"],
+        ],
+      },
+      {
+        name: "Shell Impact Case",
+        sub: "Cases",
+        price: 4900,
+        variants: "bold",
+        blurb: "Certified to 4 m drops without turning the phone into a brick.",
+        features: [
+          "MIL-STD-810H certified to 4 m onto concrete",
+          "Raised lip clears the camera bump and the screen",
+          "Magnet array is genuine N52, not a decorative ring",
+        ],
+        specs: [
+          ["Drop rating", "4 m, MIL-STD-810H"],
+          ["Thickness", "2.6 mm"],
+          ["Compatibility", "MagSafe and Qi2"],
+        ],
+      },
+      {
+        name: "Shell Leather Folio",
+        sub: "Cases",
+        price: 7900,
+        variants: "warm",
+        blurb: "Vegetable-tanned leather with three card slots and a real magnet closure.",
+        features: [
+          "Full-grain vegetable-tanned leather that darkens with use",
+          "RFID-shielded card pocket",
+          "Detaches from the shell so it can be used as a wallet",
+        ],
+        specs: [
+          ["Leather", "Full-grain, 1.2 mm"],
+          ["Capacity", "3 cards plus notes"],
+          ["Closure", "Magnetic, no snap to wear out"],
+        ],
+      },
+      {
+        name: "Flux GaN Charger 100W",
+        sub: "Charging",
+        price: 7900,
+        variants: "soft",
+        blurb: "Four ports, gallium nitride, and a folding pin that survives a bag.",
+        features: [
+          "100 W split intelligently across four devices",
+          "GaN internals run cool enough to sit on a duvet",
+          "Folding pins, and interchangeable plugs for travel",
+        ],
+        specs: [
+          ["Output", "100 W total, 100 W single port"],
+          ["Ports", "3 × USB-C PD 3.1, 1 × USB-A"],
+          ["Size", "62 × 62 × 32 mm"],
+        ],
+      },
+      {
+        name: "Flux Power Bank 20K",
+        sub: "Charging",
+        price: 8900,
+        variants: "tech",
+        blurb: "20,000 mAh, airline-legal, with a display that shows real watts.",
+        features: [
+          "Display shows actual watts in and out, not a four-bar guess",
+          "Under the 100 Wh airline limit — carry-on legal",
+          "Passthrough charging: charges itself and the phone at once",
+        ],
+        specs: [
+          ["Capacity", "20,000 mAh / 74 Wh"],
+          ["Output", "140 W max, 2 × USB-C, 1 × USB-A"],
+          ["Recharge", "1 hour 20 to full"],
+        ],
+      },
+      {
+        name: "Pulse Wireless Charging Stand",
+        sub: "Charging",
+        price: 6900,
+        variants: "soft",
+        blurb: "Qi2 at 15 W, angled for face unlock, and it will not creep across a desk.",
+        features: [
+          "Qi2 magnetic alignment — no hunting for the coil",
+          "Angled so face unlock works while it charges",
+          "Weighted base with a silicone foot",
+        ],
+        specs: [
+          ["Output", "15 W Qi2, 5 W watch pad"],
+          ["Devices", "Phone, watch and earbuds together"],
+          ["Cable", "1.5 m braided USB-C, included"],
+        ],
+      },
+      {
+        name: "Tempered Screen Shield",
+        sub: "Screen Care",
+        price: 2900,
+        variants: "none",
+        blurb: "Tempered glass with an alignment frame, so it goes on straight first time.",
+        features: [
+          "Alignment frame included — no bubbles, no second attempt",
+          "9H tempered glass with an oleophobic top layer",
+          "Cut-outs verified against the in-display fingerprint sensor",
+        ],
+        specs: [
+          ["Hardness", "9H"],
+          ["Thickness", "0.33 mm"],
+          ["Pack", "2 shields, frame, wipes"],
+        ],
+      },
+      {
+        name: "Vector Car Mount",
+        sub: "Mounts",
+        price: 4400,
+        variants: "tech",
+        blurb: "A magnetic vent mount with a metal clip that survives a summer dashboard.",
+        features: [
+          "Metal vent clip — plastic hooks fatigue and drop the phone",
+          "N52 magnet array holds a large phone over rough surfaces",
+          "Optional 15 W charging module clips on",
+        ],
+        specs: [
+          ["Hold", "Up to 500 g"],
+          ["Rotation", "360°, ball joint"],
+          ["Fits", "Blade and circular vents"],
+        ],
+      },
+      {
+        name: "Echo Wireless Earbuds",
+        sub: "Audio",
+        price: 13900,
+        variants: "tech",
+        blurb: "ANC earbuds that pair to two devices and pass a proper fit test.",
+        features: [
+          "Multipoint pairing across a laptop and a phone at once",
+          "In-app fit test measures the seal rather than guessing",
+          "Case charges over USB-C or any Qi pad",
+        ],
+        specs: [
+          ["Drivers", "11 mm dynamic"],
+          ["Battery", "9 h buds, 36 h with case"],
+          ["Rating", "IP55"],
+        ],
+      },
+      {
+        name: "Echo Wired USB-C Earphones",
+        sub: "Audio",
+        price: 4900,
+        variants: "bold",
+        blurb: "A real DAC in the cable, for people who never want to charge earphones.",
+        features: [
+          "32-bit DAC in the inline module, not a passive adapter",
+          "Inline controls that work across phones and laptops",
+          "Kevlar-reinforced cable at the strain points",
+        ],
+        specs: [
+          ["Driver", "10 mm dynamic"],
+          ["DAC", "32-bit / 384 kHz"],
+          ["Cable", "1.2 m, USB-C"],
+        ],
+      },
+      {
+        name: "Three-Axis Phone Gimbal",
+        sub: "Mounts",
+        price: 12900,
+        variants: "tech",
+        blurb: "Three-axis stabilisation that folds to pocket size and tracks a face.",
+        features: [
+          "Three-axis stabilisation with on-device subject tracking",
+          "Folds flat enough for a coat pocket",
+          "Works as a plain gimbal with no app installed",
+        ],
+        specs: [
+          ["Payload", "80–300 g"],
+          ["Battery", "13 hours"],
+          ["Folded", "175 × 85 × 45 mm"],
+        ],
+      },
+      {
+        name: "SIM Travel Case",
+        sub: "Screen Care",
+        price: 2400,
+        variants: "none",
+        blurb: "A tray, a tool, and a case that stops a spare SIM disappearing into a bag.",
+        features: [
+          "Holds four nano SIMs and two microSD cards",
+          "Machined aluminium body with a captive ejector pin",
+          "Silicone gasket keeps water and lint out",
+        ],
+        specs: [
+          ["Capacity", "4 nano SIM, 2 microSD"],
+          ["Material", "Anodised aluminium"],
+          ["Weight", "24 g"],
+        ],
+      },
+    ],
+  },
+};
