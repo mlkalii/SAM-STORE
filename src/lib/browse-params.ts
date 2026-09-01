@@ -11,7 +11,6 @@ export interface BrowseState {
   brands: string[];
   minPrice?: number;
   maxPrice?: number;
-  minRating?: number;
   inStockOnly: boolean;
   onSaleOnly: boolean;
   sort?: SortKey;
@@ -58,7 +57,6 @@ export function parseBrowseParams(params: RawSearchParams): BrowseState {
     brands: list(params.brand),
     minPrice: number(params.min),
     maxPrice: number(params.max),
-    minRating: number(params.rating),
     inStockOnly: first(params.stock) === "1",
     onSaleOnly: first(params.sale) === "1",
     sort: isSortKey(sortRaw) ? sortRaw : undefined,
@@ -80,7 +78,6 @@ export function toProductQuery(
     brands: state.brands,
     minPrice: state.minPrice,
     maxPrice: state.maxPrice,
-    minRating: state.minRating,
     inStockOnly: state.inStockOnly,
     onSaleOnly: state.onSaleOnly,
     sort: state.sort,
@@ -101,7 +98,6 @@ export function buildHref(basePath: string, state: Partial<BrowseState>): string
   if (state.brands?.length) params.set("brand", state.brands.join(","));
   if (typeof state.minPrice === "number") params.set("min", String(state.minPrice));
   if (typeof state.maxPrice === "number") params.set("max", String(state.maxPrice));
-  if (typeof state.minRating === "number") params.set("rating", String(state.minRating));
   if (state.inStockOnly) params.set("stock", "1");
   if (state.onSaleOnly) params.set("sale", "1");
   if (state.sort) params.set("sort", state.sort);
@@ -133,7 +129,6 @@ export function countActiveFilters(state: BrowseState) {
     state.brands.length +
     state.sellers.length +
     (typeof state.minPrice === "number" || typeof state.maxPrice === "number" ? 1 : 0) +
-    (typeof state.minRating === "number" ? 1 : 0) +
     (state.inStockOnly ? 1 : 0) +
     (state.onSaleOnly ? 1 : 0)
   );

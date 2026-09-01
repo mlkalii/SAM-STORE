@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     "electronics",
     "home and kitchen",
     "beauty",
-    "wellness",
     "sports",
     "pet supplies",
     "baby products",

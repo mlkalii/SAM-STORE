@@ -87,30 +87,6 @@ export function productJsonLd(product: Product, siteUrl: string) {
           },
         }
       : {}),
-    ...(product.reviewCount > 0
-      ? {
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: product.rating.toFixed(1),
-            reviewCount: product.reviewCount,
-            bestRating: 5,
-            worstRating: 1,
-          },
-        }
-      : {}),
-    review: product.reviews.slice(0, 5).map((review) => ({
-      "@type": "Review",
-      name: review.title,
-      reviewBody: review.body,
-      datePublished: review.createdAt,
-      author: { "@type": "Person", name: review.author },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: review.rating,
-        bestRating: 5,
-        worstRating: 1,
-      },
-    })),
   };
 }
 

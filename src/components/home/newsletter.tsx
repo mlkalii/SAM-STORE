@@ -37,7 +37,7 @@ export function Newsletter() {
               Six emails a year. <em className="text-gold-gradient italic">Maybe five.</em>
             </h2>
             <p className="mt-4 max-w-md text-muted-foreground">
-              Price drops and restocks across all fifteen departments. Subscribers see them a day early.
+              Price drops and restocks across all fourteen departments. Subscribers see them a day early.
             </p>
           </div>
 

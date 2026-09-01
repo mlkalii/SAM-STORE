@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
 
@@ -92,13 +92,6 @@ export function QuickViewDialog({
             </DialogHeader>
 
             <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
-              <span className="flex items-center gap-1.5">
-                <Star className="size-3.5 fill-current" aria-hidden />
-                {product.rating.toFixed(1)}
-                <span className="text-muted-foreground/60">
-                  ({product.reviewCount.toLocaleString("en-US")})
-                </span>
-              </span>
               <StockBadge status={product.stockStatus} count={product.stockCount} />
             </div>
 
@@ -121,7 +114,7 @@ export function QuickViewDialog({
               className="mt-4 px-0"
               render={<Link href={`/shop/${product.slug}`} onClick={() => onOpenChange(false)} />}
             >
-              Full details, specifications and reviews
+              Full details and specifications
               <ArrowRight className="size-4" aria-hidden />
             </Button>
           </div>

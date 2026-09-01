@@ -38,7 +38,7 @@ export function MobileNav() {
           <SheetTitle>
             <Logo />
           </SheetTitle>
-          <SheetDescription>Premium essentials across fifteen departments.</SheetDescription>
+          <SheetDescription>Premium essentials across fourteen departments.</SheetDescription>
         </SheetHeader>
 
         <nav

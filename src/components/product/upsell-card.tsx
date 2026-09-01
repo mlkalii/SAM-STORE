@@ -47,8 +47,7 @@ export function UpsellCard({
         </span>
         <span className="mt-1 block truncate text-sm font-medium">{upgrade.name}</span>
         <span className="mt-0.5 block text-xs text-muted-foreground">
-          {formatPrice(difference)} more · {upgrade.warrantyMonths}-month warranty ·{" "}
-          {upgrade.rating.toFixed(1)}★
+          {formatPrice(difference)} more · {upgrade.warrantyMonths}-month warranty
         </span>
       </span>
 

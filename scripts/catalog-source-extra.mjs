@@ -169,59 +169,6 @@ export const EXTRA_CONCEPTS = {
     },
   ],
 
-  "health-wellness": [
-    {
-      name: "Meridian Sleep Tracker Ring",
-      sub: "Monitoring",
-      price: 29900,
-      variants: "tech",
-      blurb: "Seven-day battery, and the data stays on your phone unless you export it.",
-      features: [
-        "Seven days per charge, charged in the supplied case",
-        "No subscription — every metric is free forever",
-        "Data stored locally; export is manual and complete",
-      ],
-      specs: [
-        ["Sensors", "PPG, temperature, accelerometer"],
-        ["Sizes", "6–13, sizing kit included"],
-        ["Water resistance", "100 m"],
-      ],
-    },
-    {
-      name: "Omega-3 Triglyceride Capsules",
-      sub: "Supplements",
-      price: 3800,
-      variants: "capacity",
-      blurb: "Triglyceride-form fish oil, IFOS-certified, with no fishy repeat.",
-      features: [
-        "Triglyceride form absorbs better than the cheaper ethyl ester",
-        "IFOS five-star certified for purity and freshness",
-        "Enteric coating stops the aftertaste",
-      ],
-      specs: [
-        ["EPA/DHA", "800 mg / 400 mg per serving"],
-        ["Source", "Wild-caught anchovy and sardine"],
-        ["Oxidation", "TOTOX under 10"],
-      ],
-    },
-    {
-      name: "Kinetic Balance Board",
-      sub: "Mobility",
-      price: 8900,
-      variants: "warm",
-      blurb: "Solid birch with a rubber contact ring that will not mark a wooden floor.",
-      features: [
-        "Solid birch ply, not a veneered composite",
-        "Rubber ring protects floors and stops it sliding",
-        "Progressive tilt range for rehab through to training",
-      ],
-      specs: [
-        ["Diameter", "40 cm"],
-        ["Tilt", "Up to 18°"],
-        ["Max load", "150 kg"],
-      ],
-    },
-  ],
 
   "sports-outdoors": [
     {

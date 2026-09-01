@@ -75,7 +75,7 @@ export default async function HomePage() {
             Moving <em className="italic">fastest</em> this week
           </>
         }
-        description="Ranked by review momentum since release, not all-time volume — so a genuinely new product can appear here."
+        description="Ranked by sales momentum since release, not all-time volume — so a genuinely new product can appear here."
         href="/shop?sort=popular"
         linkLabel="Browse all"
         products={trending}
@@ -105,7 +105,7 @@ export default async function HomePage() {
             What people <em className="italic">actually reorder</em>
           </>
         }
-        description="Ranked by verified purchases across all fifteen departments — never by margin."
+        description="Ranked by verified purchases across all fourteen departments — never by margin."
         href="/best-sellers"
         linkLabel="All best sellers"
         products={bestSellers}
@@ -134,7 +134,7 @@ export default async function HomePage() {
           </>
         }
         description="Strong products from across the catalogue in a comparable price band to what sells best."
-        href="/shop?sort=rating"
+        href="/shop"
         linkLabel="See more"
         products={recommended}
         layout="rail"

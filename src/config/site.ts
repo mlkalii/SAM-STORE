@@ -5,9 +5,9 @@ import type { NavItem } from "@/types";
 export const siteConfig = {
   name: storeConfig.tradingName,
   legalName: storeConfig.legalName,
-  title: "SAMRUX — Premium essentials across fifteen departments",
+  title: "SAMRUX — Premium essentials across fourteen departments",
   description:
-    "A curated multi-category marketplace: electronics, computers, phones, home, beauty, wellness, sport, pets, baby, office, automotive, tools, fashion, gourmet food and toys. Fewer products, better chosen.",
+    "A curated multi-category marketplace: electronics, computers, phones, home, beauty, sport, pets, baby, office, automotive, tools, fashion, gourmet food and toys. Fewer products, better chosen.",
   /** Resolved from the environment — see `@/config/site-url`. */
   url: siteUrl,
   freeShippingThreshold: 7500,

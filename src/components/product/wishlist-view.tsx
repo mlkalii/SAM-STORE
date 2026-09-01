@@ -5,7 +5,6 @@ import { Heart, Trash2 } from "lucide-react";
 import Link from "next/link";
 
 import { ProductImage } from "@/components/product/product-image";
-import { StarRating } from "@/components/product/star-rating";
 import { Button } from "@/components/ui/button";
 import { useWishlist } from "@/hooks/use-product-lists";
 import { formatPrice, pluralize } from "@/lib/format";
@@ -84,7 +83,6 @@ export function WishlistView() {
                   {item.name}
                 </Link>
               </h2>
-              <StarRating rating={item.rating} size="xs" className="mt-1.5" />
               <div className="mt-2 flex items-baseline gap-2">
                 <span className="font-mono text-sm tabular-nums">{formatPrice(item.price)}</span>
                 {item.compareAtPrice ? (

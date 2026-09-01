@@ -69,7 +69,6 @@ const CATEGORY_WARRANTY: Record<string, WarrantyPolicy> = {
   "mobile-phones": MONTHS(6), //           Mobile Phones & Accessories
   "home-kitchen": MONTHS(6), //            Home & Kitchen
   "beauty-personal-care": DOA, //          Beauty & Personal Care
-  "health-wellness": MONTHS(6), //         Health & Wellness
   "sports-outdoors": MONTHS(12), //        Sports & Outdoors
   "pet-supplies": MONTHS(6), //            Pet Supplies
   "baby-products": MONTHS(6), //           Baby Products

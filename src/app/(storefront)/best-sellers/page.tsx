@@ -30,7 +30,7 @@ export default async function BestSellersPage(props: PageProps<"/best-sellers">)
     <Container className="py-14">
       <SectionHeading
         as="h1"
-        eyebrow={`${all.length} across fifteen departments`}
+        eyebrow={`${all.length} across fourteen departments`}
         title={
           <>
             Best <em className="italic">sellers</em>

@@ -16,7 +16,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Shop all",
-  description: "Every product SAMRUX stocks, across all fifteen departments.",
+  description: "Every product SAMRUX stocks, across all fourteen departments.",
 };
 
 export default async function ShopPage(props: PageProps<"/shop">) {

@@ -208,7 +208,6 @@ export const SORT_OPTIONS = [
   { key: "new", label: "Newest" },
   { key: "price-asc", label: "Price: low to high" },
   { key: "price-desc", label: "Price: high to low" },
-  { key: "rating", label: "Top rated" },
   { key: "discount", label: "Biggest saving" },
 ] as const;
 
@@ -226,7 +225,6 @@ export interface ProductQuery {
   /** Cents, inclusive. */
   minPrice?: number;
   maxPrice?: number;
-  minRating?: number;
   inStockOnly?: boolean;
   onSaleOnly?: boolean;
   sort?: SortKey;
@@ -346,7 +344,6 @@ export async function queryProducts(query: ProductQuery = {}): Promise<ProductQu
     brands = [],
     minPrice,
     maxPrice,
-    minRating,
     inStockOnly = false,
     onSaleOnly = false,
     sort = q ? "relevance" : "popular",
@@ -385,7 +382,6 @@ export async function queryProducts(query: ProductQuery = {}): Promise<ProductQu
     if (sellers.length && !sellers.includes(product.sellerSlug ?? "")) return false;
     if (typeof minPrice === "number" && product.price < minPrice) return false;
     if (typeof maxPrice === "number" && product.price > maxPrice) return false;
-    if (typeof minRating === "number" && product.rating < minRating) return false;
     if (inStockOnly && product.stockStatus === "out_of_stock") return false;
     if (onSaleOnly && product.discountPercent <= 0) return false;
     return true;
@@ -401,8 +397,6 @@ export async function queryProducts(query: ProductQuery = {}): Promise<ProductQu
         return a.product.price - b.product.price;
       case "price-desc":
         return b.product.price - a.product.price;
-      case "rating":
-        return b.product.rating - a.product.rating || b.product.reviewCount - a.product.reviewCount;
       case "discount":
         return b.product.discountPercent - a.product.discountPercent;
       default:

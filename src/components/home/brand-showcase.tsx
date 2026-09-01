@@ -77,10 +77,6 @@ export async function BrandShowcase() {
                 <span aria-hidden className="text-gold/40">
                   ·
                 </span>
-                <span>{entry.rating.toFixed(1)}★</span>
-                <span aria-hidden className="text-gold/40">
-                  ·
-                </span>
                 <span>from {formatPrice(entry.cheapest)}</span>
               </span>
             </Link>

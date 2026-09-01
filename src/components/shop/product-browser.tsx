@@ -73,12 +73,6 @@ export function ProductBrowser({
     })),
   ];
 
-  if (typeof state.minRating === "number") {
-    chips.push({
-      label: `${state.minRating.toFixed(1)}★ & up`,
-      href: buildHref(basePath, withFilter(state, { minRating: undefined })),
-    });
-  }
   if (typeof state.minPrice === "number" || typeof state.maxPrice === "number") {
     chips.push({
       label: "Price",

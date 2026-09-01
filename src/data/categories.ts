@@ -1,7 +1,7 @@
 import type { Category } from "@/types";
 
 /**
- * The fifteen top-level departments. Everything else in the app — navigation,
+ * The fourteen top-level departments. Everything else in the app — navigation,
  * the mega menu, category pages, filters, the catalogue generator — reads from
  * this list. Gradients are tuned for the dark theme: deep, saturated, and
  * legible under a white overlay.
@@ -61,17 +61,6 @@ export const categories: Category[] = [
     icon: "Sparkles",
     gradient: "from-rose-600 via-pink-600 to-fuchsia-700",
     subcategories: ["Skincare", "Hair Tools", "Sun Care", "Body", "Masks", "Lip Care"],
-    sourceUrl: "",
-  },
-  {
-    slug: "health-wellness",
-    name: "Health & Wellness",
-    tagline: "Third-party tested, plainly labelled",
-    description:
-      "Supplements, recovery devices and monitors. Every batch is tested by an outside lab and the certificate is linked on the product page.",
-    icon: "HeartPulse",
-    gradient: "from-emerald-700 via-teal-700 to-cyan-700",
-    subcategories: ["Supplements", "Recovery", "Monitoring", "Sleep", "Nutrition", "Mobility"],
     sourceUrl: "",
   },
   {
@@ -186,7 +175,7 @@ export function getCategory(slug: string) {
 
 export const categoryBySlug = new Map(categories.map((category) => [category.slug, category]));
 
-/** Grouping used by the mega menu so fifteen departments stay scannable. */
+/** Grouping used by the mega menu so fourteen departments stay scannable. */
 export const categoryGroups: { title: string; slugs: string[] }[] = [
   {
     title: "Tech",
@@ -200,7 +189,6 @@ export const categoryGroups: { title: string; slugs: string[] }[] = [
     title: "You & Family",
     slugs: [
       "beauty-personal-care",
-      "health-wellness",
       "fashion",
       "baby-products",
       "toys-games",

@@ -1,4 +1,4 @@
-import { Check, Star } from "lucide-react";
+import { Check } from "lucide-react";
 import Link from "next/link";
 
 import { Separator } from "@/components/ui/separator";
@@ -19,8 +19,6 @@ const PRICE_BANDS = [
   { label: `${formatPrice(35000)} – ${formatPrice(70000)}`, min: 35000, max: 69999 },
   { label: `${formatPrice(70000)} and up`, min: 70000, max: undefined },
 ];
-
-const RATINGS = [4.5, 4.0, 3.5];
 
 function FilterRow({
   href,
@@ -147,28 +145,6 @@ export function FilterPanel({
             </FilterRow>
           );
         })}
-      </Group>
-
-      <Separator />
-
-      <Group title="Rating">
-        {RATINGS.map((rating) => (
-          <FilterRow
-            key={rating}
-            active={state.minRating === rating}
-            href={buildHref(
-              basePath,
-              withFilter(state, {
-                minRating: state.minRating === rating ? undefined : rating,
-              }),
-            )}
-          >
-            <span className="flex items-center gap-1.5">
-              <Star className="size-3.5 fill-current" aria-hidden />
-              {rating.toFixed(1)} &amp; up
-            </span>
-          </FilterRow>
-        ))}
       </Group>
 
       {/* Only meaningful when the listing spans more than one store. */}

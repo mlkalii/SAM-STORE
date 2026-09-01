@@ -15,9 +15,7 @@ import { FrequentlyBoughtTogether } from "@/components/product/frequently-bought
 import { ProductGrid } from "@/components/product/product-grid";
 import { ProductRail } from "@/components/product/product-rail";
 import { UpsellCard } from "@/components/product/upsell-card";
-import { ProductReviews } from "@/components/product/product-reviews";
 import { RecentlyViewedRail, RecordRecentlyViewed } from "@/components/product/recently-viewed";
-import { StarRating } from "@/components/product/star-rating";
 import { StickyBuyBar } from "@/components/product/sticky-buy-bar";
 import {
   Accordion,
@@ -121,7 +119,7 @@ export default async function ProductPage(props: PageProps<"/shop/[slug]">) {
 
   return (
     <>
-      {/* Rich result markup for the product, its offer and its rating. */}
+      {/* Rich result markup for the product and its offer. */}
       <script
         type="application/ld+json"
         // Serialised server-side from our own data — no user input involved.
@@ -185,14 +183,6 @@ export default async function ProductPage(props: PageProps<"/shop/[slug]">) {
             </p>
 
             <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
-              <a href="#reviews" className="hover:text-foreground">
-                <StarRating
-                  rating={product.rating}
-                  reviewCount={product.reviewCount}
-                  showValue
-                  size="sm"
-                />
-              </a>
               <StockBadge status={product.stockStatus} count={product.stockCount} />
               <CopySkuButton sku={product.sku} />
             </div>
@@ -334,10 +324,6 @@ export default async function ProductPage(props: PageProps<"/shop/[slug]">) {
           <FrequentlyBoughtTogether anchor={product} companions={companions} />
         </Container>
       ) : null}
-
-      <Container as="section" className="border-t py-16">
-        <ProductReviews product={product} />
-      </Container>
 
       <Container as="section" className="py-16">
         <SectionHeading

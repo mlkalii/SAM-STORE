@@ -11,7 +11,6 @@ import { ProductImage } from "@/components/product/product-image";
 import { ProductChips, SellerLine } from "@/components/product/product-meta";
 import { QuickAddButton } from "@/components/product/quick-add-button";
 import { QuickViewTrigger } from "@/components/product/quick-view-trigger";
-import { StarRating } from "@/components/product/star-rating";
 import { useClientToday } from "@/hooks/use-client-today";
 import { shortDeliveryLabel } from "@/lib/delivery";
 import { discountPercent, formatPrice } from "@/lib/format";
@@ -145,12 +144,6 @@ export function ProductCard({
         {compact ? null : <SellerLine product={product} className="mt-1.5" />}
 
         <div className="mt-2 flex flex-wrap items-center gap-x-2.5 gap-y-1">
-          <StarRating
-            rating={product.rating}
-            reviewCount={product.reviewCount}
-            showValue
-            size="xs"
-          />
           <StockBadge status={product.stockStatus} count={product.stockCount} />
         </div>
 

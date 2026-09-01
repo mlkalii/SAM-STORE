@@ -7,7 +7,6 @@ import * as React from "react";
 import { ProductImage } from "@/components/product/product-image";
 import { QuickAddButton } from "@/components/product/quick-add-button";
 import { StockBadge } from "@/components/product/product-badges";
-import { StarRating } from "@/components/product/star-rating";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { COMPARE_LIMIT, useCompare } from "@/hooks/use-product-lists";
@@ -70,12 +69,6 @@ export function CompareView() {
       label: "Price",
       render: (product) => (
         <span className="font-mono text-base tabular-nums">{formatPrice(product.price)}</span>
-      ),
-    },
-    {
-      label: "Rating",
-      render: (product) => (
-        <StarRating rating={product.rating} reviewCount={product.reviewCount} showValue size="xs" />
       ),
     },
     {

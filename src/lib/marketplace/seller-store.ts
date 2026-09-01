@@ -166,7 +166,7 @@ const SEED_SELLERS: SeedInput[] = [
     contactName: "Priya Raman",
     email: "care@meridianwellbeing.example",
     phone: "+1 (615) 555-0119",
-    departments: ["beauty-personal-care", "health-wellness"],
+    departments: ["beauty-personal-care"],
     rating: 4.8,
     reviewCount: 2760,
     followerCount: 9130,

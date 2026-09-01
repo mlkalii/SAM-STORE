@@ -7,7 +7,6 @@ import * as React from "react";
 import { toast } from "sonner";
 
 import { ProductImage } from "@/components/product/product-image";
-import { StarRating } from "@/components/product/star-rating";
 import { WishlistButton } from "@/components/product/product-actions";
 import { useCart } from "@/components/providers/cart-provider";
 import { Button } from "@/components/ui/button";
@@ -18,7 +17,7 @@ import type { Product } from "@/types";
  * Sticky purchase bar.
  *
  * Appears once the main buy panel has scrolled out of view, so the price and
- * the primary action stay reachable through the specs and reviews. Uses an
+ * the primary action stay reachable through the specs. Uses an
  * IntersectionObserver against a sentinel rather than scroll maths.
  */
 export function StickyBuyBar({
@@ -83,7 +82,6 @@ export function StickyBuyBar({
                     {formatPrice(product.compareAtPrice)}
                   </span>
                 ) : null}
-                <StarRating rating={product.rating} size="xs" className="hidden sm:inline-flex" />
               </div>
             </div>
 
