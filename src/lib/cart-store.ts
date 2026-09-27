@@ -48,7 +48,7 @@ function onStorage(event: StorageEvent) {
  * The cart lives outside React so it can be read with `useSyncExternalStore`.
  * That keeps hydration free of a setState round trip and gives cross-tab sync
  * for free. Each line carries its own product snapshot, so the client bundle
- * never has to import the 300-product catalogue just to render the bag.
+ * never has to import the whole catalogue just to render the bag.
  */
 export const cartStore = {
   subscribe(listener: Listener) {

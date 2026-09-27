@@ -8,7 +8,7 @@
  */
 
 export type WarrantyKind =
-  /** A fixed number of months of manufacturer cover. */
+  /** A fixed number of months of cover. */
   | "months"
   /** Replaced only if it arrives faulty. */
   | "doa-replacement"
@@ -31,7 +31,7 @@ const MONTHS = (months: number): WarrantyPolicy => ({
   kind: "months",
   months,
   label: `${months}-month warranty`,
-  summary: `Covered by a ${months}-month manufacturer warranty against defects in materials and workmanship, starting on the delivery date.`,
+  summary: `Covered by a ${months}-month SAMRUX warranty against defects in materials and workmanship, starting on the delivery date.`,
 });
 
 const DOA: WarrantyPolicy = {

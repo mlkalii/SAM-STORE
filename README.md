@@ -1,6 +1,6 @@
 # SAMRUX — direct-to-consumer store across fourteen departments
 
-A production-shaped Next.js commerce front end: fourteen departments, 285 catalogue products,
+A production-shaped Next.js commerce front end: fourteen departments, 69 catalogue products,
 server-rendered filtering and search, on a dark-luxury design system. App Router, React Server Components, Tailwind v4,
 shadcn/ui, Framer Motion for interaction, GSAP for the scripted hero and scroll work.
 
@@ -104,9 +104,15 @@ so many feeds work without edits. Everything downstream reads
 
 ## Catalogue data
 
-285 products — 14 departments × up to 7 product types × 3 tiers (Lite / standard / Pro), each with a verified, self-hosted photo under `public/products/` (credits in `public/products/CREDITS.json`).
-Every name, SKU and slug is unique; brands are assigned on a stride co-prime with the
-pool size so no two concepts in a department share one.
+69 products across 14 departments, one listing per photograph, each with a self-hosted photo
+under `public/products/` (credits in `public/products/CREDITS.json`). Every product is sold
+directly by SAMRUX LLC and priced in USD.
+
+`src/data/catalog.json` is the source of truth and is curated, not regenerated.
+`scripts/curate-catalog.mjs` is the pass that removed the duplicate Lite / Pro listings and the
+listings whose photograph did not match; the file as it stood before that pass is kept in
+`scripts/catalog-archive/`. The generator scripts below are retained for reference only and
+write to `src/data/catalog.generated.json`.
 
 ```
 scripts/catalog-source.mjs         10 original departments × 10 concepts
@@ -124,10 +130,10 @@ src/data/categories.ts         the ten departments
 Every product carries: name, brand, SKU, short and long description, features,
 specifications, price, discount and compare-at price, rating, review count, written reviews,
 stock status and count, category, subcategory, variants, tags, release date, warranty months,
-return window, dispatch hours, a video flag, six images, and the
+return window, dispatch hours, a video flag, one image, and the
 featured / best-seller / new-arrival / trending flags.
 
-Totals: **285 products · 95 product photos · 21 per department (18 automotive, 15 computers)**.
+Totals: **69 products · 69 product photos**.
 
 The generator is deterministic — running it twice produces a byte-identical file, so the
 catalogue diffs like any other source. Nothing imports the script at runtime.
@@ -205,10 +211,9 @@ round trip, `localStorage` persistence, cross-tab sync. Each line carries a prod
 
 ## Product imagery
 
-Real photography from Unsplash (free for commercial use under the Unsplash License).
-`scripts/image-pool.mjs` holds 124 curated photo IDs — every one verified to resolve and
-visually checked against its department — and the generator assigns six per product with a
-rotating offset so neighbouring products never share a lead shot.
+One self-hosted photograph per product under `public/products/`, with the source and licence
+of each recorded in `public/products/CREDITS.json`. These are licensed stock photographs chosen
+to match the product type; replace them with photographs of the actual stock before launch.
 
 `components/product/product-image.tsx` wraps `next/image`: responsive `sizes`, AVIF/WebP
 negotiation, lazy loading below the fold, `priority` on the first grid row and the PDP hero,
@@ -224,10 +229,9 @@ To use your own photography: drop files under `public/products/<slug>/` and poin
 Gallery with cursor-tracking zoom, a full-screen viewer (arrow-key navigable), a thumbnail
 slider and a video slot. Brand link, copyable SKU, specifications, features, description,
 warranty, shipping and returns. Delivery estimate that resolves after hydration so a
-prerendered page never shows a stale date. Reviews with distribution bars, star ratings and
-verified-purchase badges — server-rendered, so they are indexable. Wishlist, compare, share,
+prerendered page never shows a stale date. Wishlist, compare, share,
 sticky add-to-cart, buy now, related products, more-from-this-brand, and recently viewed.
-`Product`, `Offer`, `AggregateRating` and `Review` JSON-LD ship with every page.
+`Product` and `Offer` JSON-LD ship with every page.
 
 ## Client-side lists
 

@@ -101,10 +101,10 @@ export default async function HomePage() {
         eyebrow="Best sellers"
         title={
           <>
-            What people <em className="italic">actually reorder</em>
+            Popular <em className="italic">across the range</em>
           </>
         }
-        description="The products customers come back for, across all fourteen departments."
+        description="A selection of popular products from all fourteen departments."
         href="/best-sellers"
         linkLabel="All best sellers"
         products={bestSellers}

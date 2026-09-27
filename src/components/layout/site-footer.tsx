@@ -103,7 +103,8 @@ export function SiteFooter() {
         {/* Policies strip */}
         <div className="flex flex-col gap-5 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} {storeConfig.legalName}. All rights reserved. All prices
+            © {new Date().getFullYear()} {storeConfig.legalName}. All rights reserved.{" "}
+            {storeConfig.tradingName} is an online retail store operated by {storeConfig.legalName}. All prices
             are in US dollars ({currencyConfig.code}).
           </p>
 

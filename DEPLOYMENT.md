@@ -18,7 +18,7 @@ order of infrastructure ownership.
 
    ```sh
    npm run db:migrate     # applies prisma/migrations (0001_init creates all tables)
-   npm run db:seed        # staff accounts, 780-product catalogue, rules, gift cards
+   npm run db:seed        # staff accounts, catalogue, gift cards
    ```
 
 ## 1. Vercel

@@ -1,5 +1,9 @@
 # SAMRUX — Release Candidate 1
 
+> **Historical record.** This describes the August 2026 build. The seller, payout,
+> commission and review features it mentions have since been removed: SAMRUX is a
+> single retail store operated by SAMRUX LLC. See `README.md` for the current state.
+
 Phase 12 final QA, production audit and release verification.
 Build verified 1 August 2026 against `next build` + `next start`, not the dev server.
 

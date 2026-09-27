@@ -49,7 +49,7 @@ export default function HelpPage() {
         {
           heading: "Warranty",
           paragraphs: [
-            "We administer warranty claims ourselves rather than passing you to the manufacturer. Cover runs from 12 months on Lite configurations to 60 months on Max.",
+            "We administer warranty claims ourselves rather than passing you to the manufacturer. Cover is set by department and shown on every product page; the warranty page lists each one.",
           ],
         },
         {

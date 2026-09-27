@@ -30,7 +30,7 @@ export const mainNav: NavItem[] = [
   { label: "Categories", href: "/categories", description: "Browse by department" },
   { label: "Deals", href: "/deals", description: "Everything currently reduced" },
   { label: "New Arrivals", href: "/new-arrivals", description: "Added in the last few weeks" },
-  { label: "Best Sellers", href: "/best-sellers", description: "What people actually reorder" },
+  { label: "Best Sellers", href: "/best-sellers", description: "Popular across the range" },
   { label: "About", href: "/about", description: "How we choose what to stock" },
   { label: "Contact", href: "/contact", description: "Talk to a real person" },
 ];

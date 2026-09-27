@@ -13,7 +13,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Best sellers",
-  description: "The products people reorder, ranked by verified review volume.",
+  description: "Popular products from across the SAMRUX range.",
 };
 
 export default async function BestSellersPage(props: PageProps<"/best-sellers">) {
@@ -36,7 +36,7 @@ export default async function BestSellersPage(props: PageProps<"/best-sellers">)
             Best <em className="italic">sellers</em>
           </>
         }
-        description="Ranked by verified purchases and review volume, not by what we would like to move. Updated weekly."
+        description="Popular products from across the range, all sold and shipped directly by SAMRUX LLC."
       />
 
       <DepartmentRail className="mt-10" />

@@ -7,7 +7,7 @@ import { searchInsights } from "@/lib/commerce/search-insights";
 /**
  * Type-ahead endpoint for the header search field.
  *
- * Keeping suggestions on the server means the 300-product catalogue never
+ * Keeping suggestions on the server means the product catalogue never
  * reaches the client bundle. Swap `suggestProducts` for a search service
  * (Algolia, Typesense, a database query) and the client stays unchanged.
  */

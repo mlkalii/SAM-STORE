@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Categories",
-  description: "Fifteen departments, each curated to a short list of things worth owning.",
+  description: "Fourteen departments, each curated to a short list of things worth owning.",
 };
 
 export default async function CategoriesPage() {

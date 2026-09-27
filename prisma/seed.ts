@@ -3,8 +3,7 @@
  *
  * Loads the same data the in-memory stores boot with, so switching
  * `DATA_BACKEND` to "prisma" lands on an identical storefront: the full
- * 780-product catalogue, the five staff accounts, the marketplace sellers,
- * commission rules, promotions and gift cards.
+ * catalogue, the staff accounts and gift cards.
  *
  * Run with:  npm run db:seed          (after `npm run db:migrate`)
  * Idempotent: everything is upserted by its natural key, so re-running
@@ -172,27 +171,6 @@ async function seedCatalog() {
   console.log(`catalog: ${count} products`);
 }
 
-async function seedCommissionRules() {
-  const rules = [
-    { id: "marketplace-default", kind: "percentage", label: "Marketplace standard", value: 12, priority: 0 },
-    { id: "category-electronics", kind: "category", label: "Electronics", value: 8, category: "electronics", priority: 10 },
-    { id: "category-computers", kind: "category", label: "Computers & Accessories", value: 8, category: "computers-accessories", priority: 10 },
-    { id: "category-mobile", kind: "category", label: "Mobile Phones & Accessories", value: 10, category: "mobile-phones", priority: 10 },
-    { id: "category-grocery", kind: "category", label: "Grocery & Gourmet Food", value: 6, category: "grocery-gourmet-food", priority: 10 },
-    { id: "category-fashion", kind: "category", label: "Fashion", value: 15, category: "fashion", priority: 10 },
-    { id: "category-beauty", kind: "category", label: "Beauty & Personal Care", value: 15, category: "beauty-personal-care", priority: 10 },
-  ];
-
-  for (const rule of rules) {
-    await prisma.commissionRule.upsert({
-      where: { id: rule.id },
-      create: rule,
-      update: { value: rule.value, priority: rule.priority },
-    });
-  }
-  console.log(`commission rules: ${rules.length}`);
-}
-
 async function seedGiftCards() {
   const cards = [
     { code: "SAMRUX-GIFT-50", initialBalance: 5000, balance: 5000 },
@@ -208,7 +186,6 @@ async function seedGiftCards() {
 async function main() {
   await seedStaff();
   await seedCatalog();
-  await seedCommissionRules();
   await seedGiftCards();
 }
 

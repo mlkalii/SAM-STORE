@@ -26,7 +26,7 @@ function warnings(): string[] {
 
   if (DATA_BACKEND !== "prisma") {
     notes.push(
-      "DATA_BACKEND is 'memory': accounts, orders and seller records live in this " +
+      "DATA_BACKEND is 'memory': accounts, orders and store records live in this " +
         "instance's RAM. On a serverless host every instance has its own copy and " +
         "loses it on shutdown. Set DATA_BACKEND=prisma with DATABASE_URL to persist.",
     );

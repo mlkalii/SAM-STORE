@@ -10,7 +10,7 @@ import { StockBadge } from "@/components/product/product-badges";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { COMPARE_LIMIT, useCompare } from "@/hooks/use-product-lists";
-import { formatWarranty } from "@/lib/delivery";
+import { warrantyFor } from "@/config/warranty";
 import { discountPercent, formatPrice } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import type { Product } from "@/types";
@@ -82,7 +82,7 @@ export function CompareView() {
     { label: "SKU", render: (product) => <span className="font-mono text-xs">{product.sku}</span> },
     {
       label: "Warranty",
-      render: (product) => formatWarranty(product.warrantyMonths),
+      render: (product) => warrantyFor(product.category).label,
     },
     {
       label: "Returns",

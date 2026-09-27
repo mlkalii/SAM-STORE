@@ -14,7 +14,7 @@ export default async function ProfilePage() {
 
   return (
     <>
-      <Panel title="Profile photo" description="Shown on reviews and in your account.">
+      <Panel title="Profile photo" description="Shown in your account.">
         <div className="flex flex-wrap items-center gap-5">
           <Avatar
             initials={profile.initials}

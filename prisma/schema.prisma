@@ -1,4 +1,4 @@
-// SAMRUX marketplace schema.
+// SAMRUX store schema — a single retail store operated by SAMRUX LLC.
 //
 // Mirrors the in-memory domain stores one-to-one, so the migration path is
 // "implement each store interface against these tables" — no behavioural
@@ -9,7 +9,7 @@
 //   createdAt / updatedAt / deletedAt
 //               audit fields on every mutable table; soft delete everywhere a
 //               row can be referenced by history (never hard-delete an order's
-//               product, a review's author, a payout's seller)
+//               product)
 //   Money       integer minor units (Int), exactly as the application layer —
 //               amounts are integer minor units (cents); the store trades in USD
 //   Indexes     every foreign key, every column the query engine filters on
@@ -44,10 +44,7 @@ model User {
   orders        Order[]
   notifications Notification[]
   authTokens    AuthToken[]
-  reviews       Review[]
   threads       MessageThread[]
-  follows       SellerFollow[]
-  seller        Seller?
   auditEntries  AuditLog[]     @relation("AuditActorUser")
 
   createdAt DateTime  @default(now())
@@ -126,103 +123,6 @@ model Notification {
 }
 
 /* ------------------------------------------------------------------------ */
-/*  Marketplace sellers                                                      */
-/* ------------------------------------------------------------------------ */
-
-model Seller {
-  id          String  @id @default(cuid())
-  slug        String  @unique
-  owner       User    @relation(fields: [ownerUserId], references: [id])
-  ownerUserId String  @unique
-  storeName   String
-  description String  @default("")
-  logoUrl     String?
-  bannerUrl   String?
-  gradient    String  @default("from-zinc-800 to-zinc-600")
-
-  // Business record. Tax id stored masked; the full value belongs in a
-  // dedicated KYC vault, never in the application database.
-  legalName          String
-  businessType       String
-  taxIdMasked        String
-  registrationNumber String?
-  addressLine1       String
-  addressLine2       String?
-  city               String
-  state              String
-  postcode           String
-  country            String  @default("US")
-  contactName        String
-  contactEmail       String
-  contactPhone       String
-
-  // Payout destination — last four digits only.
-  bankAccountName  String?
-  bankAccountLast4 String?
-  bankRoutingLast4 String?
-  usdtWallet       String?
-
-  status          String    @default("pending") // draft|pending|approved|suspended|rejected
-  statusNote      String?
-  statusChangedAt DateTime?
-  statusChangedBy String?
-
-  commissionOverride Int? // percentage points
-
-  rating        Float  @default(0)
-  reviewCount   Int    @default(0)
-  followerCount Int    @default(0)
-  departments   String[] @default([])
-  featured      Boolean  @default(false)
-  dispatchHours Int      @default(24)
-  returnDays    Int      @default(30)
-
-  products      Product[]
-  verifications SellerVerification[]
-  ledgerEntries LedgerEntry[]
-  payouts       Payout[]
-  reviews       Review[]
-  threads       MessageThread[]
-  followers     SellerFollow[]
-
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  deletedAt DateTime?
-
-  @@index([status])
-  @@index([featured])
-}
-
-model SellerVerification {
-  id          String    @id @default(cuid())
-  seller      Seller    @relation(fields: [sellerId], references: [id])
-  sellerId    String
-  kind        String // identity | business | tax | banking
-  status      String    @default("not-started")
-  documentRef String?
-  note        String?
-  submittedAt DateTime?
-  reviewedAt  DateTime?
-  reviewedBy  String?
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@unique([sellerId, kind])
-}
-
-model SellerFollow {
-  seller     Seller   @relation(fields: [sellerId], references: [id])
-  sellerId   String
-  user       User     @relation(fields: [userId], references: [id])
-  userId     String
-  followedAt DateTime @default(now())
-
-  @@id([sellerId, userId])
-  @@index([userId])
-}
-
-/* ------------------------------------------------------------------------ */
 /*  Catalogue                                                                */
 /* ------------------------------------------------------------------------ */
 
@@ -249,9 +149,6 @@ model Product {
   subcategory String @default("")
   tags       String[] @default([])
 
-  seller   Seller? @relation(fields: [sellerId], references: [id])
-  sellerId String?
-
   images   ProductImage[]
   variants ProductVariant[]
 
@@ -271,7 +168,6 @@ model Product {
   newArrival Boolean @default(false)
   trending   Boolean @default(false)
 
-  reviews    Review[]
   orderLines OrderLine[]
   movements  StockMovement[]
 
@@ -281,8 +177,8 @@ model Product {
   deletedAt DateTime?
 
   @@index([category, status, visible])
-  @@index([sellerId])
   @@index([brand])
+
   @@index([price])
   @@index([deletedAt])
 }
@@ -396,8 +292,6 @@ model OrderLine {
   name         String
   brand        String
   category     String
-  sellerId     String?
-  sellerName   String?
   image        String  @default("")
 
   quantity     Int
@@ -407,7 +301,6 @@ model OrderLine {
   lineDiscount Int @default(0)
 
   @@index([orderId])
-  @@index([sellerId])
   @@index([slug])
 }
 
@@ -433,7 +326,7 @@ model PaymentTransaction {
   orderId  String
   provider String // stripe | paypal | apple-pay | google-pay | bank-transfer | cash-on-delivery | usdt
 
-  kind      String // intent | capture | refund | payout-settlement
+  kind      String // intent | capture | refund
   status    String // pending | authorised | captured | failed | refunded
   amount    Int
   currency  String  @default("USD")
@@ -446,69 +339,6 @@ model PaymentTransaction {
   @@index([orderId])
   @@index([provider, reference])
   @@index([status])
-}
-
-/* ------------------------------------------------------------------------ */
-/*  Marketplace money                                                        */
-/* ------------------------------------------------------------------------ */
-
-model LedgerEntry {
-  id       String @id @default(cuid())
-  seller   Seller @relation(fields: [sellerId], references: [id])
-  sellerId String
-  kind     String // sale | commission | refund | commission-reversal | payout | adjustment
-  amount   Int // positive credits the seller, negative debits
-  currency String @default("USD")
-  description String
-  orderId        String?
-  orderReference String?
-  payout   Payout? @relation(fields: [payoutId], references: [id])
-  payoutId String?
-
-  createdAt DateTime @default(now())
-
-  @@index([sellerId, createdAt])
-  @@index([orderId])
-}
-
-model Payout {
-  id        String @id @default(cuid())
-  reference String @unique
-  seller    Seller @relation(fields: [sellerId], references: [id])
-  sellerId  String
-  amount    Int
-  currency  String @default("USD")
-  status    String @default("requested") // requested|approved|processing|paid|rejected
-  destination    String
-  note           String?
-  processedBy    String?
-  processedAt    DateTime?
-  transactionRef String?
-
-  ledgerEntries LedgerEntry[]
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@index([sellerId, createdAt])
-  @@index([status])
-}
-
-model CommissionRule {
-  id       String  @id @default(cuid())
-  kind     String // percentage | fixed | category
-  label    String
-  value    Int // percentage points, or minor units for `fixed`
-  category String?
-  sellerId String?
-  active   Boolean @default(true)
-  priority Int     @default(10)
-
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  deletedAt DateTime?
-
-  @@index([active, priority])
 }
 
 /* ------------------------------------------------------------------------ */
@@ -553,41 +383,8 @@ model GiftCard {
 }
 
 /* ------------------------------------------------------------------------ */
-/*  Reviews and messaging                                                    */
+/*  Customer support messaging                                               */
 /* ------------------------------------------------------------------------ */
-
-model Review {
-  id       String  @id @default(cuid())
-  target   String // product | seller
-  product  Product? @relation(fields: [productId], references: [id])
-  productId String?
-  seller   Seller  @relation(fields: [sellerId], references: [id])
-  sellerId String
-  author   User    @relation(fields: [authorId], references: [id])
-  authorId String
-
-  rating           Int
-  title            String
-  body             String
-  verifiedPurchase Boolean @default(false)
-  orderId          String?
-
-  status         String    @default("pending") // pending | published | rejected
-  moderatedAt    DateTime?
-  moderatedBy    String?
-  moderationNote String?
-  helpfulCount   Int       @default(0)
-  replyBody      String?
-  replyAt        DateTime?
-
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  deletedAt DateTime?
-
-  @@index([productId, status])
-  @@index([sellerId, status])
-  @@index([authorId])
-}
 
 model MessageThread {
   id         String @id @default(cuid())
@@ -595,8 +392,6 @@ model MessageThread {
   subject    String
   customer   User   @relation(fields: [customerId], references: [id])
   customerId String
-  seller     Seller @relation(fields: [sellerId], references: [id])
-  sellerId   String
   productSlug String?
   orderId     String?
   status      String @default("open") // open | answered | closed
@@ -608,7 +403,6 @@ model MessageThread {
   updatedAt DateTime @updatedAt
 
   @@index([customerId, updatedAt])
-  @@index([sellerId, updatedAt])
   @@index([productSlug, visibility, status])
 }
 
@@ -617,14 +411,14 @@ model Message {
   thread   MessageThread @relation(fields: [threadId], references: [id])
   threadId String
 
-  authorRole String // customer | seller | admin
+  authorRole String // customer | admin
   authorId   String
   authorName String
   body       String
   attachments Json @default("[]")
 
   readByCustomer Boolean @default(false)
-  readBySeller   Boolean @default(false)
+  readBySupport  Boolean @default(false)
 
   createdAt DateTime @default(now())
 
@@ -645,7 +439,7 @@ model AuditLog {
   userActorId  String?
   actorLabel   String // denormalised display name, survives account deletion
 
-  action   String // e.g. product.update, seller.approve, payout.paid
+  action   String // e.g. product.update, order.refund
   resource String // e.g. product:aeris-wireless-headphones
   detail   Json?
   ip       String?

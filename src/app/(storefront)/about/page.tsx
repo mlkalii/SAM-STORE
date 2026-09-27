@@ -66,7 +66,11 @@ export default async function AboutPage() {
           <h1 className="mt-6 max-w-4xl font-display text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.98] tracking-tight text-balance">
             A department store with a rejection rate.
           </h1>
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground text-pretty">
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-pretty">
+            {siteConfig.name} is an online retail store operated by {siteConfig.legalName}. Every
+            product on this site is sold and shipped directly by us.
+          </p>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground text-pretty">
             {meta.count} products across {categories.length} departments. Every one of
             them displaced something else, because each department is kept deliberately small. That cap
             is the entire product strategy — it forces a decision instead of a listing.
