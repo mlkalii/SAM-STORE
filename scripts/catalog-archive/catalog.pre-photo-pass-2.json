@@ -2,7 +2,7 @@
  "generatedFrom": "scripts/generate-catalog.mjs + curated image/price pass (2026-09-26)",
  "catalogDate": "2026-07-01",
  "currency": "USD",
- "count": 56,
+ "count": 69,
  "products": [
   {
    "id": "p-0002",
@@ -322,21 +322,40 @@
    "name": "Corex Mechanical Keyboard",
    "brand": "Cirroq",
    "sku": "ELE-CM-05-ST",
-   "shortDescription": "A compact mechanical keyboard with two-tone keycaps.",
-   "longDescription": "A compact mechanical keyboard with two-tone keycaps.\n\nSold and shipped directly by SAMRUX LLC.",
+   "shortDescription": "A gasket-mounted 75% board with hot-swap sockets and real damping.",
+   "longDescription": "A gasket-mounted 75% board with hot-swap sockets and real damping. Built by Cirroq for the electronics range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Cirroq over-engineers. Hot-swap sockets accept three- and five-pin switches, and gasket mount with two layers of poron for a softer bottom-out.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
    "features": [
-    "Compact layout",
-    "Two-tone keycaps",
-    "Mechanical switches"
+    "Hot-swap sockets accept three- and five-pin switches",
+    "Gasket mount with two layers of poron for a softer bottom-out",
+    "Wired, 2.4 GHz and Bluetooth for three paired devices",
+    "Firmware updates delivered over the air for a minimum of five years",
+    "Repair schematics and spare parts published on the support portal"
    ],
    "specifications": [
+    {
+     "label": "Layout",
+     "value": "75%, 82 keys"
+    },
+    {
+     "label": "Switches",
+     "value": "Pre-lubed linear, 45 g actuation"
+    },
+    {
+     "label": "Keycaps",
+     "value": "PBT double-shot, cherry profile"
+    },
+    {
+     "label": "In the box",
+     "value": "Device, braided USB-C cable, quick-start card"
+    },
     {
      "label": "SKU",
      "value": "ELE-CM-05-ST"
     }
    ],
    "price": 15899,
-   "discountPercent": 0,
+   "compareAtPrice": 17699,
+   "discountPercent": 10,
    "rating": 4.6,
    "reviewCount": 2904,
    "stockStatus": "in_stock",
@@ -347,7 +366,7 @@
     {
      "id": "cirroq-corex-mechanical-keyboard-main",
      "view": "main",
-     "alt": "Corex Mechanical Keyboard — product photo",
+     "alt": "Cirroq Corex Mechanical Keyboard — product photo",
      "src": "/products/electronics-corex-mechanical-keyboard/main.jpg",
      "thumbnail": "/products/electronics-corex-mechanical-keyboard/thumb.jpg",
      "credit": "Photo: Nebulant via flickr, CC BY 2.0",
@@ -365,6 +384,7 @@
    "tags": [
     "Electronics",
     "Accessories",
+    "Cirroq",
     "Corex",
     "Mechanical",
     "Keyboard"
@@ -433,25 +453,327 @@
    ]
   },
   {
+   "id": "p-0011",
+   "slug": "kestrel-audio-aperture-mirrorless-camera",
+   "name": "Aperture Mirrorless Camera",
+   "brand": "Kestrel Audio",
+   "sku": "ELE-AM-09-ST",
+   "shortDescription": "A 33-megapixel full-frame body with in-body stabilisation.",
+   "longDescription": "A 33-megapixel full-frame body with in-body stabilisation. Built by Kestrel Audio for the electronics range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Kestrel Audio over-engineers. 8 stops of in-body image stabilisation, and subject-detection autofocus for people, animals and vehicles.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
+   "features": [
+    "8 stops of in-body image stabilisation",
+    "Subject-detection autofocus for people, animals and vehicles",
+    "Dual card slots — CFexpress B and UHS-II SD",
+    "Firmware updates delivered over the air for a minimum of five years",
+    "Repair schematics and spare parts published on the support portal"
+   ],
+   "specifications": [
+    {
+     "label": "Sensor",
+     "value": "33 MP full-frame BSI CMOS"
+    },
+    {
+     "label": "Video",
+     "value": "6K oversampled 4K/60, 10-bit 4:2:2"
+    },
+    {
+     "label": "Viewfinder",
+     "value": "3.69 M-dot OLED, 120 Hz"
+    },
+    {
+     "label": "In the box",
+     "value": "Device, braided USB-C cable, quick-start card"
+    },
+    {
+     "label": "SKU",
+     "value": "ELE-AM-09-ST"
+    }
+   ],
+   "price": 129899,
+   "compareAtPrice": 162399,
+   "discountPercent": 20,
+   "rating": 4,
+   "reviewCount": 2810,
+   "stockStatus": "low_stock",
+   "stockCount": 4,
+   "category": "electronics",
+   "subcategory": "Cameras",
+   "images": [
+    {
+     "id": "kestrel-audio-aperture-mirrorless-camera-main",
+     "view": "main",
+     "alt": "Kestrel Audio Aperture Mirrorless Camera — product photo",
+     "src": "/products/electronics-aperture-mirrorless-camera/main.jpg",
+     "thumbnail": "/products/electronics-aperture-mirrorless-camera/thumb.jpg",
+     "credit": "Photo: Janitors via flickr, CC BY 2.0",
+     "gradient": "from-slate-700 via-indigo-600 to-sky-500",
+     "width": 1600,
+     "height": 1600
+    }
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Standard"
+    }
+   ],
+   "tags": [
+    "Electronics",
+    "Cameras",
+    "Kestrel Audio",
+    "Aperture",
+    "Mirrorless",
+    "Camera"
+   ],
+   "releasedAt": "2025-07-23",
+   "gradient": "from-slate-700 via-indigo-600 to-sky-500",
+   "warrantyMonths": 24,
+   "returnWindowDays": 30,
+   "dispatchHours": 48,
+   "hasVideo": false,
+   "featured": false,
+   "bestSeller": false,
+   "newArrival": false,
+   "trending": false,
+   "reviews": [
+    {
+     "id": "kestrel-audio-aperture-mirrorless-camera-r1",
+     "author": "Oskar N.",
+     "rating": 4,
+     "title": "Very good, one small gripe",
+     "body": "Performs well and feels durable. Took off a star because the first one arrived with a cosmetic mark; support replaced it in two days without argument. Been using it daily for about three months now.",
+     "createdAt": "2026-06-13",
+     "verifiedPurchase": false,
+     "helpfulCount": 100
+    },
+    {
+     "id": "kestrel-audio-aperture-mirrorless-camera-r3",
+     "author": "Marta L.",
+     "rating": 3,
+     "title": "OK for the price",
+     "body": "Works as intended, though I expected a bit more refinement at this price. Fine if you catch it on a discount. Bought it as a gift and ended up ordering a second for myself.",
+     "createdAt": "2026-06-10",
+     "verifiedPurchase": true,
+     "helpfulCount": 102
+    },
+    {
+     "id": "kestrel-audio-aperture-mirrorless-camera-r6",
+     "author": "Sofia R.",
+     "rating": 3,
+     "title": "Fine, not remarkable",
+     "body": "Mixed — the core function is good but the finish is average. I would probably look around before rebuying. Replaced something twice the price and have not missed it.",
+     "createdAt": "2026-02-17",
+     "verifiedPurchase": true,
+     "helpfulCount": 193
+    },
+    {
+     "id": "kestrel-audio-aperture-mirrorless-camera-r2",
+     "author": "Aisha B.",
+     "rating": 4,
+     "title": "Good — nearly perfect",
+     "body": "Great quality for the money. Would be five stars if the accessories included were a little better.",
+     "createdAt": "2025-11-16",
+     "verifiedPurchase": true,
+     "helpfulCount": 105
+    },
+    {
+     "id": "kestrel-audio-aperture-mirrorless-camera-r5",
+     "author": "Tariq M.",
+     "rating": 4,
+     "title": "Recommended with one caveat",
+     "body": "Performs well and feels durable. Took off a star because the first one arrived with a cosmetic mark; support replaced it in two days without argument.",
+     "createdAt": "2025-10-14",
+     "verifiedPurchase": false,
+     "helpfulCount": 238
+    },
+    {
+     "id": "kestrel-audio-aperture-mirrorless-camera-r8",
+     "author": "Mei L.",
+     "rating": 5,
+     "title": "Does the job properly",
+     "body": "The spec sheet matched reality, which is more than I can say for the last three I tried. Build quality is genuinely good and it has not developed any rattles or quirks.",
+     "createdAt": "2025-08-02",
+     "verifiedPurchase": true,
+     "helpfulCount": 191
+    },
+    {
+     "id": "kestrel-audio-aperture-mirrorless-camera-r7",
+     "author": "Nadia S.",
+     "rating": 4,
+     "title": "Happy with it",
+     "body": "Very pleased overall. The only thing I would change is the documentation — it assumes you already know what you are doing.",
+     "createdAt": "2025-06-23",
+     "verifiedPurchase": true,
+     "helpfulCount": 149
+    },
+    {
+     "id": "kestrel-audio-aperture-mirrorless-camera-r4",
+     "author": "Hugo P.",
+     "rating": 5,
+     "title": "Better than the one it replaced",
+     "body": "Setup took five minutes and it has done exactly what it says since. Nothing clever, nothing annoying — it just works.",
+     "createdAt": "2025-06-13",
+     "verifiedPurchase": true,
+     "helpfulCount": 177
+    }
+   ]
+  },
+  {
+   "id": "p-0014",
+   "slug": "aeterna-relay-bluetooth-transmitter",
+   "name": "Relay Bluetooth Transmitter",
+   "brand": "Aeterna",
+   "sku": "ELE-RB-11-ST",
+   "shortDescription": "Adds low-latency wireless audio to anything with a 3.5 mm or optical out.",
+   "longDescription": "Adds low-latency wireless audio to anything with a 3.5 mm or optical out. Built by Aeterna for the electronics range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Aeterna over-engineers. aptX Low Latency keeps lip-sync correct on television audio, and transmits to two pairs of headphones at once.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
+   "features": [
+    "aptX Low Latency keeps lip-sync correct on television audio",
+    "Transmits to two pairs of headphones at once",
+    "Passthrough keeps the wired connection live",
+    "Firmware updates delivered over the air for a minimum of five years",
+    "Repair schematics and spare parts published on the support portal"
+   ],
+   "specifications": [
+    {
+     "label": "Codecs",
+     "value": "aptX LL, aptX HD, AAC, SBC"
+    },
+    {
+     "label": "Range",
+     "value": "30 m line of sight"
+    },
+    {
+     "label": "Inputs",
+     "value": "Optical, 3.5 mm, USB-C"
+    },
+    {
+     "label": "In the box",
+     "value": "Device, braided USB-C cable, quick-start card"
+    },
+    {
+     "label": "SKU",
+     "value": "ELE-RB-11-ST"
+    }
+   ],
+   "price": 3499,
+   "compareAtPrice": 4099,
+   "discountPercent": 15,
+   "rating": 4.7,
+   "reviewCount": 3760,
+   "stockStatus": "in_stock",
+   "stockCount": 411,
+   "category": "electronics",
+   "subcategory": "Audio",
+   "images": [
+    {
+     "id": "aeterna-relay-bluetooth-transmitter-main",
+     "view": "main",
+     "alt": "Aeterna Relay Bluetooth Transmitter — product photo",
+     "src": "/products/electronics-relay-bluetooth-transmitter/main.jpg",
+     "thumbnail": "/products/electronics-relay-bluetooth-transmitter/thumb.jpg",
+     "credit": "Photo: audioreservoir via flickr, CC BY 2.0",
+     "gradient": "from-sky-700 via-cyan-600 to-slate-400",
+     "width": 1600,
+     "height": 1600
+    }
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Standard"
+    }
+   ],
+   "tags": [
+    "Electronics",
+    "Audio",
+    "Aeterna",
+    "Relay",
+    "Bluetooth",
+    "Transmitter"
+   ],
+   "releasedAt": "2025-05-15",
+   "gradient": "from-sky-700 via-cyan-600 to-slate-400",
+   "warrantyMonths": 24,
+   "returnWindowDays": 30,
+   "dispatchHours": 48,
+   "hasVideo": false,
+   "featured": false,
+   "bestSeller": true,
+   "newArrival": false,
+   "trending": false,
+   "reviews": [
+    {
+     "id": "aeterna-relay-bluetooth-transmitter-r2",
+     "author": "Tomas H.",
+     "rating": 3,
+     "title": "Mixed feelings",
+     "body": "Mixed — the core function is good but the finish is average. I would probably look around before rebuying. Bought it after returning a cheaper one that lasted six weeks.",
+     "createdAt": "2026-01-27",
+     "verifiedPurchase": true,
+     "helpfulCount": 170
+    },
+    {
+     "id": "aeterna-relay-bluetooth-transmitter-r3",
+     "author": "Mei L.",
+     "rating": 5,
+     "title": "Better than the one it replaced",
+     "body": "Bought it partly on the warranty terms and have not needed them, which is the ideal outcome. Feels like it will outlast the guarantee comfortably.",
+     "createdAt": "2025-12-26",
+     "verifiedPurchase": true,
+     "helpfulCount": 174
+    },
+    {
+     "id": "aeterna-relay-bluetooth-transmitter-r1",
+     "author": "Anouk J.",
+     "rating": 5,
+     "title": "No notes",
+     "body": "Noticeably better made than the mainstream option I was comparing against. The details you only notice after a month are all right. Second one I've owned — replaced a five-year-old unit.",
+     "createdAt": "2025-08-26",
+     "verifiedPurchase": false,
+     "helpfulCount": 51
+    }
+   ]
+  },
+  {
    "id": "p-0020",
    "slug": "cirroq-beacon-action-camera",
    "name": "Beacon Action Camera",
    "brand": "Cirroq",
    "sku": "ELE-BA-13-ST",
-   "shortDescription": "A compact action camera supplied with a clear waterproof housing and mount.",
-   "longDescription": "A compact action camera supplied with a clear waterproof housing and mount.\n\nSold and shipped directly by SAMRUX LLC.",
+   "shortDescription": "Waterproof to 10 m without a case, with stabilisation that actually holds.",
+   "longDescription": "Waterproof to 10 m without a case, with stabilisation that actually holds. Built by Cirroq for the electronics range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Cirroq over-engineers. Waterproof to 10 m with no housing needed, and horizon-lock stabilisation up to 360° of rotation.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
    "features": [
-    "Clear waterproof housing included",
-    "Mounting bracket included"
+    "Waterproof to 10 m with no housing needed",
+    "Horizon-lock stabilisation up to 360° of rotation",
+    "Front screen for framing yourself",
+    "Firmware updates delivered over the air for a minimum of five years",
+    "Repair schematics and spare parts published on the support portal"
    ],
    "specifications": [
+    {
+     "label": "Video",
+     "value": "5.3K/60, 4K/120"
+    },
+    {
+     "label": "Photo",
+     "value": "27 MP stills, RAW"
+    },
+    {
+     "label": "Battery",
+     "value": "Removable 1,720 mAh"
+    },
+    {
+     "label": "In the box",
+     "value": "Device, braided USB-C cable, quick-start card"
+    },
     {
      "label": "SKU",
      "value": "ELE-BA-13-ST"
     }
    ],
    "price": 32899,
-   "discountPercent": 0,
+   "compareAtPrice": 38699,
+   "discountPercent": 15,
    "rating": 4.5,
    "reviewCount": 1612,
    "stockStatus": "in_stock",
@@ -462,7 +784,7 @@
     {
      "id": "cirroq-beacon-action-camera-main",
      "view": "main",
-     "alt": "Beacon Action Camera — product photo",
+     "alt": "Cirroq Beacon Action Camera — product photo",
      "src": "/products/electronics-beacon-action-camera/main.jpg",
      "thumbnail": "/products/electronics-beacon-action-camera/thumb.jpg",
      "credit": "Photo: rawpixel via rawpixel, CC0",
@@ -480,6 +802,7 @@
    "tags": [
     "Electronics",
     "Cameras",
+    "Cirroq",
     "Beacon",
     "Action",
     "Camera"
@@ -723,6 +1046,172 @@
    ]
   },
   {
+   "id": "p-0026",
+   "slug": "axio-quill-mechanical-keyboard-65",
+   "name": "Quill Mechanical Keyboard 65",
+   "brand": "Axio",
+   "sku": "COM-QM-05-ST",
+   "shortDescription": "An aluminium 65% board with a proper gasket mount and QMK firmware.",
+   "longDescription": "An aluminium 65% board with a proper gasket mount and QMK firmware. Built by Axio for the computers & accessories range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Axio over-engineers. CNC aluminium case with a gasket-mounted plate, and open QMK/VIA firmware — remap without vendor software.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
+   "features": [
+    "CNC aluminium case with a gasket-mounted plate",
+    "Open QMK/VIA firmware — remap without vendor software",
+    "Hot-swap sockets for three- and five-pin switches",
+    "Serviceable by design — storage, memory and battery are all user-replaceable",
+    "Drivers, firmware and schematics published for a minimum of six years"
+   ],
+   "specifications": [
+    {
+     "label": "Layout",
+     "value": "65%, 68 keys"
+    },
+    {
+     "label": "Switches",
+     "value": "Pre-lubed tactile, 55 g"
+    },
+    {
+     "label": "Connection",
+     "value": "USB-C, detachable"
+    },
+    {
+     "label": "Support",
+     "value": "Named engineer, no scripted first line"
+    },
+    {
+     "label": "SKU",
+     "value": "COM-QM-05-ST"
+    }
+   ],
+   "price": 18899,
+   "compareAtPrice": 20999,
+   "discountPercent": 10,
+   "rating": 4.3,
+   "reviewCount": 3267,
+   "stockStatus": "in_stock",
+   "stockCount": 557,
+   "category": "computers-accessories",
+   "subcategory": "Peripherals",
+   "images": [
+    {
+     "id": "axio-quill-mechanical-keyboard-65-main",
+     "view": "main",
+     "alt": "Axio Quill Mechanical Keyboard 65 — product photo",
+     "src": "/products/computers-accessories-quill-mechanical-keyboard-65/main.jpg",
+     "thumbnail": "/products/computers-accessories-quill-mechanical-keyboard-65/thumb.jpg",
+     "credit": "Photo: rawpixel via rawpixel, CC0",
+     "gradient": "from-slate-700 via-indigo-800 to-violet-700",
+     "width": 1600,
+     "height": 1600
+    }
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Standard"
+    }
+   ],
+   "tags": [
+    "Computers & Accessories",
+    "Peripherals",
+    "Axio",
+    "Quill",
+    "Mechanical",
+    "Keyboard"
+   ],
+   "releasedAt": "2025-05-13",
+   "gradient": "from-slate-700 via-indigo-800 to-violet-700",
+   "warrantyMonths": 24,
+   "returnWindowDays": 30,
+   "dispatchHours": 48,
+   "hasVideo": false,
+   "featured": false,
+   "bestSeller": true,
+   "newArrival": false,
+   "trending": false,
+   "reviews": [
+    {
+     "id": "axio-quill-mechanical-keyboard-65-r3",
+     "author": "Tomas H.",
+     "rating": 5,
+     "title": "Worth the money",
+     "body": "I was sceptical at this price but the finish is excellent and it has taken daily use without complaint. Packaging was plastic-free too, which I appreciated. Bought it after returning a cheaper one that lasted six weeks.",
+     "createdAt": "2026-05-21",
+     "verifiedPurchase": true,
+     "helpfulCount": 71
+    },
+    {
+     "id": "axio-quill-mechanical-keyboard-65-r8",
+     "author": "Kai H.",
+     "rating": 3,
+     "title": "Fine, not remarkable",
+     "body": "Works as intended, though I expected a bit more refinement at this price. Fine if you catch it on a discount.",
+     "createdAt": "2026-03-30",
+     "verifiedPurchase": false,
+     "helpfulCount": 195
+    },
+    {
+     "id": "axio-quill-mechanical-keyboard-65-r4",
+     "author": "Bea C.",
+     "rating": 4,
+     "title": "Recommended with one caveat",
+     "body": "Does everything promised. It is slightly bulkier than the photos suggest, so measure your space before ordering.",
+     "createdAt": "2026-02-21",
+     "verifiedPurchase": true,
+     "helpfulCount": 115
+    },
+    {
+     "id": "axio-quill-mechanical-keyboard-65-r5",
+     "author": "Lucas M.",
+     "rating": 5,
+     "title": "Exactly what was described",
+     "body": "The spec sheet matched reality, which is more than I can say for the last three I tried. Build quality is genuinely good and it has not developed any rattles or quirks. Ordered on a Thursday, arrived Monday.",
+     "createdAt": "2025-12-30",
+     "verifiedPurchase": true,
+     "helpfulCount": 16
+    },
+    {
+     "id": "axio-quill-mechanical-keyboard-65-r6",
+     "author": "Hugo P.",
+     "rating": 3,
+     "title": "OK for the price",
+     "body": "It is competent but unexciting. Nothing wrong with it, nothing that made me glad I chose it over the alternatives. Second one I've owned — replaced a five-year-old unit.",
+     "createdAt": "2025-12-29",
+     "verifiedPurchase": true,
+     "helpfulCount": 10
+    },
+    {
+     "id": "axio-quill-mechanical-keyboard-65-r1",
+     "author": "Priya N.",
+     "rating": 2,
+     "title": "Disappointing on one point",
+     "body": "Ran into a fault in the first fortnight. Replacement arrived quickly and has been fine, but the first impression was not great.",
+     "createdAt": "2025-12-01",
+     "verifiedPurchase": false,
+     "helpfulCount": 156
+    },
+    {
+     "id": "axio-quill-mechanical-keyboard-65-r7",
+     "author": "Daniel K.",
+     "rating": 5,
+     "title": "Better than the one it replaced",
+     "body": "Setup took five minutes and it has done exactly what it says since. Nothing clever, nothing annoying — it just works. Bought it after returning a cheaper one that lasted six weeks.",
+     "createdAt": "2025-08-17",
+     "verifiedPurchase": true,
+     "helpfulCount": 92
+    },
+    {
+     "id": "axio-quill-mechanical-keyboard-65-r2",
+     "author": "Pieter DV.",
+     "rating": 5,
+     "title": "Better than the one it replaced",
+     "body": "I was sceptical at this price but the finish is excellent and it has taken daily use without complaint. Packaging was plastic-free too, which I appreciated. Bought it after returning a cheaper one that lasted six weeks.",
+     "createdAt": "2025-06-28",
+     "verifiedPurchase": true,
+     "helpfulCount": 124
+    }
+   ]
+  },
+  {
    "id": "p-0029",
    "slug": "meridiem-signal-webcam-pro",
    "name": "Signal Webcam Pro",
@@ -888,6 +1377,286 @@
    ]
   },
   {
+   "id": "p-0032",
+   "slug": "cirroq-kestrel-studio-microphone",
+   "name": "Kestrel Studio Microphone",
+   "brand": "Cirroq",
+   "sku": "COM-KS-09-ST",
+   "shortDescription": "A cardioid condenser with an internal shock mount and USB-C or XLR out.",
+   "longDescription": "A cardioid condenser with an internal shock mount and USB-C or XLR out. Built by Cirroq for the computers & accessories range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Cirroq over-engineers. Internal shock mount kills desk thumps without an external cradle, and uSB-C now, XLR later — the same microphone grows with the setup.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
+   "features": [
+    "Internal shock mount kills desk thumps without an external cradle",
+    "USB-C now, XLR later — the same microphone grows with the setup",
+    "Zero-latency headphone monitoring with a real gain knob",
+    "Serviceable by design — storage, memory and battery are all user-replaceable",
+    "Drivers, firmware and schematics published for a minimum of six years"
+   ],
+   "specifications": [
+    {
+     "label": "Capsule",
+     "value": "25 mm cardioid condenser"
+    },
+    {
+     "label": "Response",
+     "value": "20 Hz – 20 kHz"
+    },
+    {
+     "label": "Sampling",
+     "value": "24-bit / 96 kHz"
+    },
+    {
+     "label": "Support",
+     "value": "Named engineer, no scripted first line"
+    },
+    {
+     "label": "SKU",
+     "value": "COM-KS-09-ST"
+    }
+   ],
+   "price": 21899,
+   "discountPercent": 0,
+   "rating": 4.4,
+   "reviewCount": 1207,
+   "stockStatus": "out_of_stock",
+   "stockCount": 0,
+   "category": "computers-accessories",
+   "subcategory": "Peripherals",
+   "images": [
+    {
+     "id": "cirroq-kestrel-studio-microphone-main",
+     "view": "main",
+     "alt": "Cirroq Kestrel Studio Microphone — product photo",
+     "src": "/products/computers-accessories-kestrel-studio-microphone/main.jpg",
+     "thumbnail": "/products/computers-accessories-kestrel-studio-microphone/thumb.jpg",
+     "credit": "Photo: Torsten Dettlaff via stocksnap, CC0",
+     "gradient": "from-slate-700 via-indigo-800 to-violet-700",
+     "width": 1600,
+     "height": 1600
+    }
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Standard"
+    }
+   ],
+   "tags": [
+    "Computers & Accessories",
+    "Peripherals",
+    "Cirroq",
+    "Kestrel",
+    "Studio",
+    "Microphone"
+   ],
+   "releasedAt": "2025-06-25",
+   "gradient": "from-slate-700 via-indigo-800 to-violet-700",
+   "warrantyMonths": 24,
+   "returnWindowDays": 30,
+   "dispatchHours": 48,
+   "hasVideo": false,
+   "featured": false,
+   "bestSeller": true,
+   "newArrival": false,
+   "trending": false,
+   "reviews": [
+    {
+     "id": "cirroq-kestrel-studio-microphone-r2",
+     "author": "Hanna V.",
+     "rating": 3,
+     "title": "Fine, not remarkable",
+     "body": "Mixed — the core function is good but the finish is average. I would probably look around before rebuying.",
+     "createdAt": "2026-05-20",
+     "verifiedPurchase": true,
+     "helpfulCount": 109
+    },
+    {
+     "id": "cirroq-kestrel-studio-microphone-r5",
+     "author": "Sanne K.",
+     "rating": 5,
+     "title": "Does the job properly",
+     "body": "Bought it partly on the warranty terms and have not needed them, which is the ideal outcome. Feels like it will outlast the guarantee comfortably.",
+     "createdAt": "2025-11-07",
+     "verifiedPurchase": true,
+     "helpfulCount": 213
+    },
+    {
+     "id": "cirroq-kestrel-studio-microphone-r1",
+     "author": "Anouk J.",
+     "rating": 4,
+     "title": "Good — nearly perfect",
+     "body": "Does everything promised. It is slightly bulkier than the photos suggest, so measure your space before ordering. Ordered on a Thursday, arrived Monday.",
+     "createdAt": "2025-09-03",
+     "verifiedPurchase": true,
+     "helpfulCount": 145
+    },
+    {
+     "id": "cirroq-kestrel-studio-microphone-r3",
+     "author": "Daniel K.",
+     "rating": 4,
+     "title": "Solid, minor niggles",
+     "body": "Does everything promised. It is slightly bulkier than the photos suggest, so measure your space before ordering. Using it several times a week rather than daily.",
+     "createdAt": "2025-08-27",
+     "verifiedPurchase": true,
+     "helpfulCount": 151
+    },
+    {
+     "id": "cirroq-kestrel-studio-microphone-r6",
+     "author": "Andrei P.",
+     "rating": 5,
+     "title": "Does the job properly",
+     "body": "Bought it partly on the warranty terms and have not needed them, which is the ideal outcome. Feels like it will outlast the guarantee comfortably. Second one I've owned — replaced a five-year-old unit.",
+     "createdAt": "2025-08-01",
+     "verifiedPurchase": true,
+     "helpfulCount": 133
+    },
+    {
+     "id": "cirroq-kestrel-studio-microphone-r4",
+     "author": "Erik S.",
+     "rating": 4,
+     "title": "Good — nearly perfect",
+     "body": "Very pleased overall. The only thing I would change is the documentation — it assumes you already know what you are doing.",
+     "createdAt": "2025-06-03",
+     "verifiedPurchase": true,
+     "helpfulCount": 213
+    }
+   ]
+  },
+  {
+   "id": "p-0038",
+   "slug": "cirroq-meridian-5g-handset",
+   "name": "Meridian 5G Handset",
+   "brand": "Cirroq",
+   "sku": "MOB-MH-01-ST",
+   "shortDescription": "A flagship sensor and a battery you can replace without a heat gun.",
+   "longDescription": "A flagship sensor and a battery you can replace without a heat gun. Built by Cirroq for the mobile phones & accessories range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Cirroq over-engineers. Battery replaceable with a standard screwdriver in under ten minutes, and 1-inch main sensor with optical stabilisation.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
+   "features": [
+    "Battery replaceable with a standard screwdriver in under ten minutes",
+    "1-inch main sensor with optical stabilisation",
+    "Seven years of OS updates, in writing",
+    "Sold unlocked, with the out-of-warranty battery replacement price published",
+    "Security updates guaranteed in writing for at least five years"
+   ],
+   "specifications": [
+    {
+     "label": "Display",
+     "value": "6.3\" LTPO OLED, 1–120 Hz, 2,400 nits"
+    },
+    {
+     "label": "Camera",
+     "value": "1\" 50 MP main, 48 MP ultrawide, 5× tele"
+    },
+    {
+     "label": "Battery",
+     "value": "5,000 mAh, 80 W wired"
+    },
+    {
+     "label": "Network",
+     "value": "Unlocked, dual SIM (nano + eSIM)"
+    },
+    {
+     "label": "SKU",
+     "value": "MOB-MH-01-ST"
+    }
+   ],
+   "price": 84899,
+   "compareAtPrice": 121299,
+   "discountPercent": 30,
+   "rating": 3.9,
+   "reviewCount": 3124,
+   "stockStatus": "out_of_stock",
+   "stockCount": 0,
+   "category": "mobile-phones",
+   "subcategory": "Handsets",
+   "images": [
+    {
+     "id": "cirroq-meridian-5g-handset-main",
+     "view": "main",
+     "alt": "Cirroq Meridian 5G Handset — product photo",
+     "src": "/products/mobile-phones-meridian-5g-handset/main.jpg",
+     "thumbnail": "/products/mobile-phones-meridian-5g-handset/thumb.jpg",
+     "credit": "Photo: Freestocks.org via stocksnap, CC0",
+     "gradient": "from-cyan-700 via-sky-700 to-blue-800",
+     "width": 1600,
+     "height": 1600
+    }
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Standard"
+    }
+   ],
+   "tags": [
+    "Mobile Phones & Accessories",
+    "Handsets",
+    "Cirroq",
+    "Meridian",
+    "Handset"
+   ],
+   "releasedAt": "2024-12-31",
+   "gradient": "from-cyan-700 via-sky-700 to-blue-800",
+   "warrantyMonths": 24,
+   "returnWindowDays": 30,
+   "dispatchHours": 48,
+   "hasVideo": false,
+   "featured": false,
+   "bestSeller": false,
+   "newArrival": false,
+   "trending": false,
+   "reviews": [
+    {
+     "id": "cirroq-meridian-5g-handset-r2",
+     "author": "Noah E.",
+     "rating": 3,
+     "title": "Mixed feelings",
+     "body": "Mixed — the core function is good but the finish is average. I would probably look around before rebuying. Bought it after returning a cheaper one that lasted six weeks.",
+     "createdAt": "2026-06-21",
+     "verifiedPurchase": true,
+     "helpfulCount": 14
+    },
+    {
+     "id": "cirroq-meridian-5g-handset-r5",
+     "author": "Ravi S.",
+     "rating": 5,
+     "title": "Would buy again without thinking",
+     "body": "The spec sheet matched reality, which is more than I can say for the last three I tried. Build quality is genuinely good and it has not developed any rattles or quirks. Bought it as a gift and ended up ordering a second for myself.",
+     "createdAt": "2026-05-06",
+     "verifiedPurchase": true,
+     "helpfulCount": 38
+    },
+    {
+     "id": "cirroq-meridian-5g-handset-r4",
+     "author": "Lucas M.",
+     "rating": 4,
+     "title": "Good — nearly perfect",
+     "body": "Great quality for the money. Would be five stars if the accessories included were a little better.",
+     "createdAt": "2026-04-15",
+     "verifiedPurchase": true,
+     "helpfulCount": 188
+    },
+    {
+     "id": "cirroq-meridian-5g-handset-r3",
+     "author": "Jonas W.",
+     "rating": 4,
+     "title": "Happy with it",
+     "body": "Very pleased overall. The only thing I would change is the documentation — it assumes you already know what you are doing. Replaced something twice the price and have not missed it.",
+     "createdAt": "2026-01-15",
+     "verifiedPurchase": true,
+     "helpfulCount": 218
+    },
+    {
+     "id": "cirroq-meridian-5g-handset-r1",
+     "author": "Hanna V.",
+     "rating": 5,
+     "title": "Better than the one it replaced",
+     "body": "Setup took five minutes and it has done exactly what it says since. Nothing clever, nothing annoying — it just works. Been using it daily for about three months now.",
+     "createdAt": "2025-09-23",
+     "verifiedPurchase": true,
+     "helpfulCount": 47
+    }
+   ]
+  },
+  {
    "id": "p-0041",
    "slug": "volux-shell-impact-case",
    "name": "Shell Impact Case",
@@ -1015,17 +1784,36 @@
   },
   {
    "id": "p-0047",
-   "slug": "aeterna-flux-power-bank",
-   "name": "Flux Power Bank",
+   "slug": "aeterna-flux-power-bank-20k",
+   "name": "Flux Power Bank 20K",
    "brand": "Aeterna",
    "sku": "MOB-FP-06-ST",
-   "shortDescription": "A slim portable power bank with LED charge indicators.",
-   "longDescription": "A slim portable power bank with LED charge indicators.\n\nSold and shipped directly by SAMRUX LLC.",
+   "shortDescription": "20,000 mAh, airline-legal, with a display that shows real watts.",
+   "longDescription": "20,000 mAh, airline-legal, with a display that shows real watts. Built by Aeterna for the mobile phones & accessories range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Aeterna over-engineers. Display shows actual watts in and out, not a four-bar guess, and under the 100 Wh airline limit — carry-on legal.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
    "features": [
-    "LED charge-level indicators",
-    "Slim case"
+    "Display shows actual watts in and out, not a four-bar guess",
+    "Under the 100 Wh airline limit — carry-on legal",
+    "Passthrough charging: charges itself and the phone at once",
+    "Sold unlocked, with the out-of-warranty battery replacement price published",
+    "Security updates guaranteed in writing for at least five years"
    ],
    "specifications": [
+    {
+     "label": "Capacity",
+     "value": "20,000 mAh / 74 Wh"
+    },
+    {
+     "label": "Output",
+     "value": "140 W max, 2 × USB-C, 1 × USB-A"
+    },
+    {
+     "label": "Recharge",
+     "value": "1 hour 20 to full"
+    },
+    {
+     "label": "Network",
+     "value": "Unlocked, dual SIM (nano + eSIM)"
+    },
     {
      "label": "SKU",
      "value": "MOB-FP-06-ST"
@@ -1041,11 +1829,11 @@
    "subcategory": "Charging",
    "images": [
     {
-     "id": "aeterna-flux-power-bank-main",
+     "id": "aeterna-flux-power-bank-20k-main",
      "view": "main",
-     "alt": "Flux Power Bank — product photo",
-     "src": "/products/mobile-phones-flux-power-bank/main.jpg",
-     "thumbnail": "/products/mobile-phones-flux-power-bank/thumb.jpg",
+     "alt": "Aeterna Flux Power Bank 20K — product photo",
+     "src": "/products/mobile-phones-flux-power-bank-20k/main.jpg",
+     "thumbnail": "/products/mobile-phones-flux-power-bank-20k/thumb.jpg",
      "credit": "Photo: Tranpan23 via flickr, CC BY 2.0",
      "gradient": "from-sky-800 via-cyan-700 to-teal-700",
      "width": 1600,
@@ -1061,6 +1849,7 @@
    "tags": [
     "Mobile Phones & Accessories",
     "Charging",
+    "Aeterna",
     "Flux",
     "Power",
     "Bank"
@@ -2061,6 +2850,166 @@
    ]
   },
   {
+   "id": "p-0083",
+   "slug": "lumelle-radiance-vitamin-c-drops",
+   "name": "Radiance Vitamin C Drops",
+   "brand": "Lumelle",
+   "sku": "BEA-RV-04-ST",
+   "shortDescription": "15% L-ascorbic acid stabilised with ferulic acid, in amber glass.",
+   "longDescription": "15% L-ascorbic acid stabilised with ferulic acid, in amber glass. Built by Lumelle for the beauty & personal care range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Lumelle over-engineers. 15% L-ascorbic acid with 0.5% ferulic acid for stability, and amber glass and an airless pump slow oxidation.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
+   "features": [
+    "15% L-ascorbic acid with 0.5% ferulic acid for stability",
+    "Amber glass and an airless pump slow oxidation",
+    "Batch date printed on the bottle, not just the box",
+    "Full ingredient list with concentrations printed on the carton",
+    "Fragrance-free and dermatologist tested on sensitive skin panels"
+   ],
+   "specifications": [
+    {
+     "label": "Size",
+     "value": "30 ml"
+    },
+    {
+     "label": "Key actives",
+     "value": "L-ascorbic 15%, ferulic 0.5%, vitamin E 1%"
+    },
+    {
+     "label": "pH",
+     "value": "3.2"
+    },
+    {
+     "label": "Cruelty free",
+     "value": "Leaping Bunny certified"
+    },
+    {
+     "label": "Shelf life",
+     "value": "24 months sealed, 12 after opening"
+    },
+    {
+     "label": "SKU",
+     "value": "BEA-RV-04-ST"
+    }
+   ],
+   "price": 7199,
+   "compareAtPrice": 7999,
+   "discountPercent": 10,
+   "rating": 4.7,
+   "reviewCount": 883,
+   "stockStatus": "in_stock",
+   "stockCount": 442,
+   "category": "beauty-personal-care",
+   "subcategory": "Skincare",
+   "images": [
+    {
+     "id": "lumelle-radiance-vitamin-c-drops-main",
+     "view": "main",
+     "alt": "Lumelle Radiance Vitamin C Drops — product photo",
+     "src": "/products/beauty-personal-care-radiance-vitamin-c-drops/main.jpg",
+     "thumbnail": "/products/beauty-personal-care-radiance-vitamin-c-drops/thumb.jpg",
+     "credit": "Photo: rawpixel via rawpixel, CC0",
+     "gradient": "from-purple-400 via-pink-500 to-rose-600",
+     "width": 1600,
+     "height": 1600
+    }
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Standard"
+    }
+   ],
+   "tags": [
+    "Beauty & Personal Care",
+    "Skincare",
+    "Lumelle",
+    "Radiance",
+    "Vitamin",
+    "Drops"
+   ],
+   "releasedAt": "2026-01-18",
+   "gradient": "from-purple-400 via-pink-500 to-rose-600",
+   "warrantyMonths": 24,
+   "returnWindowDays": 30,
+   "dispatchHours": 48,
+   "hasVideo": false,
+   "featured": false,
+   "bestSeller": false,
+   "newArrival": false,
+   "trending": false,
+   "reviews": [
+    {
+     "id": "lumelle-radiance-vitamin-c-drops-r1",
+     "author": "Tariq M.",
+     "rating": 5,
+     "title": "No notes",
+     "body": "Setup took five minutes and it has done exactly what it says since. Nothing clever, nothing annoying — it just works. Been using it daily for about three months now.",
+     "createdAt": "2026-03-25",
+     "verifiedPurchase": true,
+     "helpfulCount": 24
+    },
+    {
+     "id": "lumelle-radiance-vitamin-c-drops-r2",
+     "author": "Hanna V.",
+     "rating": 5,
+     "title": "Exactly what was described",
+     "body": "Bought it partly on the warranty terms and have not needed them, which is the ideal outcome. Feels like it will outlast the guarantee comfortably.",
+     "createdAt": "2026-01-22",
+     "verifiedPurchase": true,
+     "helpfulCount": 65
+    },
+    {
+     "id": "lumelle-radiance-vitamin-c-drops-r5",
+     "author": "Camila T.",
+     "rating": 4,
+     "title": "Solid, minor niggles",
+     "body": "Great quality for the money. Would be five stars if the accessories included were a little better. Ordered on a Thursday, arrived Monday.",
+     "createdAt": "2025-11-16",
+     "verifiedPurchase": true,
+     "helpfulCount": 27
+    },
+    {
+     "id": "lumelle-radiance-vitamin-c-drops-r6",
+     "author": "Clara D.",
+     "rating": 5,
+     "title": "No notes",
+     "body": "I was sceptical at this price but the finish is excellent and it has taken daily use without complaint. Packaging was plastic-free too, which I appreciated. Bought it after returning a cheaper one that lasted six weeks.",
+     "createdAt": "2025-10-28",
+     "verifiedPurchase": true,
+     "helpfulCount": 87
+    },
+    {
+     "id": "lumelle-radiance-vitamin-c-drops-r7",
+     "author": "Anouk J.",
+     "rating": 5,
+     "title": "Exactly what was described",
+     "body": "Bought it partly on the warranty terms and have not needed them, which is the ideal outcome. Feels like it will outlast the guarantee comfortably.",
+     "createdAt": "2025-10-21",
+     "verifiedPurchase": true,
+     "helpfulCount": 22
+    },
+    {
+     "id": "lumelle-radiance-vitamin-c-drops-r3",
+     "author": "Rosa M.",
+     "rating": 4,
+     "title": "Happy with it",
+     "body": "Does everything promised. It is slightly bulkier than the photos suggest, so measure your space before ordering. Bought it as a gift and ended up ordering a second for myself.",
+     "createdAt": "2025-10-06",
+     "verifiedPurchase": true,
+     "helpfulCount": 220
+    },
+    {
+     "id": "lumelle-radiance-vitamin-c-drops-r4",
+     "author": "Farah Z.",
+     "rating": 5,
+     "title": "Better than the one it replaced",
+     "body": "I was sceptical at this price but the finish is excellent and it has taken daily use without complaint. Packaging was plastic-free too, which I appreciated. Second one I've owned — replaced a five-year-old unit.",
+     "createdAt": "2025-07-18",
+     "verifiedPurchase": false,
+     "helpfulCount": 137
+    }
+   ]
+  },
+  {
    "id": "p-0086",
    "slug": "byrra-precision-hair-dryer",
    "name": "Precision Hair Dryer",
@@ -2196,6 +3145,155 @@
      "createdAt": "2025-06-02",
      "verifiedPurchase": true,
      "helpfulCount": 92
+    }
+   ]
+  },
+  {
+   "id": "p-0092",
+   "slug": "fleur-neuf-mineral-sunscreen-spf-50",
+   "name": "Mineral Sunscreen SPF 50",
+   "brand": "Fleur Neuf",
+   "sku": "BEA-MS-08-ST",
+   "shortDescription": "Non-nano zinc at 20% with no white cast on medium skin tones.",
+   "longDescription": "Non-nano zinc at 20% with no white cast on medium skin tones. Built by Fleur Neuf for the beauty & personal care range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Fleur Neuf over-engineers. 20% non-nano zinc oxide, reef-safe formulation, and tinted iron oxides prevent a white cast.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
+   "features": [
+    "20% non-nano zinc oxide, reef-safe formulation",
+    "Tinted iron oxides prevent a white cast",
+    "Broad spectrum with a measured UVA-PF of 18",
+    "Full ingredient list with concentrations printed on the carton",
+    "Fragrance-free and dermatologist tested on sensitive skin panels"
+   ],
+   "specifications": [
+    {
+     "label": "Size",
+     "value": "60 ml"
+    },
+    {
+     "label": "Protection",
+     "value": "SPF 50, PA++++"
+    },
+    {
+     "label": "Water resistance",
+     "value": "80 minutes"
+    },
+    {
+     "label": "Cruelty free",
+     "value": "Leaping Bunny certified"
+    },
+    {
+     "label": "Shelf life",
+     "value": "24 months sealed, 12 after opening"
+    },
+    {
+     "label": "SKU",
+     "value": "BEA-MS-08-ST"
+    }
+   ],
+   "price": 3799,
+   "compareAtPrice": 4499,
+   "discountPercent": 16,
+   "rating": 4.7,
+   "reviewCount": 1490,
+   "stockStatus": "low_stock",
+   "stockCount": 3,
+   "category": "beauty-personal-care",
+   "subcategory": "Sun Care",
+   "images": [
+    {
+     "id": "fleur-neuf-mineral-sunscreen-spf-50-main",
+     "view": "main",
+     "alt": "Fleur Neuf Mineral Sunscreen SPF 50 — product photo",
+     "src": "/products/beauty-personal-care-mineral-sunscreen-spf-50/main.jpg",
+     "thumbnail": "/products/beauty-personal-care-mineral-sunscreen-spf-50/thumb.jpg",
+     "credit": "Photo: rawpixel via rawpixel, CC0",
+     "gradient": "from-purple-400 via-pink-500 to-rose-600",
+     "width": 1600,
+     "height": 1600
+    }
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Standard"
+    }
+   ],
+   "tags": [
+    "Beauty & Personal Care",
+    "Sun Care",
+    "Fleur Neuf",
+    "Mineral",
+    "Sunscreen"
+   ],
+   "releasedAt": "2025-09-13",
+   "gradient": "from-purple-400 via-pink-500 to-rose-600",
+   "warrantyMonths": 24,
+   "returnWindowDays": 30,
+   "dispatchHours": 48,
+   "hasVideo": false,
+   "featured": false,
+   "bestSeller": false,
+   "newArrival": false,
+   "trending": false,
+   "reviews": [
+    {
+     "id": "fleur-neuf-mineral-sunscreen-spf-50-r1",
+     "author": "Kai H.",
+     "rating": 5,
+     "title": "Does the job properly",
+     "body": "Noticeably better made than the mainstream option I was comparing against. The details you only notice after a month are all right.",
+     "createdAt": "2026-04-12",
+     "verifiedPurchase": true,
+     "helpfulCount": 175
+    },
+    {
+     "id": "fleur-neuf-mineral-sunscreen-spf-50-r6",
+     "author": "Nadia S.",
+     "rating": 4,
+     "title": "Recommended with one caveat",
+     "body": "Very pleased overall. The only thing I would change is the documentation — it assumes you already know what you are doing. Second one I've owned — replaced a five-year-old unit.",
+     "createdAt": "2025-09-30",
+     "verifiedPurchase": true,
+     "helpfulCount": 234
+    },
+    {
+     "id": "fleur-neuf-mineral-sunscreen-spf-50-r5",
+     "author": "Daniel K.",
+     "rating": 5,
+     "title": "Does the job properly",
+     "body": "The spec sheet matched reality, which is more than I can say for the last three I tried. Build quality is genuinely good and it has not developed any rattles or quirks. Second one I've owned — replaced a five-year-old unit.",
+     "createdAt": "2025-09-28",
+     "verifiedPurchase": true,
+     "helpfulCount": 4
+    },
+    {
+     "id": "fleur-neuf-mineral-sunscreen-spf-50-r4",
+     "author": "Bea C.",
+     "rating": 5,
+     "title": "Exactly what was described",
+     "body": "Bought it partly on the warranty terms and have not needed them, which is the ideal outcome. Feels like it will outlast the guarantee comfortably.",
+     "createdAt": "2025-08-29",
+     "verifiedPurchase": true,
+     "helpfulCount": 125
+    },
+    {
+     "id": "fleur-neuf-mineral-sunscreen-spf-50-r3",
+     "author": "Amara O.",
+     "rating": 5,
+     "title": "Would buy again without thinking",
+     "body": "Noticeably better made than the mainstream option I was comparing against. The details you only notice after a month are all right. Bought it after returning a cheaper one that lasted six weeks.",
+     "createdAt": "2025-07-26",
+     "verifiedPurchase": true,
+     "helpfulCount": 50
+    },
+    {
+     "id": "fleur-neuf-mineral-sunscreen-spf-50-r2",
+     "author": "Ines C.",
+     "rating": 5,
+     "title": "Exactly what was described",
+     "body": "I was sceptical at this price but the finish is excellent and it has taken daily use without complaint. Packaging was plastic-free too, which I appreciated.",
+     "createdAt": "2025-06-22",
+     "verifiedPurchase": true,
+     "helpfulCount": 111
     }
    ]
   },
@@ -2864,24 +3962,44 @@
   },
   {
    "id": "p-0119",
-   "slug": "ridgeline-vinyl-kettlebell-8-kg",
-   "name": "Vinyl Kettlebell 8 kg",
+   "slug": "ridgeline-competition-kettlebell",
+   "name": "Competition Kettlebell",
    "brand": "Ridgeline",
    "sku": "SPO-CK-12-ST",
-   "shortDescription": "An 8 kg kettlebell with a coloured vinyl coating.",
-   "longDescription": "An 8 kg kettlebell with a coloured vinyl coating.\n\nSold and shipped directly by SAMRUX LLC.",
+   "shortDescription": "Single-cast competition bell — same handle diameter at every weight.",
+   "longDescription": "Single-cast competition bell — same handle diameter at every weight. Built by Ridgeline for the sports & outdoors range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Ridgeline over-engineers. Single-cast, no welded handle to fail, and 35 mm handle at every weight, so technique carries over.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
    "features": [
-    "8 kg",
-    "Vinyl-coated to protect floors"
+    "Single-cast, no welded handle to fail",
+    "35 mm handle at every weight, so technique carries over",
+    "Powder coat holds chalk without shredding hands",
+    "Field-tested for a full season before it reaches the catalogue",
+    "Repairs handled in-house — send it back rather than replacing it"
    ],
    "specifications": [
+    {
+     "label": "Weights",
+     "value": "8–32 kg"
+    },
+    {
+     "label": "Handle",
+     "value": "35 mm, powder coated"
+    },
+    {
+     "label": "Base",
+     "value": "Flat, 210 mm"
+    },
+    {
+     "label": "Care",
+     "value": "Cold wash, no fabric softener"
+    },
     {
      "label": "SKU",
      "value": "SPO-CK-12-ST"
     }
    ],
-   "price": 3499,
-   "discountPercent": 0,
+   "price": 11899,
+   "compareAtPrice": 16999,
+   "discountPercent": 30,
    "rating": 4.6,
    "reviewCount": 3095,
    "stockStatus": "low_stock",
@@ -2890,11 +4008,11 @@
    "subcategory": "Training",
    "images": [
     {
-     "id": "ridgeline-vinyl-kettlebell-8-kg-main",
+     "id": "ridgeline-competition-kettlebell-main",
      "view": "main",
-     "alt": "Vinyl Kettlebell 8 kg — product photo",
-     "src": "/products/sports-outdoors-vinyl-kettlebell-8-kg/main.jpg",
-     "thumbnail": "/products/sports-outdoors-vinyl-kettlebell-8-kg/thumb.jpg",
+     "alt": "Ridgeline Competition Kettlebell — product photo",
+     "src": "/products/sports-outdoors-competition-kettlebell/main.jpg",
+     "thumbnail": "/products/sports-outdoors-competition-kettlebell/thumb.jpg",
      "credit": "Photo: rawpixel via rawpixel, CC0",
      "gradient": "from-green-800 via-emerald-700 to-teal-500",
      "width": 1600,
@@ -2910,7 +4028,8 @@
    "tags": [
     "Sports & Outdoors",
     "Training",
-    "Vinyl",
+    "Ridgeline",
+    "Competition",
     "Kettlebell"
    ],
    "releasedAt": "2026-04-19",
@@ -3008,23 +4127,42 @@
   },
   {
    "id": "p-0122",
-   "slug": "fetchwell-bolster-dog-bed",
-   "name": "Bolster Dog Bed",
+   "slug": "fetchwell-orthopedic-dog-bed",
+   "name": "Orthopedic Dog Bed",
    "brand": "Fetchwell",
    "sku": "PET-OD-01-ST",
-   "shortDescription": "A round plush dog bed with a raised bolster edge.",
-   "longDescription": "A round plush dog bed with a raised bolster edge.\n\nSold and shipped directly by SAMRUX LLC.",
+   "shortDescription": "A single slab of CertiPUR foam under a waterproof, washable cover.",
+   "longDescription": "A single slab of CertiPUR foam under a waterproof, washable cover. Built by Fetchwell for the pet supplies range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Fetchwell over-engineers. 10 cm single-piece memory foam, not shredded offcuts, and waterproof inner liner under a removable outer cover.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
    "features": [
-    "Raised bolster edge",
-    "Plush cover"
+    "10 cm single-piece memory foam, not shredded offcuts",
+    "Waterproof inner liner under a removable outer cover",
+    "Bolster edge supports the head without collapsing",
+    "Every fabric surface unzips and goes through a domestic washing machine",
+    "No PVC, phthalates or added dyes anywhere in the product"
    ],
    "specifications": [
+    {
+     "label": "Foam",
+     "value": "10 cm CertiPUR-US memory foam"
+    },
+    {
+     "label": "Cover",
+     "value": "Removable, machine washable"
+    },
+    {
+     "label": "Base",
+     "value": "Non-slip, floor-safe"
+    },
+    {
+     "label": "Cleaning",
+     "value": "Machine washable cover, cold cycle"
+    },
     {
      "label": "SKU",
      "value": "PET-OD-01-ST"
     }
    ],
-   "price": 6999,
+   "price": 14899,
    "discountPercent": 0,
    "rating": 4.1,
    "reviewCount": 3675,
@@ -3034,11 +4172,11 @@
    "subcategory": "Beds",
    "images": [
     {
-     "id": "fetchwell-bolster-dog-bed-main",
+     "id": "fetchwell-orthopedic-dog-bed-main",
      "view": "main",
-     "alt": "Bolster Dog Bed — product photo",
-     "src": "/products/pet-supplies-bolster-dog-bed/main.jpg",
-     "thumbnail": "/products/pet-supplies-bolster-dog-bed/thumb.jpg",
+     "alt": "Fetchwell Orthopedic Dog Bed — product photo",
+     "src": "/products/pet-supplies-orthopedic-dog-bed/main.jpg",
+     "thumbnail": "/products/pet-supplies-orthopedic-dog-bed/thumb.jpg",
      "credit": "Photo: Howard O. Young via flickr, CC BY 2.0",
      "gradient": "from-orange-400 via-amber-500 to-yellow-600",
      "width": 1600,
@@ -3047,16 +4185,27 @@
    ],
    "variants": [
     {
-     "id": "standard",
-     "label": "Standard"
+     "id": "s",
+     "label": "Small"
+    },
+    {
+     "id": "m",
+     "label": "Medium"
+    },
+    {
+     "id": "l",
+     "label": "Large"
+    },
+    {
+     "id": "xl",
+     "label": "X-Large"
     }
    ],
    "tags": [
     "Pet Supplies",
     "Beds",
-    "Bolster",
-    "Dog",
-    "Bed"
+    "Fetchwell",
+    "Orthopedic"
    ],
    "releasedAt": "2024-12-14",
    "gradient": "from-orange-400 via-amber-500 to-yellow-600",
@@ -3400,25 +4549,44 @@
   },
   {
    "id": "p-0137",
-   "slug": "trailpaw-hard-sided-pet-carrier",
-   "name": "Hard-Sided Pet Carrier",
+   "slug": "trailpaw-travel-pet-carrier",
+   "name": "Travel Pet Carrier",
    "brand": "Trailpaw",
    "sku": "PET-TP-08-ST",
-   "shortDescription": "A hard-sided plastic pet carrier with a wire door and a top-opening hatch.",
-   "longDescription": "A hard-sided plastic pet carrier with a wire door and a top-opening hatch.\n\nSold and shipped directly by SAMRUX LLC.",
+   "shortDescription": "Airline-compliant on major carriers, with a rigid frame that packs flat.",
+   "longDescription": "Airline-compliant on major carriers, with a rigid frame that packs flat. Built by Trailpaw for the pet supplies range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Trailpaw over-engineers. Meets under-seat dimensions for most major airlines, and rigid internal frame collapses flat for storage.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
    "features": [
-    "Wire front door",
-    "Top-opening hatch",
-    "Carry handle"
+    "Meets under-seat dimensions for most major airlines",
+    "Rigid internal frame collapses flat for storage",
+    "Removable, washable sherpa base pad",
+    "Every fabric surface unzips and goes through a domestic washing machine",
+    "No PVC, phthalates or added dyes anywhere in the product"
    ],
    "specifications": [
+    {
+     "label": "Dimensions",
+     "value": "46 × 28 × 28 cm"
+    },
+    {
+     "label": "Max pet weight",
+     "value": "9 kg"
+    },
+    {
+     "label": "Ventilation",
+     "value": "Mesh on three sides"
+    },
+    {
+     "label": "Cleaning",
+     "value": "Machine washable cover, cold cycle"
+    },
     {
      "label": "SKU",
      "value": "PET-TP-08-ST"
     }
    ],
-   "price": 6999,
-   "discountPercent": 0,
+   "price": 12899,
+   "compareAtPrice": 14299,
+   "discountPercent": 10,
    "rating": 4.4,
    "reviewCount": 3312,
    "stockStatus": "in_stock",
@@ -3427,11 +4595,11 @@
    "subcategory": "Travel",
    "images": [
     {
-     "id": "trailpaw-hard-sided-pet-carrier-main",
+     "id": "trailpaw-travel-pet-carrier-main",
      "view": "main",
-     "alt": "Hard-Sided Pet Carrier — product photo",
-     "src": "/products/pet-supplies-hard-sided-pet-carrier/main.jpg",
-     "thumbnail": "/products/pet-supplies-hard-sided-pet-carrier/thumb.jpg",
+     "alt": "Trailpaw Travel Pet Carrier — product photo",
+     "src": "/products/pet-supplies-travel-pet-carrier/main.jpg",
+     "thumbnail": "/products/pet-supplies-travel-pet-carrier/thumb.jpg",
      "credit": "Photo: TheLivingRoominKenmore via flickr, CC BY 2.0",
      "gradient": "from-orange-500 via-red-400 to-amber-300",
      "width": 1600,
@@ -3447,8 +4615,8 @@
    "tags": [
     "Pet Supplies",
     "Travel",
-    "Hard-Sided",
-    "Pet",
+    "Trailpaw",
+    "Travel",
     "Carrier"
    ],
    "releasedAt": "2025-02-23",
@@ -3712,6 +4880,303 @@
    ]
   },
   {
+   "id": "p-0143",
+   "slug": "milo-and-fern-compact-stroller",
+   "name": "Compact Stroller",
+   "brand": "Milo & Fern",
+   "sku": "BAB-CS-02-ST",
+   "shortDescription": "Folds one-handed to cabin size and stands up on its own.",
+   "longDescription": "Folds one-handed to cabin size and stands up on its own. Built by Milo & Fern for the baby products range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Milo & Fern over-engineers. One-handed fold that stands unsupported, and fits most airline cabin lockers at 55 × 40 × 23 cm folded.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
+   "features": [
+    "One-handed fold that stands unsupported",
+    "Fits most airline cabin lockers at 55 × 40 × 23 cm folded",
+    "Full recline and a UPF 50+ extendable canopy",
+    "Meets or exceeds the current EN and ASTM safety standards for its class",
+    "Every fabric is Oeko-Tex Standard 100 certified for infant contact"
+   ],
+   "specifications": [
+    {
+     "label": "Folded",
+     "value": "55 × 40 × 23 cm"
+    },
+    {
+     "label": "Weight",
+     "value": "6.2 kg"
+    },
+    {
+     "label": "Capacity",
+     "value": "Birth to 22 kg"
+    },
+    {
+     "label": "Certification",
+     "value": "EN 1888 / ASTM F833 as applicable"
+    },
+    {
+     "label": "Materials",
+     "value": "BPA, BPS and phthalate free"
+    },
+    {
+     "label": "SKU",
+     "value": "BAB-CS-02-ST"
+    }
+   ],
+   "price": 44899,
+   "discountPercent": 0,
+   "rating": 4,
+   "reviewCount": 3572,
+   "stockStatus": "in_stock",
+   "stockCount": 374,
+   "category": "baby-products",
+   "subcategory": "Travel",
+   "images": [
+    {
+     "id": "milo-and-fern-compact-stroller-main",
+     "view": "main",
+     "alt": "Milo & Fern Compact Stroller — product photo",
+     "src": "/products/baby-products-compact-stroller/main.jpg",
+     "thumbnail": "/products/baby-products-compact-stroller/thumb.jpg",
+     "credit": "Photo: exfordy via flickr, CC BY 2.0",
+     "gradient": "from-blue-300 via-sky-400 to-indigo-400",
+     "width": 1600,
+     "height": 1600
+    }
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Standard"
+    }
+   ],
+   "tags": [
+    "Baby Products",
+    "Travel",
+    "Milo & Fern",
+    "Compact",
+    "Stroller"
+   ],
+   "releasedAt": "2025-11-26",
+   "gradient": "from-blue-300 via-sky-400 to-indigo-400",
+   "warrantyMonths": 24,
+   "returnWindowDays": 30,
+   "dispatchHours": 48,
+   "hasVideo": false,
+   "featured": false,
+   "bestSeller": false,
+   "newArrival": false,
+   "trending": false,
+   "reviews": [
+    {
+     "id": "milo-and-fern-compact-stroller-r5",
+     "author": "Mei L.",
+     "rating": 5,
+     "title": "No notes",
+     "body": "Noticeably better made than the mainstream option I was comparing against. The details you only notice after a month are all right.",
+     "createdAt": "2026-01-19",
+     "verifiedPurchase": true,
+     "helpfulCount": 35
+    },
+    {
+     "id": "milo-and-fern-compact-stroller-r1",
+     "author": "Tariq M.",
+     "rating": 3,
+     "title": "Fine, not remarkable",
+     "body": "It is competent but unexciting. Nothing wrong with it, nothing that made me glad I chose it over the alternatives. Replaced something twice the price and have not missed it.",
+     "createdAt": "2025-11-25",
+     "verifiedPurchase": true,
+     "helpfulCount": 132
+    },
+    {
+     "id": "milo-and-fern-compact-stroller-r4",
+     "author": "Lucas M.",
+     "rating": 5,
+     "title": "Would buy again without thinking",
+     "body": "Noticeably better made than the mainstream option I was comparing against. The details you only notice after a month are all right.",
+     "createdAt": "2025-09-30",
+     "verifiedPurchase": true,
+     "helpfulCount": 20
+    },
+    {
+     "id": "milo-and-fern-compact-stroller-r6",
+     "author": "Sanne K.",
+     "rating": 3,
+     "title": "OK for the price",
+     "body": "Works as intended, though I expected a bit more refinement at this price. Fine if you catch it on a discount. Ordered on a Thursday, arrived Monday.",
+     "createdAt": "2025-07-26",
+     "verifiedPurchase": true,
+     "helpfulCount": 28
+    },
+    {
+     "id": "milo-and-fern-compact-stroller-r3",
+     "author": "Camila T.",
+     "rating": 5,
+     "title": "Better than the one it replaced",
+     "body": "Noticeably better made than the mainstream option I was comparing against. The details you only notice after a month are all right.",
+     "createdAt": "2025-06-09",
+     "verifiedPurchase": true,
+     "helpfulCount": 122
+    },
+    {
+     "id": "milo-and-fern-compact-stroller-r2",
+     "author": "Hugo P.",
+     "rating": 5,
+     "title": "Exactly what was described",
+     "body": "The spec sheet matched reality, which is more than I can say for the last three I tried. Build quality is genuinely good and it has not developed any rattles or quirks.",
+     "createdAt": "2025-06-01",
+     "verifiedPurchase": false,
+     "helpfulCount": 153
+    }
+   ]
+  },
+  {
+   "id": "p-0146",
+   "slug": "bambino-nord-infant-car-seat",
+   "name": "Infant Car Seat",
+   "brand": "Bambino Nord",
+   "sku": "BAB-IC-03-ST",
+   "shortDescription": "A rear-facing seat with a load leg and a no-rethread harness.",
+   "longDescription": "A rear-facing seat with a load leg and a no-rethread harness. Built by Bambino Nord for the baby products range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Bambino Nord over-engineers. Load leg reduces rotation in a frontal impact, and no-rethread harness adjusts with the headrest.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
+   "features": [
+    "Load leg reduces rotation in a frontal impact",
+    "No-rethread harness adjusts with the headrest",
+    "Level indicator visible from outside the car",
+    "Meets or exceeds the current EN and ASTM safety standards for its class",
+    "Every fabric is Oeko-Tex Standard 100 certified for infant contact"
+   ],
+   "specifications": [
+    {
+     "label": "Orientation",
+     "value": "Rear-facing"
+    },
+    {
+     "label": "Range",
+     "value": "40–85 cm, up to 13 kg"
+    },
+    {
+     "label": "Install",
+     "value": "ISOFIX base or belt path"
+    },
+    {
+     "label": "Certification",
+     "value": "EN 1888 / ASTM F833 as applicable"
+    },
+    {
+     "label": "Materials",
+     "value": "BPA, BPS and phthalate free"
+    },
+    {
+     "label": "SKU",
+     "value": "BAB-IC-03-ST"
+    }
+   ],
+   "price": 34899,
+   "compareAtPrice": 49899,
+   "discountPercent": 30,
+   "rating": 4.7,
+   "reviewCount": 2601,
+   "stockStatus": "in_stock",
+   "stockCount": 308,
+   "category": "baby-products",
+   "subcategory": "Car Safety",
+   "images": [
+    {
+     "id": "bambino-nord-infant-car-seat-main",
+     "view": "main",
+     "alt": "Bambino Nord Infant Car Seat — product photo",
+     "src": "/products/baby-products-infant-car-seat/main.jpg",
+     "thumbnail": "/products/baby-products-infant-car-seat/thumb.jpg",
+     "credit": "Photo: seanmfreese via flickr, CC BY 2.0",
+     "gradient": "from-cyan-300 via-teal-300 to-sky-500",
+     "width": 1600,
+     "height": 1600
+    }
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Standard"
+    }
+   ],
+   "tags": [
+    "Baby Products",
+    "Car Safety",
+    "Bambino Nord",
+    "Infant",
+    "Seat"
+   ],
+   "releasedAt": "2025-04-25",
+   "gradient": "from-cyan-300 via-teal-300 to-sky-500",
+   "warrantyMonths": 24,
+   "returnWindowDays": 30,
+   "dispatchHours": 48,
+   "hasVideo": false,
+   "featured": false,
+   "bestSeller": true,
+   "newArrival": false,
+   "trending": false,
+   "reviews": [
+    {
+     "id": "bambino-nord-infant-car-seat-r5",
+     "author": "Kai H.",
+     "rating": 5,
+     "title": "Worth the money",
+     "body": "The spec sheet matched reality, which is more than I can say for the last three I tried. Build quality is genuinely good and it has not developed any rattles or quirks.",
+     "createdAt": "2026-03-30",
+     "verifiedPurchase": false,
+     "helpfulCount": 229
+    },
+    {
+     "id": "bambino-nord-infant-car-seat-r2",
+     "author": "Lucas M.",
+     "rating": 5,
+     "title": "No notes",
+     "body": "The spec sheet matched reality, which is more than I can say for the last three I tried. Build quality is genuinely good and it has not developed any rattles or quirks.",
+     "createdAt": "2026-01-03",
+     "verifiedPurchase": true,
+     "helpfulCount": 106
+    },
+    {
+     "id": "bambino-nord-infant-car-seat-r6",
+     "author": "Nour A.",
+     "rating": 5,
+     "title": "No notes",
+     "body": "Noticeably better made than the mainstream option I was comparing against. The details you only notice after a month are all right.",
+     "createdAt": "2025-12-23",
+     "verifiedPurchase": true,
+     "helpfulCount": 3
+    },
+    {
+     "id": "bambino-nord-infant-car-seat-r4",
+     "author": "Hanna V.",
+     "rating": 5,
+     "title": "Would buy again without thinking",
+     "body": "I was sceptical at this price but the finish is excellent and it has taken daily use without complaint. Packaging was plastic-free too, which I appreciated.",
+     "createdAt": "2025-09-11",
+     "verifiedPurchase": true,
+     "helpfulCount": 133
+    },
+    {
+     "id": "bambino-nord-infant-car-seat-r1",
+     "author": "Lina W.",
+     "rating": 5,
+     "title": "No notes",
+     "body": "The spec sheet matched reality, which is more than I can say for the last three I tried. Build quality is genuinely good and it has not developed any rattles or quirks. Replaced something twice the price and have not missed it.",
+     "createdAt": "2025-09-01",
+     "verifiedPurchase": false,
+     "helpfulCount": 162
+    },
+    {
+     "id": "bambino-nord-infant-car-seat-r3",
+     "author": "Marta L.",
+     "rating": 5,
+     "title": "No notes",
+     "body": "Setup took five minutes and it has done exactly what it says since. Nothing clever, nothing annoying — it just works. Bought it as a gift and ended up ordering a second for myself.",
+     "createdAt": "2025-06-17",
+     "verifiedPurchase": true,
+     "helpfulCount": 69
+    }
+   ]
+  },
+  {
    "id": "p-0149",
    "slug": "lullaby-co-baby-monitor-hd",
    "name": "Baby Monitor HD",
@@ -3836,6 +5301,165 @@
      "createdAt": "2025-06-12",
      "verifiedPurchase": true,
      "helpfulCount": 66
+    }
+   ]
+  },
+  {
+   "id": "p-0152",
+   "slug": "nestly-organic-cotton-swaddle-set",
+   "name": "Organic Cotton Swaddle Set",
+   "brand": "Nestly",
+   "sku": "BAB-OC-06-ST",
+   "shortDescription": "GOTS muslin that gets softer with every wash.",
+   "longDescription": "GOTS muslin that gets softer with every wash. Built by Nestly for the baby products range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Nestly over-engineers. GOTS-certified organic cotton muslin, and pre-washed, so shrinkage is done before it arrives.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
+   "features": [
+    "GOTS-certified organic cotton muslin",
+    "Pre-washed, so shrinkage is done before it arrives",
+    "120 × 120 cm — big enough to swaddle properly",
+    "Meets or exceeds the current EN and ASTM safety standards for its class",
+    "Every fabric is Oeko-Tex Standard 100 certified for infant contact"
+   ],
+   "specifications": [
+    {
+     "label": "Includes",
+     "value": "3 swaddles"
+    },
+    {
+     "label": "Size",
+     "value": "120 × 120 cm each"
+    },
+    {
+     "label": "Care",
+     "value": "Machine wash warm, tumble low"
+    },
+    {
+     "label": "Certification",
+     "value": "EN 1888 / ASTM F833 as applicable"
+    },
+    {
+     "label": "Materials",
+     "value": "BPA, BPS and phthalate free"
+    },
+    {
+     "label": "SKU",
+     "value": "BAB-OC-06-ST"
+    }
+   ],
+   "price": 4899,
+   "discountPercent": 0,
+   "rating": 4.3,
+   "reviewCount": 3159,
+   "stockStatus": "in_stock",
+   "stockCount": 295,
+   "category": "baby-products",
+   "subcategory": "Textiles",
+   "images": [
+    {
+     "id": "nestly-organic-cotton-swaddle-set-main",
+     "view": "main",
+     "alt": "Nestly Organic Cotton Swaddle Set — product photo",
+     "src": "/products/baby-products-organic-cotton-swaddle-set/main.jpg",
+     "thumbnail": "/products/baby-products-organic-cotton-swaddle-set/thumb.jpg",
+     "credit": "Photo: deanj via flickr, CC BY 2.0",
+     "gradient": "from-blue-300 via-sky-400 to-indigo-400",
+     "width": 1600,
+     "height": 1600
+    }
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Standard"
+    }
+   ],
+   "tags": [
+    "Baby Products",
+    "Textiles",
+    "Nestly",
+    "Organic",
+    "Cotton",
+    "Swaddle"
+   ],
+   "releasedAt": "2025-08-02",
+   "gradient": "from-blue-300 via-sky-400 to-indigo-400",
+   "warrantyMonths": 24,
+   "returnWindowDays": 30,
+   "dispatchHours": 48,
+   "hasVideo": false,
+   "featured": false,
+   "bestSeller": true,
+   "newArrival": false,
+   "trending": false,
+   "reviews": [
+    {
+     "id": "nestly-organic-cotton-swaddle-set-r5",
+     "author": "Ines C.",
+     "rating": 5,
+     "title": "Worth the money",
+     "body": "I was sceptical at this price but the finish is excellent and it has taken daily use without complaint. Packaging was plastic-free too, which I appreciated.",
+     "createdAt": "2026-04-21",
+     "verifiedPurchase": true,
+     "helpfulCount": 157
+    },
+    {
+     "id": "nestly-organic-cotton-swaddle-set-r4",
+     "author": "Owen B.",
+     "rating": 5,
+     "title": "Exactly what was described",
+     "body": "Noticeably better made than the mainstream option I was comparing against. The details you only notice after a month are all right. Ordered on a Thursday, arrived Monday.",
+     "createdAt": "2026-04-15",
+     "verifiedPurchase": true,
+     "helpfulCount": 45
+    },
+    {
+     "id": "nestly-organic-cotton-swaddle-set-r2",
+     "author": "Felix A.",
+     "rating": 5,
+     "title": "Worth the money",
+     "body": "Bought it partly on the warranty terms and have not needed them, which is the ideal outcome. Feels like it will outlast the guarantee comfortably. Bought it as a gift and ended up ordering a second for myself.",
+     "createdAt": "2026-02-09",
+     "verifiedPurchase": true,
+     "helpfulCount": 20
+    },
+    {
+     "id": "nestly-organic-cotton-swaddle-set-r7",
+     "author": "Jonah R.",
+     "rating": 5,
+     "title": "No notes",
+     "body": "Noticeably better made than the mainstream option I was comparing against. The details you only notice after a month are all right. Bought it after returning a cheaper one that lasted six weeks.",
+     "createdAt": "2026-02-06",
+     "verifiedPurchase": true,
+     "helpfulCount": 176
+    },
+    {
+     "id": "nestly-organic-cotton-swaddle-set-r3",
+     "author": "Ravi S.",
+     "rating": 3,
+     "title": "Does the job, feels average",
+     "body": "Mixed — the core function is good but the finish is average. I would probably look around before rebuying.",
+     "createdAt": "2025-07-02",
+     "verifiedPurchase": true,
+     "helpfulCount": 154
+    },
+    {
+     "id": "nestly-organic-cotton-swaddle-set-r6",
+     "author": "Priya N.",
+     "rating": 5,
+     "title": "Would buy again without thinking",
+     "body": "Bought it partly on the warranty terms and have not needed them, which is the ideal outcome. Feels like it will outlast the guarantee comfortably.",
+     "createdAt": "2025-06-18",
+     "verifiedPurchase": true,
+     "helpfulCount": 172
+    },
+    {
+     "id": "nestly-organic-cotton-swaddle-set-r1",
+     "author": "Tomas H.",
+     "rating": 4,
+     "title": "Very good, one small gripe",
+     "body": "Performs well and feels durable. Took off a star because the first one arrived with a cosmetic mark; support replaced it in two days without argument. Ordered on a Thursday, arrived Monday.",
+     "createdAt": "2025-06-07",
+     "verifiedPurchase": false,
+     "helpfulCount": 12
     }
    ]
   },
@@ -3982,23 +5606,48 @@
   },
   {
    "id": "p-0158",
-   "slug": "lullaby-co-star-projector-nightlight",
-   "name": "Star Projector Nightlight",
+   "slug": "lullaby-co-lumen-nursery-nightlight",
+   "name": "Lumen Nursery Nightlight",
    "brand": "Lullaby Co",
    "sku": "BAB-LN-12-ST",
-   "shortDescription": "A nursery nightlight that projects stars onto the wall and ceiling.",
-   "longDescription": "A nursery nightlight that projects stars onto the wall and ceiling.\n\nSold and shipped directly by SAMRUX LLC.",
+   "shortDescription": "Warm 1,800 K light that will not suppress melatonin, dimmable to nothing.",
+   "longDescription": "Warm 1,800 K light that will not suppress melatonin, dimmable to nothing. Built by Lullaby Co for the baby products range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Lullaby Co over-engineers. 1,800 K amber output — no blue spike before sleep, and dims to 0.5 lux, low enough for a night feed.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
    "features": [
-    "Projects a star pattern"
+    "1,800 K amber output — no blue spike before sleep",
+    "Dims to 0.5 lux, low enough for a night feed",
+    "Portable, magnetic base, 30-hour battery",
+    "Meets or exceeds the current EN and ASTM safety standards for its class",
+    "Every fabric is Oeko-Tex Standard 100 certified for infant contact"
    ],
    "specifications": [
+    {
+     "label": "Colour temperature",
+     "value": "1,800 K fixed"
+    },
+    {
+     "label": "Battery",
+     "value": "30 hours at low"
+    },
+    {
+     "label": "Charging",
+     "value": "USB-C or magnetic dock"
+    },
+    {
+     "label": "Certification",
+     "value": "EN 1888 / ASTM F833 as applicable"
+    },
+    {
+     "label": "Materials",
+     "value": "BPA, BPS and phthalate free"
+    },
     {
      "label": "SKU",
      "value": "BAB-LN-12-ST"
     }
    ],
    "price": 4199,
-   "discountPercent": 0,
+   "compareAtPrice": 5999,
+   "discountPercent": 30,
    "rating": 4.4,
    "reviewCount": 1697,
    "stockStatus": "in_stock",
@@ -4007,11 +5656,11 @@
    "subcategory": "Nursery",
    "images": [
     {
-     "id": "lullaby-co-star-projector-nightlight-main",
+     "id": "lullaby-co-lumen-nursery-nightlight-main",
      "view": "main",
-     "alt": "Star Projector Nightlight — product photo",
-     "src": "/products/baby-products-star-projector-nightlight/main.jpg",
-     "thumbnail": "/products/baby-products-star-projector-nightlight/thumb.jpg",
+     "alt": "Lullaby Co Lumen Nursery Nightlight — product photo",
+     "src": "/products/baby-products-lumen-nursery-nightlight/main.jpg",
+     "thumbnail": "/products/baby-products-lumen-nursery-nightlight/thumb.jpg",
      "credit": "Photo: lilivanili via flickr, CC BY 2.0",
      "gradient": "from-indigo-300 via-blue-400 to-cyan-500",
      "width": 1600,
@@ -4027,8 +5676,9 @@
    "tags": [
     "Baby Products",
     "Nursery",
-    "Star",
-    "Projector",
+    "Lullaby Co",
+    "Lumen",
+    "Nursery",
     "Nightlight"
    ],
    "releasedAt": "2026-05-03",
@@ -4115,25 +5765,156 @@
    ]
   },
   {
+   "id": "p-0161",
+   "slug": "cradlewell-woven-nursery-basket",
+   "name": "Woven Nursery Basket",
+   "brand": "Cradlewell",
+   "sku": "BAB-SN-13-ST",
+   "shortDescription": "A hand-woven seagrass basket for blankets, toys or laundry, with a folded rim that stays rigid when full.",
+   "longDescription": "A hand-woven seagrass basket for blankets, toys or laundry, with a folded rim that stays rigid when full. Built by Cradlewell for our baby products range.\n\nEvery unit is checked before it leaves our warehouse, ships within 48 hours, and is covered by a 30-day return window.",
+   "features": [
+    "Hand-woven natural seagrass, no dyes or lacquer",
+    "Folded double rim keeps its shape",
+    "Large enough for a full set of cot bedding",
+    "Nests inside the larger size for storage"
+   ],
+   "specifications": [
+    {
+     "label": "Dimensions",
+     "value": "400 mm diameter × 300 mm"
+    },
+    {
+     "label": "Material",
+     "value": "Natural seagrass"
+    },
+    {
+     "label": "Capacity",
+     "value": "38 litres"
+    },
+    {
+     "label": "Care",
+     "value": "Wipe with a damp cloth"
+    },
+    {
+     "label": "SKU",
+     "value": "BAB-SN-13-ST"
+    }
+   ],
+   "price": 3499,
+   "discountPercent": 0,
+   "rating": 4.4,
+   "reviewCount": 250,
+   "stockStatus": "in_stock",
+   "stockCount": 240,
+   "category": "baby-products",
+   "subcategory": "Storage",
+   "images": [
+    {
+     "id": "cradlewell-woven-nursery-basket-main",
+     "view": "main",
+     "alt": "Cradlewell Woven Nursery Basket — product photo",
+     "src": "/products/baby-products-woven-nursery-basket/main.jpg",
+     "thumbnail": "/products/baby-products-woven-nursery-basket/thumb.jpg",
+     "credit": "Photo: rawpixel via rawpixel, CC0",
+     "gradient": "from-sky-300 via-cyan-400 to-blue-500",
+     "width": 1600,
+     "height": 1600
+    }
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Standard"
+    }
+   ],
+   "tags": [
+    "woven",
+    "nursery",
+    "basket"
+   ],
+   "releasedAt": "2025-08-29",
+   "gradient": "from-sky-300 via-cyan-400 to-blue-500",
+   "warrantyMonths": 24,
+   "returnWindowDays": 30,
+   "dispatchHours": 48,
+   "hasVideo": false,
+   "featured": false,
+   "bestSeller": false,
+   "newArrival": false,
+   "trending": false,
+   "reviews": [
+    {
+     "id": "cradlewell-stack-nursery-storage-set-r3",
+     "author": "Marta L.",
+     "rating": 5,
+     "title": "Does the job properly",
+     "body": "The spec sheet matched reality, which is more than I can say for the last three I tried. Build quality is genuinely good and it has not developed any rattles or quirks.",
+     "createdAt": "2025-09-02",
+     "verifiedPurchase": true,
+     "helpfulCount": 75
+    },
+    {
+     "id": "cradlewell-stack-nursery-storage-set-r1",
+     "author": "Lucas M.",
+     "rating": 5,
+     "title": "Does the job properly",
+     "body": "Noticeably better made than the mainstream option I was comparing against. The details you only notice after a month are all right.",
+     "createdAt": "2025-07-29",
+     "verifiedPurchase": true,
+     "helpfulCount": 176
+    },
+    {
+     "id": "cradlewell-stack-nursery-storage-set-r2",
+     "author": "Noah E.",
+     "rating": 4,
+     "title": "Very good, one small gripe",
+     "body": "Very pleased overall. The only thing I would change is the documentation — it assumes you already know what you are doing. Bought it as a gift and ended up ordering a second for myself.",
+     "createdAt": "2025-07-18",
+     "verifiedPurchase": false,
+     "helpfulCount": 104
+    }
+   ]
+  },
+  {
    "id": "p-0170",
    "slug": "ergovia-desk-organiser-set",
    "name": "Desk Organiser Set",
    "brand": "Ergovia",
    "sku": "OFF-DO-05-ST",
-   "shortDescription": "A set of desk trays and pen holders on a wooden base.",
-   "longDescription": "A set of desk trays and pen holders on a wooden base.\n\nSold and shipped directly by SAMRUX LLC.",
+   "shortDescription": "Solid walnut trays with felt bases and no visible fixings.",
+   "longDescription": "Solid walnut trays with felt bases and no visible fixings. Built by Ergovia for the office products range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Ergovia over-engineers. Solid walnut, oil finished and refinishable, and wool felt bases protect the desk surface.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
    "features": [
-    "Pen holders and open trays",
-    "Wooden base"
+    "Solid walnut, oil finished and refinishable",
+    "Wool felt bases protect the desk surface",
+    "Modular — the trays stack and nest",
+    "Rated for eight-hour daily use rather than occasional home use",
+    "Replacement castors, gas lifts and fixings kept in stock for ten years"
    ],
    "specifications": [
+    {
+     "label": "Pieces",
+     "value": "5 trays and a pen block"
+    },
+    {
+     "label": "Material",
+     "value": "FSC walnut, hardwax oil"
+    },
+    {
+     "label": "Footprint",
+     "value": "38 × 24 cm assembled"
+    },
+    {
+     "label": "Assembly",
+     "value": "Tools included, under 20 minutes"
+    },
     {
      "label": "SKU",
      "value": "OFF-DO-05-ST"
     }
    ],
    "price": 5899,
-   "discountPercent": 0,
+   "compareAtPrice": 9799,
+   "discountPercent": 40,
    "rating": 4.1,
    "reviewCount": 2903,
    "stockStatus": "low_stock",
@@ -4144,7 +5925,7 @@
     {
      "id": "ergovia-desk-organiser-set-main",
      "view": "main",
-     "alt": "Desk Organiser Set — product photo",
+     "alt": "Ergovia Desk Organiser Set — product photo",
      "src": "/products/office-products-desk-organiser-set/main.jpg",
      "thumbnail": "/products/office-products-desk-organiser-set/thumb.jpg",
      "credit": "Photo: rawpixel via rawpixel, CC0",
@@ -4162,9 +5943,9 @@
    "tags": [
     "Office Products",
     "Paper",
+    "Ergovia",
     "Desk",
-    "Organiser",
-    "Set"
+    "Organiser"
    ],
    "releasedAt": "2025-10-06",
    "gradient": "from-zinc-600 via-slate-600 to-neutral-800",
@@ -4226,6 +6007,151 @@
      "createdAt": "2025-07-25",
      "verifiedPurchase": false,
      "helpfulCount": 213
+    }
+   ]
+  },
+  {
+   "id": "p-0173",
+   "slug": "axio-cross-cut-shredder",
+   "name": "Cross-Cut Shredder",
+   "brand": "Axio",
+   "sku": "OFF-CS-07-ST",
+   "shortDescription": "P-4 security with a 20-minute duty cycle and jam reverse.",
+   "longDescription": "P-4 security with a 20-minute duty cycle and jam reverse. Built by Axio for the office products range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Axio over-engineers. P-4 cross cut — 4 × 35 mm particles, and 20-minute continuous run before cooldown.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
+   "features": [
+    "P-4 cross cut — 4 × 35 mm particles",
+    "20-minute continuous run before cooldown",
+    "Handles staples, clips and credit cards",
+    "Rated for eight-hour daily use rather than occasional home use",
+    "Replacement castors, gas lifts and fixings kept in stock for ten years"
+   ],
+   "specifications": [
+    {
+     "label": "Capacity",
+     "value": "14 sheets per pass"
+    },
+    {
+     "label": "Bin",
+     "value": "23 L pull-out"
+    },
+    {
+     "label": "Noise",
+     "value": "58 dB"
+    },
+    {
+     "label": "Assembly",
+     "value": "Tools included, under 20 minutes"
+    },
+    {
+     "label": "SKU",
+     "value": "OFF-CS-07-ST"
+    }
+   ],
+   "price": 5999,
+   "compareAtPrice": 9999,
+   "discountPercent": 40,
+   "rating": 4.9,
+   "reviewCount": 2461,
+   "stockStatus": "in_stock",
+   "stockCount": 421,
+   "category": "office-products",
+   "subcategory": "Paper",
+   "images": [
+    {
+     "id": "axio-cross-cut-shredder-main",
+     "view": "main",
+     "alt": "Axio Cross-Cut Shredder — product photo",
+     "src": "/products/office-products-cross-cut-shredder/main.jpg",
+     "thumbnail": "/products/office-products-cross-cut-shredder/thumb.jpg",
+     "credit": "Photo: Manuel Schmalstieg via flickr, CC BY 2.0",
+     "gradient": "from-neutral-700 via-slate-500 to-zinc-400",
+     "width": 1600,
+     "height": 1600
+    }
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Standard"
+    }
+   ],
+   "tags": [
+    "Office Products",
+    "Paper",
+    "Axio",
+    "Cross-Cut",
+    "Shredder"
+   ],
+   "releasedAt": "2026-06-27",
+   "gradient": "from-neutral-700 via-slate-500 to-zinc-400",
+   "warrantyMonths": 24,
+   "returnWindowDays": 30,
+   "dispatchHours": 48,
+   "hasVideo": false,
+   "featured": true,
+   "bestSeller": true,
+   "newArrival": true,
+   "trending": true,
+   "reviews": [
+    {
+     "id": "axio-cross-cut-shredder-r5",
+     "author": "Clara D.",
+     "rating": 5,
+     "title": "Better than the one it replaced",
+     "body": "The spec sheet matched reality, which is more than I can say for the last three I tried. Build quality is genuinely good and it has not developed any rattles or quirks.",
+     "createdAt": "2026-05-03",
+     "verifiedPurchase": true,
+     "helpfulCount": 214
+    },
+    {
+     "id": "axio-cross-cut-shredder-r3",
+     "author": "Noah E.",
+     "rating": 5,
+     "title": "Worth the money",
+     "body": "I was sceptical at this price but the finish is excellent and it has taken daily use without complaint. Packaging was plastic-free too, which I appreciated. Bought it as a gift and ended up ordering a second for myself.",
+     "createdAt": "2026-04-21",
+     "verifiedPurchase": true,
+     "helpfulCount": 153
+    },
+    {
+     "id": "axio-cross-cut-shredder-r1",
+     "author": "Camila T.",
+     "rating": 3,
+     "title": "OK for the price",
+     "body": "Works as intended, though I expected a bit more refinement at this price. Fine if you catch it on a discount. Replaced something twice the price and have not missed it.",
+     "createdAt": "2025-12-20",
+     "verifiedPurchase": true,
+     "helpfulCount": 117
+    },
+    {
+     "id": "axio-cross-cut-shredder-r4",
+     "author": "Andrei P.",
+     "rating": 5,
+     "title": "Better than the one it replaced",
+     "body": "The spec sheet matched reality, which is more than I can say for the last three I tried. Build quality is genuinely good and it has not developed any rattles or quirks.",
+     "createdAt": "2025-08-23",
+     "verifiedPurchase": true,
+     "helpfulCount": 72
+    },
+    {
+     "id": "axio-cross-cut-shredder-r2",
+     "author": "Elena G.",
+     "rating": 5,
+     "title": "No notes",
+     "body": "The spec sheet matched reality, which is more than I can say for the last three I tried. Build quality is genuinely good and it has not developed any rattles or quirks. Bought it as a gift and ended up ordering a second for myself.",
+     "createdAt": "2025-07-23",
+     "verifiedPurchase": true,
+     "helpfulCount": 202
+    },
+    {
+     "id": "axio-cross-cut-shredder-r6",
+     "author": "Erik S.",
+     "rating": 5,
+     "title": "Exactly what was described",
+     "body": "The spec sheet matched reality, which is more than I can say for the last three I tried. Build quality is genuinely good and it has not developed any rattles or quirks. Been using it daily for about three months now.",
+     "createdAt": "2025-07-09",
+     "verifiedPurchase": false,
+     "helpfulCount": 6
     }
    ]
   },
@@ -4782,24 +6708,44 @@
   },
   {
    "id": "p-0191",
-   "slug": "axlewerks-12v-tyre-inflator",
-   "name": "12V Tyre Inflator",
+   "slug": "axlewerks-cordless-tyre-inflator",
+   "name": "Cordless Tyre Inflator",
    "brand": "Axlewerks",
    "sku": "AUT-CT-03-ST",
-   "shortDescription": "A 12-volt tyre inflator with a built-in pressure gauge and a coiled air hose.",
-   "longDescription": "A 12-volt tyre inflator with a built-in pressure gauge and a coiled air hose.\n\nSold and shipped directly by SAMRUX LLC.",
+   "shortDescription": "Presets a target pressure and shuts off when it gets there.",
+   "longDescription": "Presets a target pressure and shuts off when it gets there. Built by Axlewerks for the automotive range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Axlewerks over-engineers. Set a target PSI and it stops on its own, and digital gauge accurate to ±1 PSI.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
    "features": [
-    "Built-in pressure gauge",
-    "Coiled air hose"
+    "Set a target PSI and it stops on its own",
+    "Digital gauge accurate to ±1 PSI",
+    "Inflates a 225/45 R17 from flat in 4 minutes",
+    "Sized to live in a glovebox or boot well without rattling",
+    "Every fuse, lead and adapter it needs is in the box"
    ],
    "specifications": [
+    {
+     "label": "Max pressure",
+     "value": "150 PSI"
+    },
+    {
+     "label": "Battery",
+     "value": "7,800 mAh, USB-C"
+    },
+    {
+     "label": "Adapters",
+     "value": "Presta, Schrader, ball, inflatable"
+    },
+    {
+     "label": "Operating range",
+     "value": "−20 °C to 60 °C"
+    },
     {
      "label": "SKU",
      "value": "AUT-CT-03-ST"
     }
    ],
    "price": 5999,
-   "discountPercent": 0,
+   "compareAtPrice": 6299,
+   "discountPercent": 5,
    "rating": 4.1,
    "reviewCount": 3463,
    "stockStatus": "in_stock",
@@ -4808,11 +6754,11 @@
    "subcategory": "Tyres",
    "images": [
     {
-     "id": "axlewerks-12v-tyre-inflator-main",
+     "id": "axlewerks-cordless-tyre-inflator-main",
      "view": "main",
-     "alt": "12V Tyre Inflator — product photo",
-     "src": "/products/automotive-12v-tyre-inflator/main.jpg",
-     "thumbnail": "/products/automotive-12v-tyre-inflator/thumb.jpg",
+     "alt": "Axlewerks Cordless Tyre Inflator — product photo",
+     "src": "/products/automotive-cordless-tyre-inflator/main.jpg",
+     "thumbnail": "/products/automotive-cordless-tyre-inflator/thumb.jpg",
      "credit": "Photo: chimpwithcan via flickr, CC BY 2.0",
      "gradient": "from-slate-800 via-zinc-700 to-red-600",
      "width": 1600,
@@ -4828,7 +6774,8 @@
    "tags": [
     "Automotive",
     "Tyres",
-    "12V",
+    "Axlewerks",
+    "Cordless",
     "Tyre",
     "Inflator"
    ],
@@ -5191,23 +7138,43 @@
   },
   {
    "id": "p-0200",
-   "slug": "torqline-car-wash-sponge",
-   "name": "Car Wash Sponge",
+   "slug": "torqline-wash-sponge-set",
+   "name": "Wash Sponge Set",
    "brand": "Torqline",
    "sku": "AUT-WC-12-ST",
-   "shortDescription": "A large-cell car wash sponge that holds plenty of suds.",
-   "longDescription": "A large-cell car wash sponge that holds plenty of suds.\n\nSold and shipped directly by SAMRUX LLC.",
+   "shortDescription": "Three large-cell wash sponges that hold plenty of suds and rinse clean without shedding.",
+   "longDescription": "Three large-cell wash sponges that hold plenty of suds and rinse clean without shedding. Built by Torqline for our automotive range.\n\nEvery unit is checked before it leaves our warehouse, ships within 48 hours, and is covered by a 30-day return window.",
    "features": [
-    "Large-cell foam"
+    "Open-cell foam holds water and lifts grit away from paint",
+    "Contoured grip stays in the hand when soaked",
+    "Rinses clean; machine washable up to 40 °C",
+    "Set of three: wash, wheels, glass"
    ],
    "specifications": [
+    {
+     "label": "Contents",
+     "value": "3 sponges"
+    },
+    {
+     "label": "Size",
+     "value": "220 × 110 × 60 mm each"
+    },
+    {
+     "label": "Material",
+     "value": "Polyurethane foam"
+    },
+    {
+     "label": "Care",
+     "value": "Rinse and air dry"
+    },
     {
      "label": "SKU",
      "value": "AUT-WC-12-ST"
     }
    ],
-   "price": 699,
-   "discountPercent": 0,
+   "price": 1499,
+   "compareAtPrice": 1599,
+   "discountPercent": 6,
    "rating": 4.6,
    "reviewCount": 180,
    "stockStatus": "in_stock",
@@ -5216,11 +7183,11 @@
    "subcategory": "Cleaning",
    "images": [
     {
-     "id": "torqline-car-wash-sponge-main",
+     "id": "torqline-wash-sponge-set-main",
      "view": "main",
-     "alt": "Car Wash Sponge — product photo",
-     "src": "/products/automotive-car-wash-sponge/main.jpg",
-     "thumbnail": "/products/automotive-car-wash-sponge/thumb.jpg",
+     "alt": "Torqline Wash Sponge Set — product photo",
+     "src": "/products/automotive-wash-sponge-set/main.jpg",
+     "thumbnail": "/products/automotive-wash-sponge-set/thumb.jpg",
      "credit": "Photo: rawpixel via rawpixel, CC0",
      "gradient": "from-stone-800 via-neutral-700 to-amber-600",
      "width": 1600,
@@ -5235,10 +7202,7 @@
    ],
    "tags": [
     "wash",
-    "Cleaning",
-    "Car",
-    "Wash",
-    "Sponge"
+    "sponge"
    ],
    "releasedAt": "2025-09-13",
    "gradient": "from-stone-800 via-neutral-700 to-amber-600",
@@ -6205,24 +8169,48 @@
   },
   {
    "id": "p-0233",
-   "slug": "brenna-white-court-sneaker",
-   "name": "White Court Sneaker",
+   "slug": "brenna-vulcanised-court-sneaker",
+   "name": "Vulcanised Court Sneaker",
    "brand": "Brenna",
    "sku": "FAS-VC-08-ST",
-   "shortDescription": "A white low-top lace-up sneaker.",
-   "longDescription": "A white low-top lace-up sneaker.\n\nSold and shipped directly by SAMRUX LLC.",
+   "shortDescription": "A clean leather trainer on a vulcanised sole that does not yellow.",
+   "longDescription": "A clean leather trainer on a vulcanised sole that does not yellow. Built by Brenna for the fashion range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Brenna over-engineers. Vulcanised sole bonded under heat, not glued, and full-grain leather upper with a suede heel counter.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
    "features": [
-    "Low-top",
-    "Lace-up"
+    "Vulcanised sole bonded under heat, not glued",
+    "Full-grain leather upper with a suede heel counter",
+    "Removable orthotic-friendly insole",
+    "Mill and factory named on the product page, with fibre composition in full",
+    "Sized on real bodies — the size chart is measured, not graded from a sample"
    ],
    "specifications": [
+    {
+     "label": "Upper",
+     "value": "Full-grain leather"
+    },
+    {
+     "label": "Sole",
+     "value": "Natural rubber, vulcanised"
+    },
+    {
+     "label": "Lining",
+     "value": "Vegetable-tanned leather"
+    },
+    {
+     "label": "Care",
+     "value": "Cold wash, line dry, no softener"
+    },
+    {
+     "label": "Origin",
+     "value": "Cut and sewn in Portugal"
+    },
     {
      "label": "SKU",
      "value": "FAS-VC-08-ST"
     }
    ],
    "price": 12999,
-   "discountPercent": 0,
+   "compareAtPrice": 14399,
+   "discountPercent": 10,
    "rating": 4.2,
    "reviewCount": 798,
    "stockStatus": "in_stock",
@@ -6231,11 +8219,11 @@
    "subcategory": "Footwear",
    "images": [
     {
-     "id": "brenna-white-court-sneaker-main",
+     "id": "brenna-vulcanised-court-sneaker-main",
      "view": "main",
-     "alt": "White Court Sneaker — product photo",
-     "src": "/products/fashion-white-court-sneaker/main.jpg",
-     "thumbnail": "/products/fashion-white-court-sneaker/thumb.jpg",
+     "alt": "Brenna Vulcanised Court Sneaker — product photo",
+     "src": "/products/fashion-vulcanised-court-sneaker/main.jpg",
+     "thumbnail": "/products/fashion-vulcanised-court-sneaker/thumb.jpg",
      "credit": "Photo: rawpixel via rawpixel, CC0",
      "gradient": "from-zinc-800 via-stone-700 to-amber-700",
      "width": 1600,
@@ -6244,14 +8232,27 @@
    ],
    "variants": [
     {
-     "id": "standard",
-     "label": "Standard"
+     "id": "eu40",
+     "label": "EU 40"
+    },
+    {
+     "id": "eu42",
+     "label": "EU 42"
+    },
+    {
+     "id": "eu44",
+     "label": "EU 44"
+    },
+    {
+     "id": "eu46",
+     "label": "EU 46"
     }
    ],
    "tags": [
     "Fashion",
     "Footwear",
-    "White",
+    "Brenna",
+    "Vulcanised",
     "Court",
     "Sneaker"
    ],
@@ -7420,23 +9421,48 @@
   },
   {
    "id": "p-0257",
-   "slug": "hearthline-plum-preserve",
-   "name": "Plum Preserve",
+   "slug": "hearthline-slow-cooked-fig-preserve",
+   "name": "Slow-Cooked Fig Preserve",
    "brand": "Hearthline",
    "sku": "GRO-SF-09-ST",
-   "shortDescription": "A plum preserve in a clip-top glass jar.",
-   "longDescription": "A plum preserve in a clip-top glass jar.\n\nSold and shipped directly by SAMRUX LLC.",
+   "shortDescription": "65% fruit, open-pan cooked, set with the fruit's own pectin.",
+   "longDescription": "65% fruit, open-pan cooked, set with the fruit's own pectin. Built by Hearthline for the grocery & gourmet food range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Hearthline over-engineers. 65% fruit — spoonable rather than gelled, and open-pan cooked in 30 kg batches.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
    "features": [
-    "Clip-top glass jar"
+    "65% fruit — spoonable rather than gelled",
+    "Open-pan cooked in 30 kg batches",
+    "No added pectin, colour or preservative",
+    "Producer, region and harvest date printed on every label",
+    "Bought direct — we publish what the grower was paid"
    ],
    "specifications": [
+    {
+     "label": "Fruit content",
+     "value": "65%"
+    },
+    {
+     "label": "Jar",
+     "value": "340 g"
+    },
+    {
+     "label": "Shelf life",
+     "value": "24 months sealed"
+    },
+    {
+     "label": "Storage",
+     "value": "Cool and dark, away from direct sun"
+    },
+    {
+     "label": "Traceability",
+     "value": "Lot code links to the producer record"
+    },
     {
      "label": "SKU",
      "value": "GRO-SF-09-ST"
     }
    ],
    "price": 1299,
-   "discountPercent": 0,
+   "compareAtPrice": 1899,
+   "discountPercent": 32,
    "rating": 3.7,
    "reviewCount": 3825,
    "stockStatus": "in_stock",
@@ -7445,11 +9471,11 @@
    "subcategory": "Preserves",
    "images": [
     {
-     "id": "hearthline-plum-preserve-main",
+     "id": "hearthline-slow-cooked-fig-preserve-main",
      "view": "main",
-     "alt": "Plum Preserve — product photo",
-     "src": "/products/grocery-gourmet-food-plum-preserve/main.jpg",
-     "thumbnail": "/products/grocery-gourmet-food-plum-preserve/thumb.jpg",
+     "alt": "Hearthline Slow-Cooked Fig Preserve — product photo",
+     "src": "/products/grocery-gourmet-food-slow-cooked-fig-preserve/main.jpg",
+     "thumbnail": "/products/grocery-gourmet-food-slow-cooked-fig-preserve/thumb.jpg",
      "credit": "Photo: rawpixel via rawpixel, CC0",
      "gradient": "from-amber-700 via-orange-800 to-red-800",
      "width": 1600,
@@ -7465,7 +9491,8 @@
    "tags": [
     "Grocery & Gourmet Food",
     "Preserves",
-    "Plum",
+    "Hearthline",
+    "Slow-Cooked",
     "Preserve"
    ],
    "releasedAt": "2026-01-04",
@@ -7661,25 +9688,210 @@
    ]
   },
   {
-   "id": "p-0275",
-   "slug": "nestly-wooden-toy-train",
-   "name": "Wooden Toy Train",
-   "brand": "Nestly",
-   "sku": "TOY-WT-06-ST",
-   "shortDescription": "A painted wooden toy train engine with a carriage.",
-   "longDescription": "A painted wooden toy train engine with a carriage.\n\nSold and shipped directly by SAMRUX LLC.",
+   "id": "p-0269",
+   "slug": "milo-and-fern-strategy-board-game-meridian",
+   "name": "Strategy Board Game — Meridian",
+   "brand": "Milo & Fern",
+   "sku": "TOY-SB-04-ST",
+   "shortDescription": "Forty minutes, no player elimination, and it teaches itself in one round.",
+   "longDescription": "Forty minutes, no player elimination, and it teaches itself in one round. Built by Milo & Fern for the toys & games range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Milo & Fern over-engineers. Teaches in five minutes; the first round is the tutorial, and no player elimination — everybody plays to the end.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
    "features": [
-    "Painted wood",
-    "Engine and carriage"
+    "Teaches in five minutes; the first round is the tutorial",
+    "No player elimination — everybody plays to the end",
+    "Linen-finish cards and a proper insert that sorts itself",
+    "Tested by children for a full term before it reaches the catalogue",
+    "Replacement parts sold individually — one lost piece should not bin a set"
    ],
    "specifications": [
+    {
+     "label": "Players",
+     "value": "2–5"
+    },
+    {
+     "label": "Length",
+     "value": "40 minutes"
+    },
+    {
+     "label": "Age",
+     "value": "10 and up"
+    },
+    {
+     "label": "Safety",
+     "value": "EN 71 and ASTM F963 certified"
+    },
+    {
+     "label": "Materials",
+     "value": "No PVC, phthalates or added dyes"
+    },
+    {
+     "label": "SKU",
+     "value": "TOY-SB-04-ST"
+    }
+   ],
+   "price": 5899,
+   "compareAtPrice": 9099,
+   "discountPercent": 35,
+   "rating": 4.5,
+   "reviewCount": 3467,
+   "stockStatus": "in_stock",
+   "stockCount": 582,
+   "category": "toys-games",
+   "subcategory": "Board Games",
+   "images": [
+    {
+     "id": "milo-and-fern-strategy-board-game-meridian-main",
+     "view": "main",
+     "alt": "Milo & Fern Strategy Board Game — Meridian — product photo",
+     "src": "/products/toys-games-strategy-board-game-meridian/main.jpg",
+     "thumbnail": "/products/toys-games-strategy-board-game-meridian/thumb.jpg",
+     "credit": "Photo: rawpixel via rawpixel, CC0",
+     "gradient": "from-indigo-700 via-violet-800 to-purple-700",
+     "width": 1600,
+     "height": 1600
+    }
+   ],
+   "variants": [
+    {
+     "id": "standard",
+     "label": "Standard"
+    }
+   ],
+   "tags": [
+    "Toys & Games",
+    "Board Games",
+    "Milo & Fern",
+    "Strategy",
+    "Board",
+    "Game",
+    "Meridian"
+   ],
+   "releasedAt": "2025-12-02",
+   "gradient": "from-indigo-700 via-violet-800 to-purple-700",
+   "warrantyMonths": 24,
+   "returnWindowDays": 30,
+   "dispatchHours": 48,
+   "hasVideo": false,
+   "featured": false,
+   "bestSeller": true,
+   "newArrival": false,
+   "trending": true,
+   "reviews": [
+    {
+     "id": "milo-and-fern-strategy-board-game-meridian-r6",
+     "author": "Pieter DV.",
+     "rating": 5,
+     "title": "Would buy again without thinking",
+     "body": "The spec sheet matched reality, which is more than I can say for the last three I tried. Build quality is genuinely good and it has not developed any rattles or quirks. Replaced something twice the price and have not missed it.",
+     "createdAt": "2026-04-04",
+     "verifiedPurchase": true,
+     "helpfulCount": 140
+    },
+    {
+     "id": "milo-and-fern-strategy-board-game-meridian-r7",
+     "author": "Rosa M.",
+     "rating": 5,
+     "title": "Does the job properly",
+     "body": "I was sceptical at this price but the finish is excellent and it has taken daily use without complaint. Packaging was plastic-free too, which I appreciated.",
+     "createdAt": "2026-03-12",
+     "verifiedPurchase": true,
+     "helpfulCount": 158
+    },
+    {
+     "id": "milo-and-fern-strategy-board-game-meridian-r3",
+     "author": "Jonas W.",
+     "rating": 5,
+     "title": "No notes",
+     "body": "Noticeably better made than the mainstream option I was comparing against. The details you only notice after a month are all right. Replaced something twice the price and have not missed it.",
+     "createdAt": "2025-12-08",
+     "verifiedPurchase": true,
+     "helpfulCount": 237
+    },
+    {
+     "id": "milo-and-fern-strategy-board-game-meridian-r4",
+     "author": "Farah Z.",
+     "rating": 5,
+     "title": "Better than the one it replaced",
+     "body": "Bought it partly on the warranty terms and have not needed them, which is the ideal outcome. Feels like it will outlast the guarantee comfortably. Bought it as a gift and ended up ordering a second for myself.",
+     "createdAt": "2025-09-24",
+     "verifiedPurchase": true,
+     "helpfulCount": 40
+    },
+    {
+     "id": "milo-and-fern-strategy-board-game-meridian-r1",
+     "author": "Aisha B.",
+     "rating": 5,
+     "title": "Exactly what was described",
+     "body": "Noticeably better made than the mainstream option I was comparing against. The details you only notice after a month are all right.",
+     "createdAt": "2025-09-03",
+     "verifiedPurchase": true,
+     "helpfulCount": 129
+    },
+    {
+     "id": "milo-and-fern-strategy-board-game-meridian-r2",
+     "author": "Oskar N.",
+     "rating": 5,
+     "title": "Worth the money",
+     "body": "Bought it partly on the warranty terms and have not needed them, which is the ideal outcome. Feels like it will outlast the guarantee comfortably.",
+     "createdAt": "2025-06-28",
+     "verifiedPurchase": true,
+     "helpfulCount": 34
+    },
+    {
+     "id": "milo-and-fern-strategy-board-game-meridian-r5",
+     "author": "Marta L.",
+     "rating": 5,
+     "title": "Would buy again without thinking",
+     "body": "Noticeably better made than the mainstream option I was comparing against. The details you only notice after a month are all right. Bought it after returning a cheaper one that lasted six weeks.",
+     "createdAt": "2025-06-13",
+     "verifiedPurchase": true,
+     "helpfulCount": 64
+    }
+   ]
+  },
+  {
+   "id": "p-0275",
+   "slug": "nestly-wooden-train-set",
+   "name": "Wooden Train Set",
+   "brand": "Nestly",
+   "sku": "TOY-WT-06-ST",
+   "shortDescription": "Track that fits every major brand, with magnets strong enough to pull.",
+   "longDescription": "Track that fits every major brand, with magnets strong enough to pull. Built by Nestly for the toys & games range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Nestly over-engineers. Compatible with all standard wooden track systems, and neodymium couplers that actually pull a full train.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
+   "features": [
+    "Compatible with all standard wooden track systems",
+    "Neodymium couplers that actually pull a full train",
+    "Beech track, not printed MDF that delaminates",
+    "Tested by children for a full term before it reaches the catalogue",
+    "Replacement parts sold individually — one lost piece should not bin a set"
+   ],
+   "specifications": [
+    {
+     "label": "Pieces",
+     "value": "62 including 3.4 m of track"
+    },
+    {
+     "label": "Material",
+     "value": "Beech and birch ply"
+    },
+    {
+     "label": "Age",
+     "value": "3 and up"
+    },
+    {
+     "label": "Safety",
+     "value": "EN 71 and ASTM F963 certified"
+    },
+    {
+     "label": "Materials",
+     "value": "No PVC, phthalates or added dyes"
+    },
     {
      "label": "SKU",
      "value": "TOY-WT-06-ST"
     }
    ],
-   "price": 2499,
-   "discountPercent": 0,
+   "price": 8899,
+   "compareAtPrice": 14799,
+   "discountPercent": 40,
    "rating": 4.1,
    "reviewCount": 3775,
    "stockStatus": "in_stock",
@@ -7688,11 +9900,11 @@
    "subcategory": "Pretend Play",
    "images": [
     {
-     "id": "nestly-wooden-toy-train-main",
+     "id": "nestly-wooden-train-set-main",
      "view": "main",
-     "alt": "Wooden Toy Train — product photo",
-     "src": "/products/toys-games-wooden-toy-train/main.jpg",
-     "thumbnail": "/products/toys-games-wooden-toy-train/thumb.jpg",
+     "alt": "Nestly Wooden Train Set — product photo",
+     "src": "/products/toys-games-wooden-train-set/main.jpg",
+     "thumbnail": "/products/toys-games-wooden-train-set/thumb.jpg",
      "credit": "Photo: rawpixel via rawpixel, CC0",
      "gradient": "from-fuchsia-700 via-violet-700 to-indigo-700",
      "width": 1600,
@@ -7708,8 +9920,8 @@
    "tags": [
     "Toys & Games",
     "Pretend Play",
+    "Nestly",
     "Wooden",
-    "Toy",
     "Train"
    ],
    "releasedAt": "2025-05-24",
@@ -7777,24 +9989,48 @@
   },
   {
    "id": "p-0284",
-   "slug": "loomcraft-diamond-kite",
-   "name": "Diamond Kite",
+   "slug": "loomcraft-kite-delta-wing",
+   "name": "Kite — Delta Wing",
    "brand": "Loomcraft",
    "sku": "TOY-KD-11-ST",
-   "shortDescription": "A classic diamond kite with a long ribbon tail.",
-   "longDescription": "A classic diamond kite with a long ribbon tail.\n\nSold and shipped directly by SAMRUX LLC.",
+   "shortDescription": "Ripstop nylon on carbon spars that flies in genuinely light wind.",
+   "longDescription": "Ripstop nylon on carbon spars that flies in genuinely light wind. Built by Loomcraft for the toys & games range.\n\nWe specify it because the parts that usually fail first — the ones you never see on a spec sheet — are the ones Loomcraft over-engineers. Flies from 6 km/h — usable on an average day, not just a gale, and carbon spars that flex instead of snapping.\n\nEvery unit is checked before it leaves the warehouse, ships within 48 hours, and is covered by a 30-day no-questions return window. Spare parts and consumables stay available long after the model is superseded.",
    "features": [
-    "Diamond shape",
-    "Ribbon tail"
+    "Flies from 6 km/h — usable on an average day, not just a gale",
+    "Carbon spars that flex instead of snapping",
+    "Assembles in under a minute, packs to 60 cm",
+    "Tested by children for a full term before it reaches the catalogue",
+    "Replacement parts sold individually — one lost piece should not bin a set"
    ],
    "specifications": [
+    {
+     "label": "Wingspan",
+     "value": "180 cm"
+    },
+    {
+     "label": "Wind range",
+     "value": "6–30 km/h"
+    },
+    {
+     "label": "Age",
+     "value": "6 and up"
+    },
+    {
+     "label": "Safety",
+     "value": "EN 71 and ASTM F963 certified"
+    },
+    {
+     "label": "Materials",
+     "value": "No PVC, phthalates or added dyes"
+    },
     {
      "label": "SKU",
      "value": "TOY-KD-11-ST"
     }
    ],
-   "price": 2499,
-   "discountPercent": 0,
+   "price": 3899,
+   "compareAtPrice": 5599,
+   "discountPercent": 30,
    "rating": 4.1,
    "reviewCount": 3774,
    "stockStatus": "in_stock",
@@ -7803,11 +10039,11 @@
    "subcategory": "Outdoor",
    "images": [
     {
-     "id": "loomcraft-diamond-kite-main",
+     "id": "loomcraft-kite-delta-wing-main",
      "view": "main",
-     "alt": "Diamond Kite — product photo",
-     "src": "/products/toys-games-diamond-kite/main.jpg",
-     "thumbnail": "/products/toys-games-diamond-kite/thumb.jpg",
+     "alt": "Loomcraft Kite — Delta Wing — product photo",
+     "src": "/products/toys-games-kite-delta-wing/main.jpg",
+     "thumbnail": "/products/toys-games-kite-delta-wing/thumb.jpg",
      "credit": "Photo: Aaron Burden via stocksnap, CC0",
      "gradient": "from-purple-800 via-fuchsia-700 to-rose-700",
      "width": 1600,
@@ -7823,8 +10059,10 @@
    "tags": [
     "Toys & Games",
     "Outdoor",
-    "Diamond",
-    "Kite"
+    "Loomcraft",
+    "Kite",
+    "Delta",
+    "Wing"
    ],
    "releasedAt": "2025-03-26",
    "gradient": "from-purple-800 via-fuchsia-700 to-rose-700",

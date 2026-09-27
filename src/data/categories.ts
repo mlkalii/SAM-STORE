@@ -12,7 +12,7 @@ export const categories: Category[] = [
     name: "Electronics",
     tagline: "Audio, displays and cameras",
     description:
-      "Headphones, a projector, cameras and the accessories around them.",
+      "Headphones, a projector, a keyboard and an action camera.",
     icon: "Cpu",
     gradient: "from-indigo-700 via-blue-700 to-sky-600",
     subcategories: ["Audio", "Displays", "Accessories", "Cameras"],
@@ -22,9 +22,9 @@ export const categories: Category[] = [
   {
     slug: "computers-accessories",
     name: "Computers & Accessories",
-    tagline: "Machines and the desk around them",
+    tagline: "A laptop and a webcam",
     description:
-      "A laptop and the peripherals that go with it: keyboard, webcam and microphone.",
+      "A laptop and a webcam.",
     icon: "Laptop",
     gradient: "from-slate-700 via-indigo-800 to-violet-700",
     subcategories: ["Laptops", "Peripherals"],
@@ -33,12 +33,12 @@ export const categories: Category[] = [
   {
     slug: "mobile-phones",
     name: "Mobile Phones & Accessories",
-    tagline: "Handsets, power and protection",
+    tagline: "Cases, power and audio",
     description:
-      "Phones, cases, power banks and earphones.",
+      "Phone cases, power banks and earphones.",
     icon: "Smartphone",
     gradient: "from-cyan-700 via-sky-700 to-blue-800",
-    subcategories: ["Handsets", "Cases", "Charging", "Audio"],
+    subcategories: ["Cases", "Charging", "Audio"],
     sourceUrl: "",
   },
   {
@@ -57,10 +57,10 @@ export const categories: Category[] = [
     name: "Beauty & Personal Care",
     tagline: "Skincare and grooming",
     description:
-      "Skincare, sun care and grooming tools.",
+      "Skincare and grooming tools.",
     icon: "Sparkles",
     gradient: "from-rose-600 via-pink-600 to-fuchsia-700",
-    subcategories: ["Skincare", "Hair Tools", "Sun Care"],
+    subcategories: ["Skincare", "Hair Tools"],
     sourceUrl: "",
   },
   {
@@ -90,10 +90,10 @@ export const categories: Category[] = [
     name: "Baby Products",
     tagline: "Everyday essentials for the early years",
     description:
-      "Travel, monitoring, nursery and textile essentials.",
+      "A baby monitor, a nightlight and a changing bag.",
     icon: "Baby",
     gradient: "from-sky-600 via-cyan-700 to-blue-800",
-    subcategories: ["Travel", "Car Safety", "Monitoring", "Textiles", "Out and about", "Nursery", "Storage"],
+    subcategories: ["Monitoring", "Out and about", "Nursery"],
     sourceUrl: "",
   },
   {
@@ -101,7 +101,7 @@ export const categories: Category[] = [
     name: "Office Products",
     tagline: "For desks that get used all day",
     description:
-      "Desk lighting, organisers, a shredder and a whiteboard.",
+      "Desk lighting, a desk organiser and a whiteboard.",
     icon: "Briefcase",
     gradient: "from-zinc-700 via-slate-700 to-neutral-800",
     subcategories: ["Paper", "Lighting", "Monitor Setup"],
@@ -154,12 +154,12 @@ export const categories: Category[] = [
   {
     slug: "toys-games",
     name: "Toys & Games",
-    tagline: "Played with past the first week",
+    tagline: "Wooden toys and outdoor play",
     description:
-      "Board games, wooden toys and outdoor play.",
+      "Wooden toys and outdoor play.",
     icon: "Gamepad2",
     gradient: "from-violet-700 via-purple-700 to-fuchsia-700",
-    subcategories: ["Board Games", "Pretend Play", "Outdoor"],
+    subcategories: ["Pretend Play", "Outdoor"],
     sourceUrl: "",
   },
 ];

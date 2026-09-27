@@ -68,6 +68,18 @@ const nextConfig: NextConfig = {
       { source: "/seller", destination: "/", permanent: true },
       { source: "/seller/:path*", destination: "/", permanent: true },
       { source: "/best-sellers", destination: "/shop", permanent: true },
+      // Products renamed to match their photographs keep their old links.
+      { source: "/shop/aeterna-flux-power-bank-20k", destination: "/shop/aeterna-flux-power-bank", permanent: true },
+      { source: "/shop/ridgeline-competition-kettlebell", destination: "/shop/ridgeline-vinyl-kettlebell-8-kg", permanent: true },
+      { source: "/shop/fetchwell-orthopedic-dog-bed", destination: "/shop/fetchwell-bolster-dog-bed", permanent: true },
+      { source: "/shop/trailpaw-travel-pet-carrier", destination: "/shop/trailpaw-hard-sided-pet-carrier", permanent: true },
+      { source: "/shop/lullaby-co-lumen-nursery-nightlight", destination: "/shop/lullaby-co-star-projector-nightlight", permanent: true },
+      { source: "/shop/axlewerks-cordless-tyre-inflator", destination: "/shop/axlewerks-12v-tyre-inflator", permanent: true },
+      { source: "/shop/torqline-wash-sponge-set", destination: "/shop/torqline-car-wash-sponge", permanent: true },
+      { source: "/shop/brenna-vulcanised-court-sneaker", destination: "/shop/brenna-white-court-sneaker", permanent: true },
+      { source: "/shop/hearthline-slow-cooked-fig-preserve", destination: "/shop/hearthline-plum-preserve", permanent: true },
+      { source: "/shop/nestly-wooden-train-set", destination: "/shop/nestly-wooden-toy-train", permanent: true },
+      { source: "/shop/loomcraft-kite-delta-wing", destination: "/shop/loomcraft-diamond-kite", permanent: true },
       { source: "/collections", destination: "/categories", permanent: true },
       { source: "/collections/:slug", destination: "/categories/:slug", permanent: true },
     ];

@@ -1,6 +1,6 @@
 # SAMRUX — direct-to-consumer store across fourteen departments
 
-A production-shaped Next.js commerce front end: fourteen departments, 69 catalogue products,
+A production-shaped Next.js commerce front end: fourteen departments, 56 catalogue products,
 server-rendered filtering and search, on a dark-luxury design system. App Router, React Server Components, Tailwind v4,
 shadcn/ui, Framer Motion for interaction, GSAP for the scripted hero and scroll work.
 
@@ -104,12 +104,12 @@ so many feeds work without edits. Everything downstream reads
 
 ## Catalogue data
 
-69 products across 14 departments, one listing per photograph, each with a self-hosted photo
+56 products across 14 departments, one listing per photograph, each with a self-hosted photo
 under `public/products/` (credits in `public/products/CREDITS.json`). Every product is sold
 directly by SAMRUX LLC and priced in USD.
 
 `src/data/catalog.json` is the source of truth and is curated, not regenerated.
-`scripts/curate-catalog.mjs` is the pass that removed the duplicate Lite / Pro listings and the
+`scripts/curate-catalog.mjs` and `scripts/curate-catalog-photos.mjs` are the passes that removed the duplicate Lite / Pro listings and the
 listings whose photograph did not match; the file as it stood before that pass is kept in
 `scripts/catalog-archive/`. The generator scripts below are retained for reference only and
 write to `src/data/catalog.generated.json`.
@@ -133,7 +133,7 @@ stock status and count, category, subcategory, variants, tags, release date, war
 return window, dispatch hours, a video flag, one image, and the
 featured / best-seller / new-arrival / trending flags.
 
-Totals: **69 products · 69 product photos**.
+Totals: **56 products · 56 product photos**.
 
 The generator is deterministic — running it twice produces a byte-identical file, so the
 catalogue diffs like any other source. Nothing imports the script at runtime.

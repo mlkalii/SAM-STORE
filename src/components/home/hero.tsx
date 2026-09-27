@@ -29,7 +29,7 @@ export function Hero({
       if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
       const targets =
-        "[data-hero-eyebrow],[data-hero-word],[data-hero-copy],[data-hero-cta],[data-hero-stat]";
+        "[data-hero-word],[data-hero-copy],[data-hero-cta],[data-hero-stat]";
 
       // `.from()` hides these elements the instant the timeline is built, so the
       // hero is only visible once the animation finishes. If the GSAP ticker
@@ -50,12 +50,7 @@ export function Hero({
       safety = window.setTimeout(settle, 2800);
 
       timeline
-        .from("[data-hero-eyebrow]", { opacity: 0, y: 16, duration: 0.6 })
-        .from(
-          "[data-hero-word]",
-          { opacity: 0, yPercent: 120, duration: 0.9, stagger: 0.07 },
-          "-=0.3",
-        )
+        .from("[data-hero-word]", { opacity: 0, yPercent: 120, duration: 0.9, stagger: 0.07 })
         .from("[data-hero-copy]", { opacity: 0, y: 20, duration: 0.7 }, "-=0.5")
         .from("[data-hero-cta]", { opacity: 0, y: 20, duration: 0.6, stagger: 0.08 }, "-=0.45")
         .from("[data-hero-stat]", { opacity: 0, y: 14, duration: 0.5, stagger: 0.08 }, "-=0.3")
@@ -98,15 +93,7 @@ export function Hero({
       />
 
       <Container>
-        <p
-          data-hero-eyebrow
-          className="inline-flex items-center gap-3 rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.24em] text-gold"
-        >
-          <span aria-hidden className="size-1.5 rounded-full bg-gold" />
-          {productCount} products · {departmentCount} departments · Sold direct
-        </p>
-
-        <h1 className="mt-6 font-display text-[clamp(3rem,10vw,8rem)] leading-[0.92] tracking-tight">
+        <h1 className="font-display text-[clamp(3rem,10vw,8rem)] leading-[0.92] tracking-tight">
           {words.map((word, index) => (
             <span key={`${word}-${index}`} className="inline-block overflow-hidden pb-[0.08em]">
               <span data-hero-word className="inline-block pr-[0.22em]">
