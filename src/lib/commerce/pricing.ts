@@ -10,7 +10,6 @@ import {
 } from "@/lib/commerce/promotions";
 import { estimateDelivery, getShippingMethod, rateFor } from "@/lib/commerce/shipping";
 import { calculateTax } from "@/lib/commerce/tax";
-import { sellerStore } from "@/lib/marketplace/seller-store";
 import { STORE_CURRENCY } from "@/lib/commerce/types";
 import type {
   AppliedDiscount,
@@ -101,10 +100,6 @@ export async function priceLines(items: CartInput[]): Promise<PricedLine[]> {
         name: product.name,
         brand: product.brand,
         category: product.category,
-        // Carried from the catalogue so an order can be split by seller
-        // without a second lookup once it is placed.
-        ...(product.sellerId ? { sellerId: product.sellerId } : {}),
-        ...(product.sellerId ? { sellerName: sellerStore.find(product.sellerId)?.storeName } : {}),
         image: product.images[0]?.thumbnail ?? "",
         gradient: product.gradient,
         unitPrice: product.price,

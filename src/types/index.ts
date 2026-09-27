@@ -1,4 +1,4 @@
-export type Currency = "USDT";
+export type Currency = "USD";
 
 export type StockStatus = "in_stock" | "low_stock" | "out_of_stock";
 
@@ -81,16 +81,6 @@ export interface Product {
   stockCount: number;
   category: string;
   subcategory: string;
-  /**
-   * The seller that lists this product. Optional on the raw catalogue and
-   * always present after `lib/marketplace/assign` has stamped it — see
-   * `lib/product-source`.
-   */
-  sellerId?: string;
-  /** Denormalised for cards and search results — see `marketplace/assign`. */
-  sellerName?: string;
-  sellerSlug?: string;
-  sellerVerified?: boolean;
   images: ProductImage[];
   variants: ProductVariant[];
   tags: string[];

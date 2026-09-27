@@ -43,7 +43,7 @@ const faqs = [
     id: "stock",
     question: "Why is something out of stock?",
     answer:
-      "Because each department is capped at fifty-two products, we do not overstock. Ask us and we will tell you the actual restock date rather than a guess.",
+      "Because we keep each department deliberately small, we do not overstock. Ask us and we will tell you the actual restock date rather than a guess.",
   },
 ];
 
@@ -82,7 +82,7 @@ export default async function ContactPage() {
                 {storeConfig.contactEmail}
               </a>
               <p className="text-sm text-muted-foreground">
-                Company, press, wholesale, seller applications and legal.
+                Company, press, wholesale and legal.
               </p>
             </div>
           </div>

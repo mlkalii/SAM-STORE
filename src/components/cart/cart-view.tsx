@@ -9,7 +9,7 @@ import { useCart } from "@/components/providers/cart-provider";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { siteConfig } from "@/config/site";
-import { formatPrice, pluralize } from "@/lib/format";
+import { formatPrice, formatPriceWithCode, pluralize } from "@/lib/format";
 
 export function CartView() {
   const { lines, subtotal, count, remove, setQuantity, clear } = useCart();
@@ -151,7 +151,7 @@ export function CartView() {
 
           <div className="flex items-baseline justify-between">
             <span className="font-medium">Total</span>
-            <span className="font-mono text-xl tabular-nums">{formatPrice(total)}</span>
+            <span className="font-mono text-xl tabular-nums">{formatPriceWithCode(total)}</span>
           </div>
 
           <Button size="lg" className="mt-6 w-full" render={<Link href="/checkout" />}>

@@ -147,28 +147,6 @@ export function FilterPanel({
         })}
       </Group>
 
-      {/* Only meaningful when the listing spans more than one store. */}
-      {facets.sellers.length > 1 ? (
-        <>
-          <Separator />
-          <Group title="Sold by">
-            {facets.sellers.slice(0, 8).map((facet) => (
-              <FilterRow
-                key={facet.value}
-                count={facet.count}
-                active={state.sellers.includes(facet.value)}
-                href={buildHref(
-                  basePath,
-                  withFilter(state, { sellers: toggleValue(state.sellers, facet.value) }),
-                )}
-              >
-                {facet.label ?? facet.value}
-              </FilterRow>
-            ))}
-          </Group>
-        </>
-      ) : null}
-
       {facets.brands.length > 1 ? (
         <>
           <Separator />

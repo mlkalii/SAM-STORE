@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 /**
  * Quick-access department strip, directly under the hero.
  *
- * The single most valuable thing a marketplace homepage can do above the fold
+ * The single most valuable thing a store homepage can do above the fold
  * is answer "where do I go" in one glance. Compact icon tiles rather than
  * photographic cards: a shopper scanning for a department is reading the word,
  * and a photograph at this size adds weight without adding meaning.

@@ -12,7 +12,7 @@ import { formatPrice } from "@/lib/format";
  * "Frequently bought together" on the homepage.
  *
  * Uses the same bundle logic as the product page, anchored to the current top
- * seller, and links through to the full interactive bundle rather than
+ * product, and links through to the full interactive bundle rather than
  * duplicating the basket UI here.
  */
 export async function BundleTeaser() {

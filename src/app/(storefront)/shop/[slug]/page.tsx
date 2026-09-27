@@ -24,14 +24,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { siteConfig } from "@/config/site";
+import { storeConfig } from "@/config/store";
 import { returnEligibility, returnPolicy } from "@/config/returns";
 import { warrantyFor } from "@/config/warranty";
-import { getCurrentUser } from "@/lib/auth";
-import { getCsrfToken } from "@/lib/auth/csrf";
-import { messaging } from "@/lib/marketplace/messaging";
-import { sellerStore } from "@/lib/marketplace/seller-store";
-import { toPublicSeller } from "@/lib/marketplace/seller-store";
-import { SellerBlock } from "@/components/marketplace/seller-block";
 import { formatPrice } from "@/lib/format";
 import { getCategory } from "@/data/categories";
 import {
@@ -103,13 +98,9 @@ export default async function ProductPage(props: PageProps<"/shop/[slug]">) {
     getUpsell(product),
   ]);
 
-  // Marketplace context: who sells it, what warranty the department carries and
-  // whether it can be returned at all.
-  const seller = product.sellerId ? sellerStore.find(product.sellerId) : undefined;
+  // What warranty the department carries and whether it can be returned at all.
   const warranty = warrantyFor(product.category);
   const eligibility = returnEligibility(product);
-  const [user, csrfToken] = await Promise.all([getCurrentUser(), getCsrfToken()]);
-  const questions = messaging.publicQuestions(product.slug);
 
   const breadcrumbs = [
     { name: "Shop", url: "/shop" },
@@ -256,10 +247,10 @@ export default async function ProductPage(props: PageProps<"/shop/[slug]">) {
                 <AccordionTrigger>About {product.brand}</AccordionTrigger>
                 <AccordionContent className="space-y-4 text-muted-foreground">
                   <p className="leading-relaxed text-pretty">
-                    {product.brand} builds for the {category?.name.toLowerCase() ?? "range"}{" "}
-                    department under our standard supplier terms: published spare-part
-                    availability, a named support contact, and a factory audit before the first
-                    order. We stock {sameBrand.length + 1} of their products.
+                    {product.brand} is one of the brands in our{" "}
+                    {category?.name.toLowerCase() ?? "range"} range. We currently stock{" "}
+                    {sameBrand.length + 1} {sameBrand.length + 1 === 1 ? "product" : "products"}{" "}
+                    from {product.brand}, all sold and shipped directly by {storeConfig.legalName}.
                   </p>
                   {sameBrand.length > 0 ? (
                     <Link
@@ -272,28 +263,24 @@ export default async function ProductPage(props: PageProps<"/shop/[slug]">) {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="seller">
+              <AccordionItem value="sold-by">
                 <AccordionTrigger>Sold and shipped by</AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {seller ? (
-                    <SellerBlock
-                      seller={toPublicSeller(seller)}
-                      csrfToken={csrfToken}
-                      productSlug={product.slug}
-                      signedIn={Boolean(user)}
-                      questions={questions.map((thread) => ({
-                        id: thread.id,
-                        subject: thread.subject,
-                        answer:
-                          messaging
-                            .messages(thread.id)
-                            .filter((message) => message.authorRole === "seller")
-                            .at(-1)?.body ?? "",
-                      }))}
-                    />
-                  ) : (
-                    <p>Sold and shipped by {siteConfig.name}.</p>
-                  )}
+                <AccordionContent className="space-y-3 text-muted-foreground">
+                  <p className="leading-relaxed text-pretty">
+                    Sold and shipped directly by {storeConfig.legalName}. Every item is held in
+                    our own warehouse, checked before dispatch, and invoiced by us — there is no
+                    third-party seller involved at any point in the order.
+                  </p>
+                  <p className="leading-relaxed">
+                    Questions about this product go straight to our team at{" "}
+                    <a
+                      href={`mailto:${storeConfig.supportEmail}`}
+                      className="text-foreground underline underline-offset-4"
+                    >
+                      {storeConfig.supportEmail}
+                    </a>
+                    {" "}or on {storeConfig.phone}.
+                  </p>
                 </AccordionContent>
               </AccordionItem>
 

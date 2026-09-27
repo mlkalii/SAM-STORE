@@ -5,7 +5,7 @@ import { randomUUID } from "node:crypto";
 /**
  * Audit log.
  *
- * Every privileged mutation — admin and seller actions — records who did what
+ * Every privileged mutation — every admin action — records who did what
  * to which resource. Append-only; the in-memory implementation mirrors the
  * `AuditLog` table in the Prisma schema row for row.
  *
@@ -15,12 +15,12 @@ import { randomUUID } from "node:crypto";
 
 export interface AuditEntry {
   id: string;
-  actorType: "staff" | "seller" | "user" | "system";
+  actorType: "staff" | "user" | "system";
   actorId: string;
   actorLabel: string;
-  /** Verb-object, e.g. "product.update", "seller.approve", "payout.paid". */
+  /** Verb-object, e.g. "product.update", "order.refund", "staff.create". */
   action: string;
-  /** e.g. "product:aeris-wireless-headphones", "seller:seller-northline". */
+  /** e.g. "product:aeris-wireless-headphones", "order:ord_1234". */
   resource: string;
   detail?: Record<string, unknown>;
   createdAt: string;

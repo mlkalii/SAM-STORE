@@ -11,7 +11,7 @@
 //               row can be referenced by history (never hard-delete an order's
 //               product, a review's author, a payout's seller)
 //   Money       integer minor units (Int), exactly as the application layer —
-//               the ticker (USDT) is presentation only
+//               amounts are integer minor units (cents); the store trades in USD
 //   Indexes     every foreign key, every column the query engine filters on
 
 generator client {
@@ -349,7 +349,7 @@ model Order {
   taxTotal         Int @default(0)
   giftCardTotal    Int @default(0)
   grandTotal       Int
-  currency         String @default("USDT")
+  currency         String @default("USD")
   taxLines         Json   @default("[]")
   appliedDiscounts Json   @default("[]")
 
@@ -436,7 +436,7 @@ model PaymentTransaction {
   kind      String // intent | capture | refund | payout-settlement
   status    String // pending | authorised | captured | failed | refunded
   amount    Int
-  currency  String  @default("USDT")
+  currency  String  @default("USD")
   reference String // provider-side id — never card data
   detail    Json?
 
@@ -458,7 +458,7 @@ model LedgerEntry {
   sellerId String
   kind     String // sale | commission | refund | commission-reversal | payout | adjustment
   amount   Int // positive credits the seller, negative debits
-  currency String @default("USDT")
+  currency String @default("USD")
   description String
   orderId        String?
   orderReference String?
@@ -477,7 +477,7 @@ model Payout {
   seller    Seller @relation(fields: [sellerId], references: [id])
   sellerId  String
   amount    Int
-  currency  String @default("USDT")
+  currency  String @default("USD")
   status    String @default("requested") // requested|approved|processing|paid|rejected
   destination    String
   note           String?
@@ -544,7 +544,7 @@ model GiftCard {
   code           String  @id
   initialBalance Int
   balance        Int
-  currency       String  @default("USDT")
+  currency       String  @default("USD")
   active         Boolean @default(true)
   expiresAt      DateTime?
 

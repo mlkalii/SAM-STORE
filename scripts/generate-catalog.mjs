@@ -30,7 +30,10 @@ import { CATEGORY_IMAGE_POOL, STUDIO_IMAGE_POOL } from "./image-pool.mjs";
 import { BODIES, CONTEXTS, REVIEWER_NAMES, TITLES } from "./review-source.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
-const OUT = resolve(here, "../src/data/catalog.json");
+// NOTE: since the September 2026 image/price curation pass, `src/data/catalog.json`
+// is hand-curated (285 products, self-hosted photography under /public/products).
+// This generator no longer overwrites it; it writes a scratch file for reference.
+const OUT = resolve(here, "../src/data/catalog.generated.json");
 
 /** Fixed so regenerating never churns the diff. */
 const CATALOG_DATE = new Date("2026-07-01T00:00:00.000Z");
@@ -322,11 +325,17 @@ for (const categorySlug of CATEGORY_ORDER) {
       seenSlugs.add(slug);
 
       const price = priceCents(concept.price, tier.multiplier);
-      const discountPercent = pick(random, DISCOUNTS);
+      const targetDiscount = pick(random, DISCOUNTS);
       const compareAtPrice =
-        discountPercent > 0
-          ? Math.round(price / (1 - discountPercent / 100) / 100) * 100 - 1
+        targetDiscount > 0
+          ? Math.round(price / (1 - targetDiscount / 100) / 100) * 100 - 1
           : undefined;
+      // Rounding the compare-at price to a whole-dollar .99 figure moves the
+      // real percentage by a point or two, so the stored figure is always
+      // recomputed from the two prices the customer actually sees.
+      const discountPercent = compareAtPrice
+        ? Math.round(((compareAtPrice - price) / compareAtPrice) * 100)
+        : 0;
 
       const rating = Number((3.7 + random() * 1.2).toFixed(1));
       const reviewCount = intBetween(random, 12, tier.reviewBase);

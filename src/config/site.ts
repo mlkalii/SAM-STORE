@@ -7,7 +7,7 @@ export const siteConfig = {
   legalName: storeConfig.legalName,
   title: "SAMRUX — Premium essentials across fourteen departments",
   description:
-    "A curated multi-category marketplace: electronics, computers, phones, home, beauty, sport, pets, baby, office, automotive, tools, fashion, gourmet food and toys. Fewer products, better chosen.",
+    "SAMRUX sells its own curated range across fourteen departments: electronics, computers, phones, home, beauty, sport, pets, baby, office, automotive, tools, fashion, gourmet food and toys. Fewer products, better chosen — sold and shipped directly by SAMRUX LLC.",
   /** Resolved from the environment — see `@/config/site-url`. */
   url: siteUrl,
   freeShippingThreshold: 7500,
@@ -31,7 +31,6 @@ export const mainNav: NavItem[] = [
   { label: "Deals", href: "/deals", description: "Everything currently reduced" },
   { label: "New Arrivals", href: "/new-arrivals", description: "Added in the last few weeks" },
   { label: "Best Sellers", href: "/best-sellers", description: "What people actually reorder" },
-  { label: "Sellers", href: "/sellers", description: "Every store on the marketplace" },
   { label: "About", href: "/about", description: "How we choose what to stock" },
   { label: "Contact", href: "/contact", description: "Talk to a real person" },
 ];
@@ -64,8 +63,6 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
     items: [
       { label: "About SAMRUX", href: "/about" },
       { label: "How we select", href: "/about#selection" },
-      { label: "Sell on SAMRUX", href: "/sell" },
-      { label: "All sellers", href: "/sellers" },
       { label: "Contact", href: "/contact" },
     ],
   },
@@ -86,7 +83,6 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
       { label: "Create an account", href: "/register" },
       { label: "My orders", href: "/account/orders" },
       { label: "Messages", href: "/account/messages" },
-      { label: "Seller dashboard", href: "/seller" },
       { label: "Wishlist", href: "/wishlist" },
     ],
   },

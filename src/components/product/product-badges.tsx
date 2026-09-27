@@ -1,5 +1,6 @@
 import { Flame, Sparkles, TrendingUp } from "lucide-react";
 
+import { discountPercent } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import type { Product, StockStatus } from "@/types";
 
@@ -35,8 +36,11 @@ export function ProductBadges({
 }) {
   const badges: React.ReactNode[] = [];
 
-  if (product.discountPercent > 0) {
-    badges.push(<DiscountBadge key="sale" percent={product.discountPercent} />);
+  // Derived from the two prices actually shown, never from a stored figure, so
+  // the badge can never disagree with the strike-through beside it.
+  const saving = discountPercent(product.price, product.compareAtPrice);
+  if (saving) {
+    badges.push(<DiscountBadge key="sale" percent={saving} />);
   }
   if (product.trending) {
     badges.push(

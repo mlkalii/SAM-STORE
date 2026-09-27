@@ -9,12 +9,12 @@
 export type Cents = number;
 
 /**
- * The store trades in USDT. Amounts remain integer minor units throughout, so
- * the ticker is presentation only — see `config/store` and `lib/format`.
+ * The store trades in US dollars. Amounts remain integer minor units (cents)
+ * throughout — see `config/store` and `lib/format`.
  */
-export type StoreCurrency = "USDT";
+export type StoreCurrency = "USD";
 
-export const STORE_CURRENCY: StoreCurrency = "USDT";
+export const STORE_CURRENCY: StoreCurrency = "USD";
 
 /* -------------------------------------------------------------------------- */
 /*  Cart                                                                       */
@@ -36,9 +36,6 @@ export interface PricedLine {
   name: string;
   brand: string;
   category: string;
-  /** Who fulfils this line. Carried through so an order can be split. */
-  sellerId?: string;
-  sellerName?: string;
   image: string;
   gradient: string;
   /** Current selling price for one unit. */

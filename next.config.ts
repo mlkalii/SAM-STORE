@@ -31,11 +31,14 @@ const nextConfig: NextConfig = {
   output: process.env.DOCKER_BUILD ? "standalone" : undefined,
 
   images: {
-    // Product photography. Unsplash is the bundled catalogue's source; add your
-    // own CDN here when you swap `PRODUCT_DATA_SOURCE` for a real feed.
+    // Product photography is self-hosted under /public/products. Add your own
+    // CDN here when you swap `PRODUCT_DATA_SOURCE` for a real feed.
+    //
+    // Unsplash stays allowed for carts saved before the catalogue moved to
+    // self-hosted photos: each cart line keeps its own image URL in
+    // `localStorage`, and an unlisted host there is a runtime error.
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
-      { protocol: "https", hostname: "picsum.photos" },
       { protocol: "https", hostname: "res.cloudinary.com" },
       ...(MEDIA_HOST ? [{ protocol: "https" as const, hostname: MEDIA_HOST }] : []),
     ],
@@ -85,7 +88,6 @@ const nextConfig: NextConfig = {
       [
         "img-src 'self' data: blob:",
         "https://images.unsplash.com",
-        "https://picsum.photos",
         "https://res.cloudinary.com",
         ...(MEDIA_HOST ? [`https://${MEDIA_HOST}`] : []),
       ].join(" "),

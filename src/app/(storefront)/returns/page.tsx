@@ -15,7 +15,7 @@ export const metadata: Metadata = {
  * The official SAMRUX return policy.
  *
  * Every number here is read from `config/returns`, which is the same source the
- * checkout, the product page, the seller dashboard and the admin refund screen
+ * checkout, the product page and the admin refund screen
  * use — so the policy a customer reads is the policy the system enforces.
  */
 export default function ReturnsPage() {
@@ -60,10 +60,10 @@ export default function ReturnsPage() {
           bullets: NON_RETURNABLE.map((rule) => `${rule.label} — ${rule.reason}`),
         },
         {
-          heading: "Marketplace orders",
+          heading: "Who handles your return",
           paragraphs: [
-            "SAMRUX is a marketplace, so an order may contain products from several independent sellers. The return policy is identical whoever sold it: the marketplace guarantees it, not the individual seller.",
-            "Return each seller's items in their own parcel using the label supplied for it. Refunds are issued per seller as each return is received.",
+            "Every product on SAMRUX is sold and shipped directly by SAMRUX LLC, so there is only ever one company to deal with. Returns are received at our own warehouse and refunds are issued by us.",
+            "Use the single prepaid label supplied with your return authorisation. Your refund is issued once the parcel is received and checked, usually within three working days.",
           ],
         },
         {

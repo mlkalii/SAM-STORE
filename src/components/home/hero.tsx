@@ -9,9 +9,18 @@ import { Magnetic } from "@/components/common/magnetic";
 import { Button } from "@/components/ui/button";
 import { gsap, useGSAP } from "@/lib/gsap";
 
-const words = ["Fifteen", "departments.", "One", "standard", "of", "proof."];
 
-export function Hero() {
+const NUMBER_WORDS = ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen","Twenty"];
+
+export function Hero({
+  productCount,
+  departmentCount,
+}: {
+  /** Live counts from the catalogue, so the hero never quotes a stale number. */
+  productCount: number;
+  departmentCount: number;
+}) {
+  const words = [NUMBER_WORDS[departmentCount] ?? String(departmentCount), "departments.", "One", "standard", "of", "proof."];
   const scope = React.useRef<HTMLElement>(null);
 
   useGSAP(
@@ -95,7 +104,7 @@ export function Hero() {
           className="inline-flex items-center gap-3 rounded-full border border-gold/20 bg-gold/5 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.24em] text-gold"
         >
           <span aria-hidden className="size-1.5 rounded-full bg-gold" />
-          780 products · 15 departments · One buyer
+          {productCount} products · {departmentCount} departments · Sold direct
         </p>
 
         <h1 className="mt-6 font-display text-[clamp(3rem,10vw,8rem)] leading-[0.92] tracking-tight">
@@ -144,8 +153,8 @@ export function Hero() {
 
         <dl className="mt-16 grid grid-cols-2 gap-6 border-t pt-8 sm:grid-cols-4">
           {[
-            { value: "780", label: "Products stocked" },
-            { value: "15", label: "Departments" },
+            { value: String(productCount), label: "Products stocked" },
+            { value: String(departmentCount), label: "Departments" },
             { value: "30 day", label: "Returns window" },
             { value: "48 hr", label: "Dispatch window" },
           ].map((stat) => (

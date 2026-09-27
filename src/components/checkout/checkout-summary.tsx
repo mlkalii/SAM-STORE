@@ -10,7 +10,7 @@ import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 import type { PricedCart } from "@/lib/commerce/pricing";
 import { describeRejection } from "@/lib/commerce/promotions";
-import { formatPrice } from "@/lib/format";
+import { formatPrice, formatPriceWithCode } from "@/lib/format";
 import { cn } from "@/lib/utils";
 
 /**
@@ -229,7 +229,7 @@ export function CheckoutSummary({
 
           <div className="flex items-baseline justify-between gap-4">
             <dt className="font-medium">Total</dt>
-            <dd className="font-mono text-2xl tabular-nums">{formatPrice(totals.grandTotal)}</dd>
+            <dd className="font-mono text-2xl tabular-nums">{formatPriceWithCode(totals.grandTotal)}</dd>
           </div>
         </dl>
       ) : (

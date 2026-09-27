@@ -13,7 +13,7 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "How SAMRUX selects products, what gets rejected, and why every department is capped at fifty-two.",
+    "How SAMRUX selects products, what gets rejected, and why every department is kept deliberately small.",
 };
 
 const chapters = [
@@ -25,7 +25,7 @@ const chapters = [
   {
     year: "2022",
     title: "The cap",
-    body: "As departments were added we set a hard limit of fifty-two products each. Adding something means removing something. It is the only rule that has never been relaxed.",
+    body: "As departments were added we kept each one deliberately small. Adding something means removing something. It is the only rule that has never been relaxed.",
   },
   {
     year: "2025",
@@ -49,7 +49,7 @@ const criteria = [
   },
   {
     title: "Priced without theatre",
-    body: "No permanent 40%-off. Our compare-at price is what we actually charged last month.",
+    body: "No permanent sale. When a product is reduced, the compare-at price is its regular price and the saving shown is the difference between the two.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default async function AboutPage() {
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground text-pretty">
             {meta.count} products across {categories.length} departments. Every one of
-            them displaced something else, because each department is capped at fifty-two. That cap
+            them displaced something else, because each department is kept deliberately small. That cap
             is the entire product strategy — it forces a decision instead of a listing.
           </p>
         </Reveal>
@@ -118,7 +118,7 @@ export default async function AboutPage() {
         <SectionHeading
           eyebrow="Departments"
           title="Where the catalogue sits today"
-          description="Fifty-two products each, reviewed quarterly."
+          description="A small range per department, reviewed quarterly."
         />
         <div className="mt-14 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((category, index) => (

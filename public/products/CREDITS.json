@@ -1,0 +1,572 @@
+{
+ "electronics-aeris-wireless-headphones": {
+  "credit": "Photo: Burst via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/wireless-headphones-EXCBJA3FFQ",
+  "license": "CC0",
+  "creator": "Burst"
+ },
+ "electronics-lumina-portable-projector": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5921858/video-projector-free-public-domain-cc0-image",
+  "license": "CC0",
+  "creator": null
+ },
+ "electronics-corex-mechanical-keyboard": {
+  "credit": "Photo: Nebulant via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/47581723@N00/31006251357",
+  "license": "BY",
+  "creator": "Nebulant"
+ },
+ "electronics-aperture-mirrorless-camera": {
+  "credit": "Photo: Janitors via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/65265630@N03/44039532502",
+  "license": "BY",
+  "creator": "Janitors"
+ },
+ "electronics-relay-bluetooth-transmitter": {
+  "credit": "Photo: audioreservoir via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/53515430@N06/14579725610",
+  "license": "BY",
+  "creator": "audioreservoir"
+ },
+ "electronics-cadence-turntable": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/6338538/png-sticker-watercolor",
+  "license": "CC0",
+  "creator": null
+ },
+ "electronics-beacon-action-camera": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/3303210/free-photo-image-video-camera-macbook-gopro",
+  "license": "CC0",
+  "creator": null
+ },
+ "computers-accessories-cirrus-14-laptop": {
+  "credit": "Photo: Leeroy via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/macbook-laptop-UDIGU0A2SN",
+  "license": "CC0",
+  "creator": "Leeroy"
+ },
+ "computers-accessories-quill-mechanical-keyboard-65": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/3298523/free-photo-image-laptop-computer-awesome",
+  "license": "CC0",
+  "creator": null
+ },
+ "computers-accessories-signal-webcam-pro": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5907091/photo-image-public-domain-technology-computer",
+  "license": "CC0",
+  "creator": null
+ },
+ "computers-accessories-kestrel-studio-microphone": {
+  "credit": "Photo: Torsten Dettlaff via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/blackandwhite-microphone-J2XH20PLE9",
+  "license": "CC0",
+  "creator": "Torsten Dettlaff"
+ },
+ "computers-accessories-machined-laptop-stand": {
+  "credit": "Photo: Lotus823 via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/81624203@N00/6266703808",
+  "license": "BY",
+  "creator": "Lotus823"
+ },
+ "mobile-phones-meridian-5g-handset": {
+  "credit": "Photo: Freestocks.org via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/smartphone-cellphone-J58JT39MOI",
+  "license": "CC0",
+  "creator": "Freestocks.org"
+ },
+ "mobile-phones-shell-impact-case": {
+  "credit": "Photo: Creative Tools via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/33907867@N02/14603265396",
+  "license": "BY",
+  "creator": "Creative Tools"
+ },
+ "mobile-phones-flux-gan-charger-100w": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5923136/photo-image-phone-public-domain-white",
+  "license": "CC0",
+  "creator": null
+ },
+ "mobile-phones-flux-power-bank-20k": {
+  "credit": "Photo: Tranpan23 via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/78077658@N02/9720052690",
+  "license": "BY",
+  "creator": "Tranpan23"
+ },
+ "mobile-phones-pulse-wireless-charging-pad": {
+  "credit": "Photo: Vishay Intertechnology via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/43093990@N05/25614223501",
+  "license": "BY",
+  "creator": "Vishay Intertechnology"
+ },
+ "mobile-phones-echo-wired-usb-c-earphones": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5969105/music-earphones",
+  "license": "CC0",
+  "creator": null
+ },
+ "mobile-phones-sim-travel-case": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5961344/free-public-domain-cc0-photo",
+  "license": "CC0",
+  "creator": null
+ },
+ "home-kitchen-tidal-vacuum-blender": {
+  "credit": "Photo: Jakub Kapusnak via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/447947/free-photo-image-smoothie-blender-orange",
+  "license": "CC0",
+  "creator": "Jakub Kapusnak"
+ },
+ "home-kitchen-hearth-cast-iron-skillet": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/3304072/free-photo-image-bake-biscuit-bowl",
+  "license": "CC0",
+  "creator": null
+ },
+ "home-kitchen-loom-linen-duvet-set": {
+  "credit": "Photo: Didriks via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/49889671@N03/17542224033",
+  "license": "BY",
+  "creator": "Didriks"
+ },
+ "home-kitchen-nordlight-floor-lamp": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/8550670/grasshopper-floor-lamp",
+  "license": "CC0",
+  "creator": null
+ },
+ "home-kitchen-kettle-one-gooseneck": {
+  "credit": "Photo: markolaz via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/195403219@N08/52135644640",
+  "license": "BY",
+  "creator": "markolaz"
+ },
+ "home-kitchen-ember-dutch-oven": {
+  "credit": "Photo: Tim Sullivan via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/chili-bowl-TOPPXSZHAV",
+  "license": "CC0",
+  "creator": "Tim Sullivan"
+ },
+ "home-kitchen-halden-knife-block-set": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5974271/photo-image-kitchen-utensils-knife-set",
+  "license": "CC0",
+  "creator": null
+ },
+ "beauty-personal-care-hydra-renewal-serum": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/11515770/dropper-bottle-blank-retro-label",
+  "license": "CC0",
+  "creator": null
+ },
+ "beauty-personal-care-radiance-vitamin-c-drops": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/11515788/bottles-beard-oil-blank-label",
+  "license": "CC0",
+  "creator": null
+ },
+ "beauty-personal-care-precision-hair-dryer": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/6029481/photo-image-public-domain-abstract-person",
+  "license": "CC0",
+  "creator": null
+ },
+ "beauty-personal-care-ceramic-styling-brush": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/6039528/photo-image-white-background-public-domain-brush",
+  "license": "CC0",
+  "creator": null
+ },
+ "beauty-personal-care-mineral-sunscreen-spf-50": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5925923/photo-image-public-domain-hand-kid",
+  "license": "CC0",
+  "creator": null
+ },
+ "beauty-personal-care-lip-restore-balm-trio": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5975401/two-diy-pink-lip-balm-different-containers",
+  "license": "CC0",
+  "creator": null
+ },
+ "beauty-personal-care-contour-electric-shaver": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5902320/photo-image-background-public-domain-free",
+  "license": "CC0",
+  "creator": null
+ },
+ "sports-outdoors-summit-down-jacket": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5918315/down-jacket-free-public-domain-cc0-photo",
+  "license": "CC0",
+  "creator": null
+ },
+ "sports-outdoors-alpine-trekking-poles": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5909798/image-cloud-public-domain-blue",
+  "license": "CC0",
+  "creator": null
+ },
+ "sports-outdoors-adjustable-dumbbell-set": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/6338195/png-sticker-public-domain",
+  "license": "CC0",
+  "creator": null
+ },
+ "sports-outdoors-yoga-mat-pro": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/11515772/closeup-teal-yoga-mat",
+  "license": "CC0",
+  "creator": null
+ },
+ "sports-outdoors-two-person-tent": {
+  "credit": "Photo: Grand Canyon NPS via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/50693818@N08/5990488883",
+  "license": "BY",
+  "creator": "Grand Canyon NPS"
+ },
+ "sports-outdoors-cascade-rain-shell": {
+  "credit": "Photo: DeltaNewsHub via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/142938205@N05/42303197521",
+  "license": "BY",
+  "creator": "DeltaNewsHub"
+ },
+ "sports-outdoors-competition-kettlebell": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5903677/photo-image-public-domain-blue-free",
+  "license": "CC0",
+  "creator": null
+ },
+ "pet-supplies-orthopedic-dog-bed": {
+  "credit": "Photo: Howard O. Young via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/16947083@N06/4245405188",
+  "license": "BY",
+  "creator": "Howard O. Young"
+ },
+ "pet-supplies-ceramic-slow-feeder-bowl": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5962183/free-public-domain-cc0-photo",
+  "license": "CC0",
+  "creator": null
+ },
+ "pet-supplies-reflective-dog-harness": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/6082337/the-dog-the-beach",
+  "license": "CC0",
+  "creator": null
+ },
+ "pet-supplies-cat-tree-tower": {
+  "credit": "Photo: Lottie's pets & stuff via flickr, CC0",
+  "source": "https://www.flickr.com/photos/36943025@N07/16327167769",
+  "license": "CC0",
+  "creator": "Lottie's pets & stuff"
+ },
+ "pet-supplies-high-sided-litter-tray": {
+  "credit": "Photo: wolfsavard via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/31369133@N04/3873959131",
+  "license": "BY",
+  "creator": "wolfsavard"
+ },
+ "pet-supplies-travel-pet-carrier": {
+  "credit": "Photo: TheLivingRoominKenmore via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/36910487@N07/4476275775",
+  "license": "BY",
+  "creator": "TheLivingRoominKenmore"
+ },
+ "pet-supplies-meadow-dog-coat": {
+  "credit": "Photo: Steven-L-Johnson via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/31295868@N06/8328985143",
+  "license": "BY",
+  "creator": "Steven-L-Johnson"
+ },
+ "baby-products-compact-stroller": {
+  "credit": "Photo: exfordy via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/32659528@N00/3984725177",
+  "license": "BY",
+  "creator": "exfordy"
+ },
+ "baby-products-infant-car-seat": {
+  "credit": "Photo: seanmfreese via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/66779558@N02/6932762098",
+  "license": "BY",
+  "creator": "seanmfreese"
+ },
+ "baby-products-baby-monitor-hd": {
+  "credit": "Photo: ajay_suresh via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/83136374@N05/51817515261",
+  "license": "BY",
+  "creator": "ajay_suresh"
+ },
+ "baby-products-organic-cotton-swaddle-set": {
+  "credit": "Photo: deanj via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/71574801@N00/174963372",
+  "license": "BY",
+  "creator": "deanj"
+ },
+ "baby-products-diaper-tote-bag": {
+  "credit": "Photo: Lori Hartman Designs via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/64253809@N04/8431660012",
+  "license": "BY",
+  "creator": "Lori Hartman Designs"
+ },
+ "baby-products-lumen-nursery-nightlight": {
+  "credit": "Photo: lilivanili via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/32334994@N00/6808728241",
+  "license": "BY",
+  "creator": "lilivanili"
+ },
+ "baby-products-woven-nursery-basket": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/6041375/photo-image-public-domain-free",
+  "license": "CC0",
+  "creator": null
+ },
+ "office-products-ergonomic-mesh-chair": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/6727919/png-sticker-public-domain",
+  "license": "CC0",
+  "creator": null
+ },
+ "office-products-hardcover-notebook-set": {
+  "credit": "Photo: Angelina Litvin via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/notebook-paper-JLXDNN5BNE",
+  "license": "CC0",
+  "creator": "Angelina Litvin"
+ },
+ "office-products-desk-organiser-set": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/3301780/free-photo-image-desk-calendar-alloy-wheel-apparel",
+  "license": "CC0",
+  "creator": null
+ },
+ "office-products-cross-cut-shredder": {
+  "credit": "Photo: Manuel Schmalstieg via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/97179825@N00/16078195419",
+  "license": "BY",
+  "creator": "Manuel Schmalstieg"
+ },
+ "office-products-led-desk-lamp": {
+  "credit": "Photo: TammiRockStar via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/71598304@N04/6470604711",
+  "license": "BY",
+  "creator": "TammiRockStar"
+ },
+ "office-products-magnetic-glass-whiteboard": {
+  "credit": "Photo: Startup Stock Photos via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/whiteboard-markers-16VYGB9PG5",
+  "license": "CC0",
+  "creator": "Startup Stock Photos"
+ },
+ "office-products-rollerball-pen-set": {
+  "credit": "Photo: Negative Space via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/notepad-pen-QKNVDENHQP",
+  "license": "CC0",
+  "creator": "Negative Space"
+ },
+ "automotive-portable-jump-starter": {
+  "credit": "Photo: Laineema via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/57389791@N03/13793153255",
+  "license": "BY",
+  "creator": "Laineema"
+ },
+ "automotive-dash-camera-4k": {
+  "credit": "Photo: brownpau via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/44124483743@N01/48632467218",
+  "license": "BY",
+  "creator": "brownpau"
+ },
+ "automotive-cordless-tyre-inflator": {
+  "credit": "Photo: chimpwithcan via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/188454520@N02/49906791062",
+  "license": "BY",
+  "creator": "chimpwithcan"
+ },
+ "automotive-dial-tyre-pressure-gauge": {
+  "credit": "Photo: fragment.fi via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/32757845@N08/9207945919",
+  "license": "BY",
+  "creator": "fragment.fi"
+ },
+ "automotive-hydraulic-trolley-jack": {
+  "credit": "Photo: Ivan Radic via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/26344495@N05/49973297072",
+  "license": "BY",
+  "creator": "Ivan Radic"
+ },
+ "automotive-wash-sponge-set": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5927078/photo-image-public-domain-person-free",
+  "license": "CC0",
+  "creator": null
+ },
+ "tools-home-improvement-self-levelling-laser-level": {
+  "credit": "Photo: Billbeee at English Wikipedia via wikimedia, CC BY 2.5",
+  "source": "https://commons.wikimedia.org/w/index.php?curid=60331669",
+  "license": "BY",
+  "creator": "Billbeee at English Wikipedia"
+ },
+ "tools-home-improvement-precision-screwdriver-set": {
+  "credit": "Photo: oskay via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/17425845@N00/4792523547",
+  "license": "BY",
+  "creator": "oskay"
+ },
+ "tools-home-improvement-steel-cantilever-toolbox": {
+  "credit": "Photo: marinetank0 via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/32585732@N05/5776473296",
+  "license": "BY",
+  "creator": "marinetank0"
+ },
+ "tools-home-improvement-adjustable-wrench-set": {
+  "credit": "Photo: Krzysztof%20Puszczy%u0144ski via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/wrench-tools-F91K0WLE2D",
+  "license": "CC0",
+  "creator": "Krzysztof%20Puszczy%u0144ski"
+ },
+ "tools-home-improvement-brushless-circular-saw": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5919335/photo-image-public-domain-construction-free",
+  "license": "CC0",
+  "creator": null
+ },
+ "tools-home-improvement-solid-beech-workbench": {
+  "credit": "Photo: Steven and Sarah via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/27498222@N00/159090829",
+  "license": "BY",
+  "creator": "Steven and Sarah"
+ },
+ "tools-home-improvement-infrared-thermometer": {
+  "credit": "Photo: Alexanderpf via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/21185523@N03/3636330714",
+  "license": "BY",
+  "creator": "Alexanderpf"
+ },
+ "fashion-double-faced-wool-overcoat": {
+  "credit": "Photo: CastawayVintage via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/44483053@N05/5392414268",
+  "license": "BY",
+  "creator": "CastawayVintage"
+ },
+ "fashion-traverse-selvedge-denim": {
+  "credit": "Photo: Seacoast Sage via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/blue-jeans-BCRQWOTPWM",
+  "license": "CC0",
+  "creator": "Seacoast Sage"
+ },
+ "fashion-goodyear-leather-derby": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/6032767/photo-image-public-domain-fashion-free",
+  "license": "CC0",
+  "creator": null
+ },
+ "fashion-vulcanised-court-sneaker": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/11524416/white-sneaker-with-pink-led-lights",
+  "license": "CC0",
+  "creator": null
+ },
+ "fashion-trailhead-chelsea-boot": {
+  "credit": "Photo: spera.de via flickr, CC BY 2.0",
+  "source": "https://www.flickr.com/photos/130010866@N02/16295029330",
+  "license": "BY",
+  "creator": "spera.de"
+ },
+ "fashion-acetate-sunglasses": {
+  "credit": "Photo: Caio Resende via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/sunglasses-summer-9F346TUOAQ",
+  "license": "CC0",
+  "creator": "Caio Resende"
+ },
+ "fashion-bridle-leather-belt": {
+  "credit": "Photo: Piotr Lohunko via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/brown-leather-DFDGN6Q757",
+  "license": "CC0",
+  "creator": "Piotr Lohunko"
+ },
+ "grocery-gourmet-food-single-origin-coffee-huila": {
+  "credit": "Photo: fireskystudios.com via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/coffee-beans-OTQJFKY0L7",
+  "license": "CC0",
+  "creator": "fireskystudios.com"
+ },
+ "grocery-gourmet-food-estate-olive-oil": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/6034466/olive-oil-free-public-domain-cc0-image",
+  "license": "CC0",
+  "creator": null
+ },
+ "grocery-gourmet-food-dark-chocolate-72": {
+  "credit": "Photo: Micha%u0142%20Grosicki via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/dark-chocolate-Z7A3GBMGOX",
+  "license": "CC0",
+  "creator": "Micha%u0142%20Grosicki"
+ },
+ "grocery-gourmet-food-wild-acacia-honey": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/6035650/honey-jar-free-public-domain-cc0-photo",
+  "license": "CC0",
+  "creator": null
+ },
+ "grocery-gourmet-food-slow-cooked-fig-preserve": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5923151/photo-image-public-domain-fruit-food",
+  "license": "CC0",
+  "creator": null
+ },
+ "grocery-gourmet-food-stone-ground-pasta": {
+  "credit": "Photo: JESHOOTS.com via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/spaghetti-pasta-A06F9A9896",
+  "license": "CC0",
+  "creator": "JESHOOTS.com"
+ },
+ "grocery-gourmet-food-smoked-paprika-tin": {
+  "credit": "Photo: Marina Pershina via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/spices-ingredients-RQ2OSZQHW9",
+  "license": "CC0",
+  "creator": "Marina Pershina"
+ },
+ "toys-games-timber-block-set": {
+  "credit": "Photo: usembassynewzealand via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/8753913/photo-image-public-domain-wood",
+  "license": "CC0",
+  "creator": "usembassynewzealand"
+ },
+ "toys-games-strategy-board-game-meridian": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5921214/photo-image-public-domain-free-game",
+  "license": "CC0",
+  "creator": null
+ },
+ "toys-games-cooperative-card-game-signal": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5914356/photo-image-public-domain-table-free",
+  "license": "CC0",
+  "creator": null
+ },
+ "toys-games-wooden-train-set": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/6019854/train-toy-free-public-domain-cc0-photo",
+  "license": "CC0",
+  "creator": null
+ },
+ "toys-games-puzzle-1000-cartography": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/3337958/free-photo-image-puzzle-cc0-creative-commons",
+  "license": "CC0",
+  "creator": null
+ },
+ "toys-games-garden-explorer-kit": {
+  "credit": "Photo: rawpixel via rawpixel, CC0",
+  "source": "https://www.rawpixel.com/image/5904151/magnifying-glass-free-public-domain-cc0-image",
+  "license": "CC0",
+  "creator": null
+ },
+ "toys-games-kite-delta-wing": {
+  "credit": "Photo: Aaron Burden via stocksnap, CC0",
+  "source": "https://stocksnap.io/photo/kite-play-5WT72DGOZ9",
+  "license": "CC0",
+  "creator": "Aaron Burden"
+ }
+}

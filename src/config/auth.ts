@@ -20,12 +20,7 @@ export const REMEMBER_ME_TTL_SECONDS = 60 * 60 * 24 * 30; // 30 days
 export const TOKEN_TTL_SECONDS = 60 * 60; // 1 hour
 
 /** Routes that require a signed-in user. Checked in `src/proxy.ts`. */
-/**
- * `/seller` is here too: a seller account is a customer account that owns a
- * store, so the same session guards it. The seller layout does the finer check
- * — that the store exists and is approved.
- */
-export const PROTECTED_PREFIXES = ["/account", "/checkout", "/seller"];
+export const PROTECTED_PREFIXES = ["/account", "/checkout"];
 
 /** Routes a signed-in user should be bounced away from. */
 export const GUEST_ONLY_PREFIXES = ["/login", "/register", "/forgot-password", "/reset-password"];

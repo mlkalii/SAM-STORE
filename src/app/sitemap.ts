@@ -3,7 +3,6 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
 import { categories } from "@/data/categories";
 import { getProducts } from "@/data/products";
-import { sellerStore } from "@/lib/marketplace/seller-store";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const products = await getProducts();
@@ -23,8 +22,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/warranty",
     "/privacy",
     "/terms",
-    "/sellers",
-    "/sell",
   ];
 
   return [
@@ -37,14 +34,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${siteConfig.url}/categories/${category.slug}`,
       changeFrequency: "weekly" as const,
       priority: 0.8,
-    })),
-    // Every approved storefront is indexable — a vendor's own store page is
-    // often what a shopper searches for by name.
-    ...sellerStore.approved().map((seller) => ({
-      url: `${siteConfig.url}/sellers/${seller.slug}`,
-      lastModified: seller.joinedAt,
-      changeFrequency: "weekly" as const,
-      priority: 0.7,
     })),
     ...products.map((product) => ({
       url: `${siteConfig.url}/shop/${product.slug}`,

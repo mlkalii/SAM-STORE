@@ -3,7 +3,6 @@ import { NextResponse } from "next/server";
 import { categories } from "@/data/categories";
 import { getBestSellers, suggestBrands, suggestProducts } from "@/data/products";
 import { searchInsights } from "@/lib/commerce/search-insights";
-import { isFullyVerified, sellerStore } from "@/lib/marketplace/seller-store";
 
 /**
  * Type-ahead endpoint for the header search field.
@@ -34,7 +33,6 @@ export async function GET(request: Request) {
       products: [],
       categories: [],
       brands: [],
-      sellers: [],
       trending: searchInsights.trending(6),
       popular,
     });
@@ -64,32 +62,11 @@ export async function GET(request: Request) {
     .slice(0, 3)
     .map((category) => ({ slug: category.slug, name: category.name }));
 
-  // Sellers are searchable too: a shopper who knows the store name should reach
-  // the storefront, not scroll a product list.
-  const sellers = sellerStore
-    .approved()
-    .filter(
-      (seller) =>
-        seller.storeName.toLowerCase().includes(needle) ||
-        seller.storeDescription.toLowerCase().includes(needle) ||
-        seller.business.city.toLowerCase().includes(needle),
-    )
-    .slice(0, 3)
-    .map((seller) => ({
-      id: seller.id,
-      slug: seller.slug,
-      storeName: seller.storeName,
-      gradient: seller.gradient,
-      rating: seller.rating,
-      verified: isFullyVerified(seller),
-    }));
-
   return NextResponse.json({
     q,
     products,
     categories: matchedCategories,
     brands,
-    sellers,
     trending: [],
     popular: [],
   });

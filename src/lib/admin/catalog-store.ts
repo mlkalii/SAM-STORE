@@ -7,7 +7,7 @@ import type { Product } from "@/types";
 /**
  * Editable catalogue layer.
  *
- * The bundled catalogue is 780 read-only products. Rather than rewrite a 6.8 MB
+ * The bundled catalogue is a read-only JSON file. Rather than rewrite a large
  * JSON file on every keystroke, admin edits are stored as *overlays*: a patch
  * per slug, plus a list of admin-created products and a set of deleted slugs.
  * `lib/product-source` applies them, so an edit made here shows on the

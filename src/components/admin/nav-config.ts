@@ -47,15 +47,6 @@ export const adminNav: AdminNavGroup[] = [
     ],
   },
   {
-    title: "Marketplace",
-    items: [
-      { href: "/admin/sellers", label: "Sellers", icon: "Store", permission: "sellers.view", prefix: true },
-      { href: "/admin/commissions", label: "Commissions", icon: "Percent", permission: "commissions.view", prefix: true },
-      { href: "/admin/payouts", label: "Payouts", icon: "Wallet", permission: "payouts.view", prefix: true },
-      { href: "/admin/reviews", label: "Reviews", icon: "Star", permission: "reviews.view", prefix: true },
-    ],
-  },
-  {
     title: "Store",
     items: [
       { href: "/admin/content", label: "Content", icon: "LayoutTemplate", permission: "content.view", prefix: true },

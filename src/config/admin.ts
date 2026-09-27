@@ -60,11 +60,7 @@ export type Permission =
   | "content.view" | "content.edit"
   | "reports.view"
   | "settings.view" | "settings.edit"
-  | "staff.view" | "staff.edit"
-  | "sellers.view" | "sellers.edit" | "sellers.approve"
-  | "commissions.view" | "commissions.edit"
-  | "payouts.view" | "payouts.edit"
-  | "reviews.view" | "reviews.moderate";
+  | "staff.view" | "staff.edit";
 
 const ROLE_PERMISSIONS: Record<AdminRole, Permission[] | ["*"]> = {
   "super-admin": ["*"],
@@ -81,10 +77,6 @@ const ROLE_PERMISSIONS: Record<AdminRole, Permission[] | ["*"]> = {
     "content.view", "content.edit",
     "reports.view",
     "settings.view",
-    "sellers.view", "sellers.edit", "sellers.approve",
-    "commissions.view", "commissions.edit",
-    "payouts.view", "payouts.edit",
-    "reviews.view", "reviews.moderate",
   ],
 
   manager: [
@@ -98,10 +90,6 @@ const ROLE_PERMISSIONS: Record<AdminRole, Permission[] | ["*"]> = {
     "marketing.view", "marketing.edit",
     "content.view",
     "reports.view",
-    "sellers.view", "sellers.edit",
-    "commissions.view",
-    "payouts.view",
-    "reviews.view", "reviews.moderate",
   ],
 
   staff: [
@@ -113,8 +101,6 @@ const ROLE_PERMISSIONS: Record<AdminRole, Permission[] | ["*"]> = {
     "customers.view",
     "inventory.view", "inventory.edit",
     "reports.view",
-    "sellers.view",
-    "reviews.view",
   ],
 
   support: [
@@ -123,8 +109,6 @@ const ROLE_PERMISSIONS: Record<AdminRole, Permission[] | ["*"]> = {
     "orders.view", "orders.edit", "orders.refund",
     "customers.view", "customers.edit",
     "reports.view",
-    "sellers.view",
-    "reviews.view", "reviews.moderate",
   ],
 };
 

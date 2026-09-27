@@ -150,13 +150,19 @@ export function SettingsForm({
           <div className={section === "currency" ? "" : "hidden"}>
             <FormSection title="Currency and units">
               <FormGrid>
-                <TextInput name="currency" label="Currency code" defaultValue={settings.currency} />
+                <TextInput name="currency" label="Currency code" defaultValue={settings.currency} readOnly disabled />
                 <TextInput
                   name="currencySymbol"
                   label="Symbol"
                   defaultValue={settings.currencySymbol}
+                  readOnly
+                  disabled
                 />
               </FormGrid>
+              <p className="text-xs text-muted-foreground">
+                The store trades in US dollars only. The currency is fixed in{" "}
+                <code>src/config/store.ts</code> and cannot be changed from here.
+              </p>
               <SelectInput
                 name="weightUnit"
                 label="Weight unit"

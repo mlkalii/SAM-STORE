@@ -1,38 +1,33 @@
 import { currencyConfig } from "@/config/store";
 
 /**
- * Prices are stored in minor units (hundredths) and always have been — the
- * store's currency is now USDT rather than USD, which changes only how a number
- * is *rendered*, never how it is stored or added up.
+ * Money rendering — the single place a price becomes text.
  *
- * `Intl.NumberFormat` cannot format USDT as a currency: `currency` requires an
- * ISO 4217 code and Tether has none. So the number is grouped by Intl and the
- * symbol is applied here.
+ * The store trades exclusively in US dollars. Amounts are stored as integer
+ * minor units (cents) everywhere: in `catalog.json`, in the cart, in orders and
+ * in the database. Nothing below changes an amount, only how it is displayed.
+ *
+ * Two decimals are always shown ($169.00, never $169) so a price can never be
+ * mistaken for a rounded or approximate figure.
  */
-export function formatPrice(minorUnits: number, currency = currencyConfig.code) {
+export function formatPrice(minorUnits: number, currency: string = currencyConfig.code) {
   const value = minorUnits / currencyConfig.minorUnits;
 
-  const grouped = new Intl.NumberFormat("en-US", {
-    minimumFractionDigits: minorUnits % currencyConfig.minorUnits === 0 ? 0 : 2,
-    maximumFractionDigits: 2,
+  return new Intl.NumberFormat(currencyConfig.locale, {
+    style: "currency",
+    currency,
+    minimumFractionDigits: currencyConfig.decimals,
+    maximumFractionDigits: currencyConfig.decimals,
   }).format(value);
-
-  // Anything other than the store currency is a genuine ISO code (a supplier
-  // feed, a historical order) and can go through Intl unchanged.
-  if (currency !== currencyConfig.code) {
-    return new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency,
-      maximumFractionDigits: minorUnits % 100 === 0 ? 0 : 2,
-    }).format(value);
-  }
-
-  return currencyConfig.position === "prefix"
-    ? `${currencyConfig.symbol}${grouped}`
-    : `${grouped} ${currencyConfig.code}`;
 }
 
-/** Long form, for invoices and anywhere the ticker must be unambiguous. */
+/**
+ * Long form — `$169.00 USD`.
+ *
+ * Used wherever the currency must be unambiguous rather than merely implied by
+ * the symbol: cart and checkout totals, invoices, order confirmations and
+ * payment instructions. `$` alone is shared by several currencies; this is not.
+ */
 export function formatPriceWithCode(minorUnits: number) {
   return `${formatPrice(minorUnits)} ${currencyConfig.code}`;
 }

@@ -7,14 +7,12 @@ import { siteConfig } from "@/config/site";
  * search/API endpoints are kept out of the index — they have no stable content
  * to rank and would only dilute the catalogue pages.
  *
- * The admin and seller dashboards are excluded outright: they are behind
+ * The admin dashboard and account area are excluded outright: they are behind
  * authentication and there is nothing there for a crawler.
  *
  * The dashboard rules are written with a trailing slash plus an explicit `$`
- * anchor. `robots.txt` matching is a prefix match, so a bare `/seller` would
- * also cover `/sellers` and `/sellers/<shop>` — de-indexing the entire public
- * seller directory and every storefront on the marketplace, which is the
- * opposite of what this file is for.
+ * anchor, because `robots.txt` matching is a prefix match and a bare `/admin`
+ * would also cover any public route that happened to start with those letters.
  */
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -31,8 +29,6 @@ export default function robots(): MetadataRoute.Robots {
           "/search?",
           "/admin$",
           "/admin/",
-          "/seller$",
-          "/seller/",
           "/account$",
           "/account/",
           "/checkout",

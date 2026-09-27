@@ -13,7 +13,7 @@ order of infrastructure ownership.
    - `DATA_BACKEND=prisma` + `DATABASE_URL` + `DIRECT_DATABASE_URL`
    - `EMAIL_PROVIDER=resend|sendgrid|ses` + the matching key
    - `STORAGE_PROVIDER=s3|r2|cloudinary` + the matching credentials
-   - Payment provider keys (`STRIPE_*`, `PAYPAL_*`, `USDT_*`)
+   - Payment provider keys (`STRIPE_*`, `PAYPAL_*`)
 3. Database bring-up (once per environment):
 
    ```sh
@@ -33,10 +33,10 @@ correctly.** With `DATA_BACKEND=memory` every store lives in the RAM of one
 serverless instance. Vercel runs many instances and discards them freely, so:
 
 - an account registered on one request may not exist on the next,
-- orders, seller applications, reviews and messages disappear on redeploy,
+- orders and support messages disappear on redeploy,
 - rate-limit counters are per instance, so the effective limit is the
   configured one multiplied by the number of live instances,
-- each cold start re-seeds the demo catalogue, orders and sellers.
+- each cold start re-seeds the demo catalogue and orders.
 
 That mode is a demo. `GET /api/health` reports `persistent: false` and lists
 exactly what is unset — check it immediately after the first deploy.
@@ -60,9 +60,9 @@ Preview (a preview build with no `AUTH_SECRET` cannot sign anyone in).
 | `NEXT_PUBLIC_SITE_URL` | canonicals, sitemap, email links | Falls back to the Vercel domain; set it once a custom domain is attached. |
 | `DATA_BACKEND=prisma` + `DATABASE_URL` + `DIRECT_DATABASE_URL` | persistence | Supabase: pooled string as `DATABASE_URL`, direct as `DIRECT_DATABASE_URL`. |
 | `EMAIL_PROVIDER` + `RESEND_API_KEY` / `SENDGRID_API_KEY` | real mail | Without it mail is logged, not sent. |
-| `STORAGE_PROVIDER` + credentials | seller/staff uploads | Without it `/api/uploads` answers 503 — the local driver is refused in production because the filesystem is read-only. |
+| `STORAGE_PROVIDER` + credentials | staff uploads | Without it `/api/uploads` answers 503 — the local driver is refused in production because the filesystem is read-only. |
 | `ADMIN_SEED_PASSWORD` | staff sign-in | Otherwise the seeded development password applies. |
-| Payment keys | checkout, webhooks | `STRIPE_*`, `PAYPAL_*`, `USDT_*`. Webhooks answer 503 until their secrets exist. |
+| Payment keys | checkout, webhooks | `STRIPE_*`, `PAYPAL_*`. Webhooks answer 503 until their secrets exist. |
 
 ### `NEXT_PUBLIC_*` changes need a redeploy
 

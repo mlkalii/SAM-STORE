@@ -19,7 +19,6 @@ export type PaymentProviderId =
   | "paypal"
   | "apple-pay"
   | "google-pay"
-  | "usdt"
   | "bank-transfer"
   | "cash-on-delivery";
 

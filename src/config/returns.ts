@@ -2,7 +2,7 @@
  * Official SAMRUX return policy.
  *
  * The numbers here drive the returns page, the product assurances strip, the
- * checkout summary, the customer's return request, the seller's return queue
+ * checkout summary, the customer's return request, the admin return queue
  * and the admin refund screen — so the window quoted to a customer is always
  * the window the system enforces.
  */

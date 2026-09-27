@@ -1,6 +1,6 @@
 "use client";
 
-import { BadgeCheck, History, LayoutGrid, Loader2, Search, Store, Tag, X } from "lucide-react";
+import { History, LayoutGrid, Loader2, Search, Tag, X } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import * as React from "react";
@@ -26,7 +26,6 @@ interface SuggestResponse {
   products: Suggestion[];
   categories: { slug: string; name: string }[];
   brands: { brand: string; count: number }[];
-  sellers: { id: string; slug: string; storeName: string; gradient: string; rating: number; verified: boolean }[];
   /** Aggregate popular queries, shown before anything is typed. */
   trending: string[];
   /** Current best sellers, shown before anything is typed. */
@@ -38,7 +37,6 @@ const EMPTY: SuggestResponse = {
   products: [],
   categories: [],
   brands: [],
-  sellers: [],
   trending: [],
   popular: [],
 };
@@ -189,8 +187,7 @@ export function SearchBar({
   const hasResults =
     fresh.products.length > 0 ||
     fresh.categories.length > 0 ||
-    fresh.brands.length > 0 ||
-    fresh.sellers.length > 0;
+    fresh.brands.length > 0;
 
   return (
     <div ref={containerRef} className={cn("relative", className)}>
@@ -210,7 +207,7 @@ export function SearchBar({
           type="search"
           autoFocus={autoFocus}
           value={query}
-          placeholder="Search 780 products across 15 departments"
+          placeholder="Search products, brands and departments"
           onChange={(event) => {
             setQuery(event.target.value);
             setOpen(true);
@@ -334,36 +331,8 @@ export function SearchBar({
         <div className="absolute inset-x-0 top-full z-50 mt-2 overflow-hidden rounded-xl border bg-popover shadow-lg">
           {hasResults ? (
             <>
-              {fresh.categories.length > 0 ||
-              fresh.brands.length > 0 ||
-              fresh.sellers.length > 0 ? (
+              {fresh.categories.length > 0 || fresh.brands.length > 0 ? (
                 <div className="border-b p-2">
-                  {/* Stores first — a shopper naming one wants the storefront. */}
-                  {fresh.sellers.map((seller) => (
-                    <button
-                      key={seller.id}
-                      type="button"
-                      onClick={() => go(`/sellers/${seller.slug}`)}
-                      className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-left text-sm hover:bg-muted"
-                    >
-                      <Store className="size-3.5 shrink-0 text-muted-foreground" aria-hidden />
-                      <span className="min-w-0 flex-1 truncate">
-                        Visit <span className="font-medium">{seller.storeName}</span>
-                      </span>
-                      {seller.verified ? (
-                        <BadgeCheck
-                          className="size-3.5 shrink-0 text-emerald-600 dark:text-emerald-400"
-                          aria-label="Verified seller"
-                        />
-                      ) : null}
-                      {seller.rating > 0 ? (
-                        <span className="font-mono text-[11px] tabular-nums text-muted-foreground">
-                          {seller.rating.toFixed(1)}★
-                        </span>
-                      ) : null}
-                    </button>
-                  ))}
-
                   {fresh.categories.map((category) => (
                     <button
                       key={category.slug}

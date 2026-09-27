@@ -15,7 +15,6 @@ import { categories } from "@/data/categories";
 import { extractRecords, isCsv, parseCsv } from "@/lib/product-source/parse-feed";
 import { normalizeProduct } from "@/lib/product-source/normalize";
 import { applyCatalogOverlays } from "@/lib/admin/catalog-store";
-import { withSellers } from "@/lib/marketplace/assign";
 import type { Product } from "@/types";
 
 export interface CatalogSnapshot {
@@ -87,7 +86,7 @@ export const getCatalog = cache(async (): Promise<CatalogSnapshot> => {
   if (PRODUCT_DATA_SOURCE.trim()) {
     const feed = await loadFeed(PRODUCT_DATA_SOURCE.trim(), {});
     if (feed.length > 0) {
-      const products = withSellers(feed);
+      const products = feed;
       sources.push({ scope: "store", from: "feed", url: PRODUCT_DATA_SOURCE, count: products.length });
       return { products, currency: catalog.currency, sources };
     }
@@ -103,7 +102,7 @@ export const getCatalog = cache(async (): Promise<CatalogSnapshot> => {
   if (withFeeds.length === 0) {
     // Admin overlays are applied last, so an edit made in the dashboard is live
     // on the storefront without touching catalog.json.
-    const products = withSellers(applyCatalogOverlays(bundled, "storefront"));
+    const products = applyCatalogOverlays(bundled, "storefront");
     sources.push({ scope: "store", from: "bundled", count: products.length });
     return { products, currency: catalog.currency, sources };
   }
@@ -124,14 +123,12 @@ export const getCatalog = cache(async (): Promise<CatalogSnapshot> => {
       .map((entry) => [entry.category.slug, entry.products]),
   );
 
-  const products = withSellers(
-    applyCatalogOverlays(
-      [
-        ...bundled.filter((product) => !replaced.has(product.category)),
-        ...[...replaced.values()].flat(),
-      ],
-      "storefront",
-    ),
+  const products = applyCatalogOverlays(
+    [
+      ...bundled.filter((product) => !replaced.has(product.category)),
+      ...[...replaced.values()].flat(),
+    ],
+    "storefront",
   );
 
   for (const category of categories) {
@@ -155,5 +152,5 @@ export const getAllProducts = cache(async (): Promise<Product[]> => {
 
 /** Admin view: includes drafts, archived and hidden products. */
 export const getAdminProducts = cache(async (): Promise<Product[]> => {
-  return withSellers(applyCatalogOverlays(bundled, "admin"));
+  return applyCatalogOverlays(bundled, "admin");
 });

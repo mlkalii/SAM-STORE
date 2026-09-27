@@ -11,6 +11,7 @@ import type {
   RefundResult,
 } from "@/lib/payments/types";
 import { hasEnv } from "@/lib/payments/types";
+import { formatPriceWithCode } from "@/lib/format";
 
 /**
  * Payment provider registry.
@@ -137,14 +138,14 @@ const bankTransfer: PaymentProvider = {
       reference: `BT-${request.orderReference}`,
       status: "pending",
       instructions:
-        `Transfer ${(request.amount / 100).toFixed(2)} USDT quoting reference ` +
+        `Transfer ${formatPriceWithCode(request.amount)} quoting reference ` +
         `${request.orderReference}. Bank details are on your confirmation email. ` +
         `Orders are dispatched once the transfer clears, usually one working day.`,
     };
   },
   async refund(request) {
     return manualRefund(
-      `Return ${(request.amount / 100).toFixed(2)} USDT by bank transfer to the account the customer paid from, quoting ${request.orderReference}.`,
+      `Return ${formatPriceWithCode(request.amount)} by bank transfer to the account the customer paid from, quoting ${request.orderReference}.`,
     );
   },
 };
@@ -166,40 +167,8 @@ const cashOnDelivery: PaymentProvider = {
   },
   async refund(request) {
     return manualRefund(
-      `Cash order ${request.orderReference}: refund ${(request.amount / 100).toFixed(2)} USDT to the customer's chosen account — no card to return it to.`,
+      `Cash order ${request.orderReference}: refund ${formatPriceWithCode(request.amount)} to the customer's chosen account — no card to return it to.`,
     );
-  },
-};
-
-/**
- * Native USDT settlement — the marketplace's own currency, settled on-chain.
- *
- * The flow a processor like this needs: create a deposit address (or payment
- * URI) per order, watch the chain for the transfer, and confirm after N
- * blocks. `USDT_SETTLEMENT_API` points at the watcher service;
- * `USDT_TREASURY_WALLET` is where funds land.
- */
-const usdt: PaymentProvider = {
-  id: "usdt",
-  label: "USDT",
-  description: "Pay directly in Tether (TRC-20 / ERC-20). Confirmed on-chain.",
-  requiredEnv: ["USDT_SETTLEMENT_API", "USDT_TREASURY_WALLET"],
-  offline: false,
-  wallet: false,
-  isConfigured: () => hasEnv(["USDT_SETTLEMENT_API", "USDT_TREASURY_WALLET"]),
-  async createIntent(request) {
-    // Replace with a deposit-address request against USDT_SETTLEMENT_API.
-    return placeholderIntent("usdt", request, {
-      status: "pending",
-      instructions:
-        `Send exactly ${(request.amount / 100).toFixed(2)} USDT to the address on your ` +
-        `confirmation page, quoting ${request.orderReference}. The order confirms after ` +
-        `chain finality, usually under two minutes.`,
-    });
-  },
-  async refund(request) {
-    // Replace with a treasury transfer via the settlement API.
-    return placeholderRefund("usdt", request);
   },
 };
 
@@ -208,7 +177,6 @@ const providers: PaymentProvider[] = [
   paypal,
   applePay,
   googlePay,
-  usdt,
   bankTransfer,
   cashOnDelivery,
 ];

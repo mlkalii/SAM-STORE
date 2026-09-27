@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * Department grid. The first two tiles run wide so the block reads as an
- * editorial layout rather than a uniform marketplace wall.
+ * editorial layout rather than a uniform grid wall.
  */
 export async function CategoryShowcase() {
   const products = await getProducts();
@@ -27,7 +27,7 @@ export async function CategoryShowcase() {
             Fifteen departments, <em className="italic">each one capped</em>
           </>
         }
-        description="Fifty-two products per department, and no more. When something better arrives, something else leaves — the shelf never just grows."
+        description="A deliberately small range per department. When something better arrives, something else leaves — the shelf never just grows."
         action={
           <Link
             href="/categories"
@@ -119,7 +119,7 @@ export async function CategoryShowcase() {
         <p className="text-sm text-muted-foreground">
           Looking for something specific?{" "}
           <Link href="/search" className="underline underline-offset-4">
-            Search all 780 products
+            Search all {products.length} products
           </Link>
           .
         </p>

@@ -7,7 +7,7 @@ import { getCurrentUser, toPublicUser } from "@/lib/auth";
  *
  * The header reads this after mount rather than the root layout reading
  * `cookies()`. That matters: touching cookies in the root layout would make
- * every route dynamic and give up prerendering for all 780 product pages.
+ * every route dynamic and give up prerendering for every product page.
  * Never returns the password hash — `toPublicUser` is the only projection.
  */
 export async function GET() {

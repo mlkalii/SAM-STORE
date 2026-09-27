@@ -15,7 +15,7 @@ export type { StorageDriver, StoredObject } from "@/lib/storage/types";
  * `STORAGE_PROVIDER` (s3 | r2 | cloudinary | local) picks the driver — R2 is
  * the s3 driver with `S3_ENDPOINT` set. `storeImage` is the one entry point:
  * it validates, optimises, generates the thumbnail and stores both renditions,
- * so every upload in the marketplace has the same shape as the catalogue's
+ * so every upload in the store has the same shape as the catalogue's
  * own imagery (1600px main, 400px thumbnail).
  */
 
@@ -44,7 +44,7 @@ function selectDriver(): StorageDriver {
  * Every driver is credential-checked, not just the local one. Naming
  * `STORAGE_PROVIDER=s3` while forgetting `S3_BUCKET` used to sail through here
  * and fail deep inside a signed request, which the uploads route reported as
- * 422 "that image could not be processed" — sending the seller off to
+ * 422 "that image could not be processed" — sending the uploader off to
  * re-export a photo that was never the problem. Now it is a 503 naming the
  * variables that are missing.
  */

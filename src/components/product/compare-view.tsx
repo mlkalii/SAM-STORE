@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { COMPARE_LIMIT, useCompare } from "@/hooks/use-product-lists";
 import { formatWarranty } from "@/lib/delivery";
-import { formatPrice } from "@/lib/format";
+import { discountPercent, formatPrice } from "@/lib/format";
 import { cn } from "@/lib/utils";
 import type { Product } from "@/types";
 
@@ -90,14 +90,14 @@ export function CompareView() {
     },
     {
       label: "Discount",
-      render: (product) =>
-        product.discountPercent > 0 ? (
-          <span className="text-emerald-600 dark:text-emerald-500">
-            −{product.discountPercent}%
-          </span>
+      render: (product) => {
+        const saving = discountPercent(product.price, product.compareAtPrice);
+        return saving ? (
+          <span className="text-emerald-600 dark:text-emerald-500">−{saving}%</span>
         ) : (
           <Minus className="size-4 text-muted-foreground" aria-label="None" />
-        ),
+        );
+      },
     },
   ];
 

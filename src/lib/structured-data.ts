@@ -5,7 +5,7 @@ import type { Category, Product } from "@/types";
  *
  * `JSON.stringify` alone is not enough: a value containing `</script>` would
  * terminate the tag and start injecting markup. The catalogue was trusted
- * data when this file was written, but sellers now author product names, so
+ * data when this file was written, but staff can now edit product names, so
  * every embedded character that could close the tag is escaped to its unicode
  * form — valid JSON, inert in HTML.
  */

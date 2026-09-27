@@ -7,7 +7,7 @@ import { Skeleton } from "@/components/ui/skeleton";
  * `(index)` route group so the Suspense boundary wraps only the list itself:
  * a boundary that also covered `orders/[id]` would flush a 200 before the
  * detail page could call `notFound()`, turning every unknown id into a soft
- * 404. Renders inside the admin/seller shell, so the sidebar and top bar stay
+ * 404. Renders inside the admin shell, so the sidebar and top bar stay
  * interactive while the list resolves.
  */
 export function DashboardSkeleton() {

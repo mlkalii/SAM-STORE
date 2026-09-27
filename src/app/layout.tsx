@@ -54,8 +54,6 @@ export default function RootLayout({
     <html lang="en" className={`${fontVariables} h-full antialiased`}>
       <head>
         {/* Product imagery is served from here — open the connection early. */}
-        <link rel="preconnect" href="https://images.unsplash.com" />
-        <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

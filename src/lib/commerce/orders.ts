@@ -24,7 +24,6 @@ import { paymentTransactions } from "@/lib/payments/transactions";
 import { notifications } from "@/lib/commerce/notifications";
 import { returnPolicy } from "@/config/returns";
 import { formatPriceWithCode } from "@/lib/format";
-import { reverseOrder, settleOrder } from "@/lib/marketplace/settlement";
 
 /**
  * Order service.
@@ -167,10 +166,6 @@ export async function placeOrder(input: PlaceOrderInput): Promise<Order> {
     body: `${order.lines.length} item${order.lines.length === 1 ? "" : "s"} · ${order.deliveryEstimate.label}`,
   });
 
-  // Credit each seller in the order. Kept behind `settleOrder` so this pipeline
-  // does not have to know how commission is calculated.
-  settleOrder(order);
-
   // The capture (or pending offline intent) enters the transaction history.
   paymentTransactions.record({
     orderId: order.id,
@@ -206,8 +201,8 @@ export async function advanceOrder(id: string, to: OrderStatus): Promise<Order |
 
   // Keyed off the status transition, not off the tracking number being absent.
   // Testing `!next.trackingNumber` meant the dispatch email was sent only when
-  // we had to invent a tracking number, and skipped whenever the seller entered
-  // a real one — so the customers with genuine tracking were the ones never
+  // we had to invent a tracking number, and skipped whenever staff entered a
+  // real one — so the customers with genuine tracking were the ones never
   // told their order had shipped. Re-entering "shipped" stays silent.
   if (to === "shipped" && order.status !== "shipped") {
     next.trackingNumber ??= `TRK${Date.now().toString().slice(-8)}XZ`;
@@ -272,9 +267,6 @@ export async function cancelOrder(id: string, reason: string): Promise<Order | u
     inventory.restock(line.slug, line.variantId, line.quantity);
   }
 
-  // The sellers never earned this. Reverse the credit and the commission.
-  reverseOrder(order);
-
   return orderStore.save(next);
 }
 
@@ -306,10 +298,9 @@ export async function requestRefund(id: string, amount?: number): Promise<Order 
   const order = orderStore.find(id);
   if (!order) return undefined;
 
-  // Refunding is not idempotent on its own: it calls the payment provider,
-  // reverses the seller ledger and emails the customer. Without this guard a
-  // double-submitted form — or an impatient second click — refunds twice,
-  // debits the seller twice and sends two notices for one order.
+  // Refunding is not idempotent on its own: it calls the payment provider and
+  // emails the customer. Without this guard a double-submitted form — or an
+  // impatient second click — refunds twice and sends two notices for one order.
   if (
     order.status === "refunded" ||
     order.status === "cancelled" ||
@@ -358,9 +349,6 @@ export async function requestRefund(id: string, amount?: number): Promise<Order 
     reference: refundResult?.reference ?? `manual-${order.reference}`,
     ...(refundResult?.instructions ? { detail: { instructions: refundResult.instructions } } : {}),
   });
-
-  // A refund unwinds the seller's earnings for this order.
-  reverseOrder(order);
 
   await sendEmail("refund-confirmation", order.email, { order: next, amount: value });
   notifications.push(order.userId, {

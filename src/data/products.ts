@@ -234,17 +234,11 @@ export interface ProductQuery {
   scope?: "all" | "deals" | "new" | "best-sellers" | "trending";
   /** Cross-department edit — see `config/collections`. */
   collection?: string;
-  /** Marketplace vendor slug — the *subject* of a storefront listing. */
-  seller?: string;
-  /** Multi-select seller filter, alongside brands. */
-  sellers?: string[];
 }
 
 export interface Facet {
   value: string;
   count: number;
-  /** Display name when `value` is a slug (sellers). */
-  label?: string;
 }
 
 export interface ProductQueryResult {
@@ -257,7 +251,6 @@ export interface ProductQueryResult {
     brands: Facet[];
     subcategories: Facet[];
     categories: Facet[];
-    sellers: Facet[];
     priceRange: { min: number; max: number };
   };
 }
@@ -304,23 +297,6 @@ function countBy(list: Product[], key: (product: Product) => string): Facet[] {
     .sort((a, b) => b.count - a.count || a.value.localeCompare(b.value));
 }
 
-/** Sellers facet: slug for the URL, store name for the label. */
-function sellerFacet(list: Product[]): Facet[] {
-  const counts = new Map<string, { count: number; label: string }>();
-  for (const product of list) {
-    if (!product.sellerSlug) continue;
-    const entry = counts.get(product.sellerSlug) ?? {
-      count: 0,
-      label: product.sellerName ?? product.sellerSlug,
-    };
-    entry.count += 1;
-    counts.set(product.sellerSlug, entry);
-  }
-  return [...counts.entries()]
-    .map(([value, entry]) => ({ value, count: entry.count, label: entry.label }))
-    .sort((a, b) => b.count - a.count || a.value.localeCompare(b.value));
-}
-
 async function scopedProducts(scope: ProductQuery["scope"]) {
   switch (scope) {
     case "deals":
@@ -351,20 +327,17 @@ export async function queryProducts(query: ProductQuery = {}): Promise<ProductQu
     perPage = 24,
     scope = "all",
     collection,
-    seller,
-    sellers = [],
   } = query;
 
   const terms = q.toLowerCase().split(/\s+/).filter(Boolean);
 
-  // Collection and seller narrow the *pool*, not the facets — they are the
-  // subject of the page rather than a filter the shopper can untick.
+  // A collection narrows the *pool*, not the facets — it is the subject of the
+  // page rather than a filter the shopper can untick.
   const edit = collection ? getCollection(collection) : undefined;
 
   const base = (await scopedProducts(scope)).filter((product) => {
     if (category && product.category !== category) return false;
     if (edit && !inCollection(product, edit)) return false;
-    if (seller && product.sellerSlug !== seller) return false;
     return true;
   });
 
@@ -379,7 +352,6 @@ export async function queryProducts(query: ProductQuery = {}): Promise<ProductQu
   const filtered = scored.filter(({ product }) => {
     if (subcategories.length && !subcategories.includes(product.subcategory)) return false;
     if (brands.length && !brands.includes(product.brand)) return false;
-    if (sellers.length && !sellers.includes(product.sellerSlug ?? "")) return false;
     if (typeof minPrice === "number" && product.price < minPrice) return false;
     if (typeof maxPrice === "number" && product.price > maxPrice) return false;
     if (inStockOnly && product.stockStatus === "out_of_stock") return false;
@@ -421,7 +393,6 @@ export async function queryProducts(query: ProductQuery = {}): Promise<ProductQu
       brands: countBy(matched, (product) => product.brand),
       subcategories: countBy(matched, (product) => product.subcategory),
       categories: countBy(matched, (product) => product.category),
-      sellers: sellerFacet(matched),
       priceRange: {
         min: prices.length ? Math.min(...prices) : 0,
         max: prices.length ? Math.max(...prices) : 0,

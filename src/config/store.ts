@@ -56,20 +56,27 @@ export const storeAddressLines = [
 /* -------------------------------------------------------------------------- */
 
 /**
- * Tether. Not an ISO 4217 code, so `Intl.NumberFormat` cannot format it as a
- * currency — see `lib/format`, which groups the number itself and appends the
- * ticker. Amounts stay integer minor units (hundredths) everywhere, exactly as
- * before, so no pricing arithmetic changes.
+ * US dollars — the single currency the store trades in.
+ *
+ * SAMRUX LLC is a Florida company shipping to all fifty US states, so USD is
+ * the only currency quoted, charged, refunded and reported anywhere on the
+ * site. `USD` is a real ISO 4217 code, so `Intl.NumberFormat` formats it
+ * natively — see `lib/format`.
+ *
+ * Amounts are stored as integer minor units (cents) everywhere, which is what
+ * `catalog.json` has always held.
  */
 export const currencyConfig = {
-  code: "USDT",
-  name: "Tether",
-  symbol: "₮",
-  /** Minor units per whole token. */
+  code: "USD",
+  name: "US Dollar",
+  symbol: "$",
+  /** Minor units per whole dollar. */
   minorUnits: 100,
   decimals: 2,
   /** Where the symbol sits relative to the number. */
   position: "prefix",
+  /** Used by `Intl` and by structured data. */
+  locale: "en-US",
 } as const;
 
 /* -------------------------------------------------------------------------- */

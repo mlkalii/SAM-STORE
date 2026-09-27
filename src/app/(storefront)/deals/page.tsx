@@ -43,7 +43,7 @@ export default async function DealsPage(props: PageProps<"/deals">) {
             Current <em className="italic">deals</em>
           </>
         }
-        description="Real reductions against the price we were charging last month — no inflated compare-at figures."
+        description="Every product here is reduced from its regular price. The saving shown is the difference between the two."
       />
 
       <DepartmentRail className="mt-10" />

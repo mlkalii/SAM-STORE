@@ -17,10 +17,6 @@ export interface BrowseState {
   page: number;
   /** Cross-department edit. Part of the page's subject, not a filter chip. */
   collection?: string;
-  /** Marketplace vendor slug. Likewise. */
-  seller?: string;
-  /** Multi-select "sold by" filter, alongside brands. */
-  sellers: string[];
 }
 
 export type RawSearchParams = Record<string, string | string[] | undefined>;
@@ -62,8 +58,6 @@ export function parseBrowseParams(params: RawSearchParams): BrowseState {
     sort: isSortKey(sortRaw) ? sortRaw : undefined,
     page: Number.isFinite(pageRaw) && pageRaw > 0 ? Math.floor(pageRaw) : 1,
     collection: first(params.collection)?.trim() || undefined,
-    seller: first(params.seller)?.trim() || undefined,
-    sellers: list(params.vendor),
   };
 }
 
@@ -84,8 +78,6 @@ export function toProductQuery(
     page: state.page,
     perPage: PER_PAGE,
     collection: state.collection,
-    seller: state.seller,
-    sellers: state.sellers,
     ...extra,
   };
 }
@@ -104,8 +96,6 @@ export function buildHref(basePath: string, state: Partial<BrowseState>): string
   // Carried through every filter change — losing the collection on a sort
   // would silently widen the results the shopper is looking at.
   if (state.collection) params.set("collection", state.collection);
-  if (state.seller) params.set("seller", state.seller);
-  if (state.sellers?.length) params.set("vendor", state.sellers.join(","));
   if (state.page && state.page > 1) params.set("page", String(state.page));
 
   const query = params.toString();
@@ -127,7 +117,6 @@ export function countActiveFilters(state: BrowseState) {
   return (
     state.subcategories.length +
     state.brands.length +
-    state.sellers.length +
     (typeof state.minPrice === "number" || typeof state.maxPrice === "number" ? 1 : 0) +
     (state.inStockOnly ? 1 : 0) +
     (state.onSaleOnly ? 1 : 0)

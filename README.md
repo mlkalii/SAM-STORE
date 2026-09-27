@@ -1,6 +1,6 @@
-# SAMRUX — premium multi-category marketplace
+# SAMRUX — direct-to-consumer store across fourteen departments
 
-A production-shaped Next.js commerce front end: fifteen departments, 780 catalogue products,
+A production-shaped Next.js commerce front end: fourteen departments, 285 catalogue products,
 server-rendered filtering and search, on a dark-luxury design system. App Router, React Server Components, Tailwind v4,
 shadcn/ui, Framer Motion for interaction, GSAP for the scripted hero and scroll work.
 
@@ -104,7 +104,7 @@ so many feeds work without edits. Everything downstream reads
 
 ## Catalogue data
 
-780 products — 15 departments × 13 concepts × 4 tiers (Lite / standard / Pro / Max).
+285 products — 14 departments × up to 7 product types × 3 tiers (Lite / standard / Pro), each with a verified, self-hosted photo under `public/products/` (credits in `public/products/CREDITS.json`).
 Every name, SKU and slug is unique; brands are assigned on a stride co-prime with the
 pool size so no two concepts in a department share one.
 
@@ -127,7 +127,7 @@ stock status and count, category, subcategory, variants, tags, release date, war
 return window, dispatch hours, a video flag, six images, and the
 featured / best-seller / new-arrival / trending flags.
 
-Totals: **780 products · 4,680 images · ~4,300 reviews · 82 brands · 52 per department**.
+Totals: **285 products · 95 product photos · 21 per department (18 automotive, 15 computers)**.
 
 The generator is deterministic — running it twice produces a byte-identical file, so the
 catalogue diffs like any other source. Nothing imports the script at runtime.

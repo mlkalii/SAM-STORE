@@ -3,14 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 
-import { CustomerReplyForm } from "@/components/marketplace/customer-reply-form";
+import { CustomerReplyForm } from "@/components/support/customer-reply-form";
 import { Panel } from "@/components/account/account-ui";
 import { Button } from "@/components/ui/button";
-import { formatStoreDateTime } from "@/config/store";
+import { formatStoreDateTime, storeConfig } from "@/config/store";
 import { requireUser } from "@/lib/auth";
 import { getCsrfToken } from "@/lib/auth/csrf";
-import { messaging } from "@/lib/marketplace/messaging";
-import { sellerStore } from "@/lib/marketplace/seller-store";
+import { messaging } from "@/lib/support/messaging";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = { title: "Conversation", robots: { index: false } };
@@ -26,12 +25,11 @@ export default async function AccountThreadPage(props: PageProps<"/account/messa
 
   messaging.markRead(id, "customer");
   const messages = messaging.messages(id);
-  const seller = sellerStore.find(thread.sellerId);
 
   return (
     <Panel
       title={thread.subject}
-      description={seller ? `With ${seller.storeName}` : undefined}
+      description={`With ${storeConfig.tradingName} customer care`}
       action={
         <Button variant="ghost" size="sm" render={<Link href="/account/messages" />}>
           <ArrowLeft className="size-3.5" aria-hidden />
@@ -63,8 +61,8 @@ export default async function AccountThreadPage(props: PageProps<"/account/messa
 
       {thread.status === "closed" ? (
         <p className="mt-6 rounded-xl border border-dashed p-4 text-center text-sm text-muted-foreground">
-          This conversation is closed. Start a new one from the seller&rsquo;s storefront if you
-          need anything else.
+          This conversation is closed. Start a new one from the contact page if you need
+          anything else.
         </p>
       ) : (
         <div className="mt-6">
@@ -72,15 +70,11 @@ export default async function AccountThreadPage(props: PageProps<"/account/messa
         </div>
       )}
 
-      {seller ? (
-        <p className="mt-6 border-t pt-4 text-xs text-muted-foreground">
-          Sold by{" "}
-          <Link href={`/sellers/${seller.slug}`} className="underline underline-offset-4">
-            {seller.storeName}
-          </Link>
-          . Marketplace support handles refunds and disputes.
-        </p>
-      ) : null}
+      <p className="mt-6 border-t pt-4 text-xs text-muted-foreground">
+        Sold and shipped by {storeConfig.legalName}. Refunds and returns are handled directly by
+        our customer care team.
+      </p>
+
     </Panel>
   );
 }

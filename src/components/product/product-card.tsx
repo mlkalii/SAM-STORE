@@ -8,7 +8,7 @@ import { BuyNowButton } from "@/components/product/buy-now-button";
 import { CompareButton, WishlistButton } from "@/components/product/product-actions";
 import { ProductBadges, StockBadge } from "@/components/product/product-badges";
 import { ProductImage } from "@/components/product/product-image";
-import { ProductChips, SellerLine } from "@/components/product/product-meta";
+import { ProductChips } from "@/components/product/product-meta";
 import { QuickAddButton } from "@/components/product/quick-add-button";
 import { QuickViewTrigger } from "@/components/product/quick-view-trigger";
 import { useClientToday } from "@/hooks/use-client-today";
@@ -141,7 +141,6 @@ export function ProductCard({
           </Link>
         </h3>
 
-        {compact ? null : <SellerLine product={product} className="mt-1.5" />}
 
         <div className="mt-2 flex flex-wrap items-center gap-x-2.5 gap-y-1">
           <StockBadge status={product.stockStatus} count={product.stockCount} />
