@@ -10,7 +10,6 @@ import { Button } from "@/components/ui/button";
 import { gsap, useGSAP } from "@/lib/gsap";
 
 
-const NUMBER_WORDS = ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen","Twenty"];
 
 export function Hero({
   productCount,
@@ -20,7 +19,7 @@ export function Hero({
   productCount: number;
   departmentCount: number;
 }) {
-  const words = [NUMBER_WORDS[departmentCount] ?? String(departmentCount), "departments.", "One", "standard", "of", "proof."];
+  const words = ["Everyday", "products,", "sold", "direct", "to", "you."];
   const scope = React.useRef<HTMLElement>(null);
 
   useGSAP(
@@ -126,15 +125,15 @@ export function Hero({
             data-hero-copy
             className="max-w-md text-lg leading-relaxed text-muted-foreground text-pretty"
           >
-            Electronics to fashion, groceries to power tools. Every product here was chosen by a
-            person who had to justify it — never by a supplier who paid for the shelf.
+            SAMRUX LLC is an online retail store offering a range of consumer products. Every
+            product is sold and shipped directly by us, with prices in US dollars.
           </p>
 
           <div className="flex flex-wrap items-center gap-3">
             <div data-hero-cta>
               <Magnetic>
-                <Button size="lg" className="h-12 px-6" render={<Link href="/categories" />}>
-                  Shop all departments
+                <Button size="lg" className="h-12 px-6" render={<Link href="/shop" />}>
+                  Shop all products
                   <ArrowRight className="size-4" aria-hidden />
                 </Button>
               </Magnetic>
@@ -146,7 +145,7 @@ export function Hero({
               className="h-12 px-6"
               render={<Link href="/about" />}
             >
-              How we select
+              About us
             </Button>
           </div>
         </div>

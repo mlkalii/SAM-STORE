@@ -64,7 +64,7 @@ export function MobileNav() {
           <Separator className="my-4" />
 
           <p className="px-2 pb-2 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-            Departments
+            Categories
           </p>
 
           <div className="flex flex-col gap-0.5">

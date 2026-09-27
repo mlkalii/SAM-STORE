@@ -6,7 +6,6 @@ import { Container } from "@/components/common/container";
 import { Separator } from "@/components/ui/separator";
 import { footerNav, policyNav, siteConfig } from "@/config/site";
 import { currencyConfig, shippingRegion, storeConfig } from "@/config/store";
-import { categories } from "@/data/categories";
 
 export function SiteFooter() {
   return (
@@ -77,26 +76,6 @@ export function SiteFooter() {
             </div>
           ))}
         </div>
-
-        <Separator className="my-10" />
-
-        <nav aria-label="All departments">
-          <h3 className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-            Departments
-          </h3>
-          <ul className="mt-4 grid gap-x-6 gap-y-2.5 sm:grid-cols-2 lg:grid-cols-5">
-            {categories.map((category) => (
-              <li key={category.slug}>
-                <Link
-                  href={`/categories/${category.slug}`}
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  {category.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
 
         <Separator className="my-10" />
 

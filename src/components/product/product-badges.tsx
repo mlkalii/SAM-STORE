@@ -62,7 +62,7 @@ export function ProductBadges({
     badges.push(
       <span key="best" className={cn(base, "bg-black/60 text-white")}>
         <Flame className="size-3" aria-hidden />
-        Best seller
+        Popular
       </span>,
     );
   }

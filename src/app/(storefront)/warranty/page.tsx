@@ -83,7 +83,7 @@ export default function WarrantyPage() {
         {
           heading: "Who stands behind it",
           paragraphs: [
-            "The warranty is SAMRUX LLC's own promise. We sell every product on this site directly, so a warranty claim is made to us and honoured by us — there is no manufacturer or third party to be referred to.",
+            "The warranty is SAMRUX LLC's own promise. We sell every product on this site directly, so a warranty claim is made to us and honoured by us.",
             `${storeConfig.legalName}, ${storeConfig.address.line1}, ${storeConfig.address.line2}, ${storeConfig.address.city}, ${storeConfig.address.state} ${storeConfig.address.postcode}. ${storeConfig.phone}.`,
           ],
         },

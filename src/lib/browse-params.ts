@@ -2,7 +2,7 @@ import { isSortKey, type ProductQuery, type SortKey } from "@/data/products";
 
 /**
  * One shared URL contract for every listing page (shop, category, search,
- * deals, new arrivals, best sellers). Filter state lives entirely in the query
+ * deals, new arrivals). Filter state lives entirely in the query
  * string, so results are shareable, bookmarkable and server-rendered.
  */
 export interface BrowseState {

@@ -58,7 +58,7 @@ export function MegaMenu() {
           if (event.key === "Escape") setOpen(false);
         }}
       >
-        Departments
+        Categories
         <ChevronDown
           className={cn("size-3.5 transition-transform duration-300", open && "rotate-180")}
           aria-hidden

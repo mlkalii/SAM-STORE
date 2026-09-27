@@ -16,7 +16,7 @@ export async function GET(request: Request) {
   const q = (searchParams.get("q") ?? "").trim();
 
   // Below two characters there is nothing to match on, so the field shows
-  // trending terms and current best sellers instead of an empty dropdown.
+  // trending terms and popular products instead of an empty dropdown.
   if (q.length < 2) {
     const popular = (await getBestSellers(4)).map((product) => ({
       slug: product.slug,

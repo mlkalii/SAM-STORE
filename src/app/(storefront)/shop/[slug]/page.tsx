@@ -4,19 +4,9 @@ import { notFound } from "next/navigation";
 import { Check, ChevronRight } from "lucide-react";
 
 import { Container } from "@/components/common/container";
-import { Reveal } from "@/components/common/reveal";
-import { SectionHeading } from "@/components/common/section-heading";
 import { BuyPanel } from "@/components/product/buy-panel";
-import { CompareButton, CopySkuButton, ShareButton, WishlistButton } from "@/components/product/product-actions";
-import { DeliveryLine, ProductAssurances } from "@/components/product/product-assurances";
-import { ProductBadges, StockBadge } from "@/components/product/product-badges";
+import { StockBadge } from "@/components/product/product-badges";
 import { ProductGallery } from "@/components/product/product-gallery";
-import { FrequentlyBoughtTogether } from "@/components/product/frequently-bought-together";
-import { ProductGrid } from "@/components/product/product-grid";
-import { ProductRail } from "@/components/product/product-rail";
-import { UpsellCard } from "@/components/product/upsell-card";
-import { RecentlyViewedRail, RecordRecentlyViewed } from "@/components/product/recently-viewed";
-import { StickyBuyBar } from "@/components/product/sticky-buy-bar";
 import {
   Accordion,
   AccordionContent,
@@ -29,15 +19,7 @@ import { returnEligibility, returnPolicy } from "@/config/returns";
 import { warrantyFor } from "@/config/warranty";
 import { formatPrice } from "@/lib/format";
 import { getCategory } from "@/data/categories";
-import {
-  getBundleCompanions,
-  getByBrand,
-  getProduct,
-  getProducts,
-  getRecommended,
-  getRelated,
-  getUpsell,
-} from "@/data/products";
+import { getProduct, getProducts } from "@/data/products";
 import { breadcrumbJsonLd, productJsonLd, jsonLd } from "@/lib/structured-data";
 
 export async function generateStaticParams() {
@@ -50,7 +32,7 @@ export async function generateMetadata(props: PageProps<"/shop/[slug]">): Promis
   const product = await getProduct(slug);
   if (!product) notFound();
 
-  const title = `${product.name} — ${product.brand}`;
+  const title = product.name;
 
   return {
     title,
@@ -82,21 +64,12 @@ export async function generateMetadata(props: PageProps<"/shop/[slug]">): Promis
   };
 }
 
-const BUY_SENTINEL = "buy-panel-sentinel";
-
 export default async function ProductPage(props: PageProps<"/shop/[slug]">) {
   const { slug } = await props.params;
   const product = await getProduct(slug);
   if (!product) notFound();
 
   const category = getCategory(product.category);
-  const [related, sameBrand, companions, recommended, upsell] = await Promise.all([
-    getRelated(product, 4),
-    getByBrand(product.brand, product.slug, 4),
-    getBundleCompanions(product, 2),
-    getRecommended(product, 10),
-    getUpsell(product),
-  ]);
 
   // What warranty the department carries and whether it can be returned at all.
   const warranty = warrantyFor(product.category);
@@ -125,8 +98,6 @@ export default async function ProductPage(props: PageProps<"/shop/[slug]">) {
         }}
       />
 
-      <RecordRecentlyViewed product={product} />
-
       <Container className="py-8">
         <nav
           aria-label="Breadcrumb"
@@ -154,18 +125,7 @@ export default async function ProductPage(props: PageProps<"/shop/[slug]">) {
           <ProductGallery product={product} />
 
           <div className="lg:sticky lg:top-32 lg:self-start">
-            <ProductBadges product={product} limit={3} />
-
-            <p className="mt-4">
-              <Link
-                href={`/shop?brand=${encodeURIComponent(product.brand)}`}
-                className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
-              >
-                {product.brand}
-              </Link>
-            </p>
-
-            <h1 className="mt-2 font-display text-4xl leading-[1.05] tracking-tight text-balance sm:text-5xl">
+            <h1 className="font-display text-4xl leading-[1.05] tracking-tight text-balance sm:text-5xl">
               {product.name}
             </h1>
 
@@ -175,32 +135,20 @@ export default async function ProductPage(props: PageProps<"/shop/[slug]">) {
 
             <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
               <StockBadge status={product.stockStatus} count={product.stockCount} />
-              <CopySkuButton sku={product.sku} />
+              <span className="font-mono text-xs">SKU {product.sku}</span>
             </div>
 
             <div className="mt-8">
               <BuyPanel product={product} />
             </div>
 
-            <div id={BUY_SENTINEL} aria-hidden className="h-px" />
-
-            <div className="mt-5 flex flex-wrap gap-2">
-              <WishlistButton product={product} variant="labelled" className="flex-1" />
-              <CompareButton product={product} variant="labelled" className="flex-1" />
-              <ShareButton product={product} variant="labelled" className="flex-1" />
-            </div>
-
-            {upsell ? <UpsellCard current={product} upgrade={upsell} className="mt-5" /> : null}
-
-            <div className="mt-5">
-              <DeliveryLine product={product} />
-            </div>
-
-            <ProductAssurances product={product} className="mt-6" />
+            <p className="mt-5 text-sm text-muted-foreground">
+              Sold and shipped directly by {storeConfig.legalName}.
+            </p>
 
             <Accordion className="mt-10">
               <AccordionItem value="description">
-                <AccordionTrigger>Description</AccordionTrigger>
+                <AccordionTrigger>Product details</AccordionTrigger>
                 <AccordionContent>
                   <div className="space-y-4 text-muted-foreground">
                     {product.longDescription.split("\n\n").map((paragraph, index) => (
@@ -243,49 +191,8 @@ export default async function ProductPage(props: PageProps<"/shop/[slug]">) {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="brand">
-                <AccordionTrigger>About {product.brand}</AccordionTrigger>
-                <AccordionContent className="space-y-4 text-muted-foreground">
-                  <p className="leading-relaxed text-pretty">
-                    {product.brand} is one of the brands in our{" "}
-                    {category?.name.toLowerCase() ?? "range"} range. We currently stock{" "}
-                    {sameBrand.length + 1} {sameBrand.length + 1 === 1 ? "product" : "products"}{" "}
-                    from {product.brand}, all sold and shipped directly by {storeConfig.legalName}.
-                  </p>
-                  {sameBrand.length > 0 ? (
-                    <Link
-                      href={`/shop?brand=${encodeURIComponent(product.brand)}`}
-                      className="inline-block text-foreground underline underline-offset-4"
-                    >
-                      See everything by {product.brand}
-                    </Link>
-                  ) : null}
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="sold-by">
-                <AccordionTrigger>Sold and shipped by</AccordionTrigger>
-                <AccordionContent className="space-y-3 text-muted-foreground">
-                  <p className="leading-relaxed text-pretty">
-                    Sold and shipped directly by {storeConfig.legalName}. Every item is held in
-                    our own warehouse, checked before dispatch, and invoiced by us — there is no
-                    third-party seller involved at any point in the order.
-                  </p>
-                  <p className="leading-relaxed">
-                    Questions about this product go straight to our team at{" "}
-                    <a
-                      href={`mailto:${storeConfig.supportEmail}`}
-                      className="text-foreground underline underline-offset-4"
-                    >
-                      {storeConfig.supportEmail}
-                    </a>
-                    {" "}or on {storeConfig.phone}.
-                  </p>
-                </AccordionContent>
-              </AccordionItem>
-
               <AccordionItem value="shipping">
-                <AccordionTrigger>Shipping, warranty &amp; returns</AccordionTrigger>
+                <AccordionTrigger>Shipping &amp; returns</AccordionTrigger>
                 <AccordionContent className="space-y-3 text-muted-foreground">
                   <p className="leading-relaxed">
                     Dispatched within {product.dispatchHours} hours on a tracked service to any of
@@ -305,49 +212,6 @@ export default async function ProductPage(props: PageProps<"/shop/[slug]">) {
           </div>
         </div>
       </Container>
-
-      {companions.length > 0 ? (
-        <Container as="section" className="py-16">
-          <FrequentlyBoughtTogether anchor={product} companions={companions} />
-        </Container>
-      ) : null}
-
-      <Container as="section" className="py-16">
-        <SectionHeading
-          eyebrow="You may also like"
-          title="Recommended for you"
-          description="Strong products from other departments in a similar price band."
-        />
-        <Reveal className="mt-12">
-          <ProductRail products={recommended} />
-        </Reveal>
-      </Container>
-
-      <Container as="section" className="py-16">
-        <SectionHeading
-          eyebrow={category?.name ?? "Related"}
-          title="Pairs well with"
-          description={`More from ${category?.name ?? "this department"}, chosen by the people who buy this one.`}
-        />
-        <Reveal className="mt-12">
-          <ProductGrid products={related} />
-        </Reveal>
-      </Container>
-
-      {sameBrand.length > 0 ? (
-        <Container as="section" className="py-16">
-          <SectionHeading eyebrow={product.brand} title={`More from ${product.brand}`} />
-          <Reveal className="mt-12">
-            <ProductGrid products={sameBrand} />
-          </Reveal>
-        </Container>
-      ) : null}
-
-      <Container as="section" className="py-16">
-        <RecentlyViewedRail excludeSlug={product.slug} />
-      </Container>
-
-      <StickyBuyBar product={product} sentinelId={BUY_SENTINEL} />
     </>
   );
 }

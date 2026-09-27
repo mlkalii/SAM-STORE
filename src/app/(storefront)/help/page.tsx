@@ -35,7 +35,6 @@ export default function HelpPage() {
           ],
           bullets: [
             "Domestic delivery: two to four working days once dispatched",
-            "International delivery: five to nine working days",
             "Every parcel is tracked; the number appears on the order as soon as it exists",
           ],
         },

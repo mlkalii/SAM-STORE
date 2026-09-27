@@ -58,7 +58,16 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     // `/collections` became `/categories` when the store went multi-category.
+    // SAMRUX is a single store: the retired seller routes go home, and the
+    // retired listing pages go to the shop.
     return [
+      { source: "/sellers", destination: "/", permanent: true },
+      { source: "/sellers/:path*", destination: "/", permanent: true },
+      { source: "/sell", destination: "/", permanent: true },
+      { source: "/sell/:path*", destination: "/", permanent: true },
+      { source: "/seller", destination: "/", permanent: true },
+      { source: "/seller/:path*", destination: "/", permanent: true },
+      { source: "/best-sellers", destination: "/shop", permanent: true },
       { source: "/collections", destination: "/categories", permanent: true },
       { source: "/collections/:slug", destination: "/categories/:slug", permanent: true },
     ];

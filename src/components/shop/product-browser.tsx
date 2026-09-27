@@ -25,7 +25,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * The listing shell shared by /shop, /categories/[slug], /search, /deals,
- * /new-arrivals and /best-sellers: sidebar filters, sort, grid, pagination.
+ * and /new-arrivals: sidebar filters, sort, grid, pagination.
  */
 export function ProductBrowser({
   basePath,

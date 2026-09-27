@@ -2,7 +2,7 @@
  * Customer support conversations.
  *
  * SAMRUX sells directly, so a conversation has exactly two sides: the customer
- * and the SAMRUX support team. There is no third-party seller in the middle,
+ * and the SAMRUX support team. Nobody else sits in the middle,
  * and nothing here is ever published on a product page.
  */
 

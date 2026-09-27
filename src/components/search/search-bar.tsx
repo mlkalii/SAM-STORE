@@ -28,7 +28,7 @@ interface SuggestResponse {
   brands: { brand: string; count: number }[];
   /** Aggregate popular queries, shown before anything is typed. */
   trending: string[];
-  /** Current best sellers, shown before anything is typed. */
+  /** Popular products, shown before anything is typed. */
   popular: Suggestion[];
 }
 
@@ -93,7 +93,7 @@ export function SearchBar({
   const fresh = results.q === trimmed ? results : EMPTY;
   const loading = trimmed.length >= 2 && results.q !== trimmed;
 
-  // Idle panel: trending terms and best sellers, fetched the first time the
+  // Idle panel: trending terms and popular products, fetched the first time the
   // field is opened rather than on every page load.
   const [idle, setIdle] = React.useState<SuggestResponse | null>(null);
   React.useEffect(() => {
